@@ -8,7 +8,11 @@
     "type": "git",
     "url": "https://github.com/SimonFinney/simonfinney.github.io.git"
   },
-  "keywords": ["simon", "finney", "github"],
+  "keywords": [
+    "simon",
+    "finney",
+    "github"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SimonFinney/simonfinney.github.io/issues"
@@ -42,12 +46,17 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.28",
     "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.1",
     "prettier": "^1.10.2",
     "stylelint": "^8.4.0",
     "stylelint-config-recommended-scss": "^2.0.0",
     "stylelint-scss": "^2.2.0"
   },
   "lint-staged": {
-    "src/**/*.{js,json,md,scss}": ["prettier", "git add"]
+    "src/**/*.{js,json,md,scss}": [
+      "prettier",
+      "git add"
+    ]
   }
 }
