@@ -1,0 +1,38 @@
+////
+/// Posts component styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2018
+////
+
+@import '../globals/colour', '../globals/sizing';
+
+/// Border style.
+/// @type List<*>
+$posts__border: sizing-get(extra-extra-small) solid colour-get(brand--secondary);
+
+/// Padding.
+/// @type Length
+$posts__padding: sizing-get(none);
+
+/// Style.
+/// @type String
+$posts__style: none;
+
+/// List item padding.
+/// @type Length
+$posts__li__padding: sizing-get(small);
+
+.posts {
+  padding: $posts__padding;
+  list-style: $posts__style;
+
+  > li {
+    border-bottom: $posts__border;
+    display: inline-block;
+    padding: $posts__li__padding;
+
+    &:first-of-type {
+      border-top: $posts__border;
+    }
+  }
+}

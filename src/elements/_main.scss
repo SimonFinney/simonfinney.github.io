@@ -1,0 +1,27 @@
+////
+/// Main styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/media', '../globals/sizing';
+
+/// Breakpoint.
+/// @type Length
+$main__breakpoint: breakpoint-get(medium);
+
+/// Margin.
+/// @type Length
+$main__margin: sizing-get(large);
+
+/// Width.
+/// @type Length
+$main__width: calc(66% - #{$main__margin});
+
+@include media-query($main__breakpoint) {
+  main {
+    float: left;
+    width: $main__width;
+    margin-right: $main__margin;
+  }
+}

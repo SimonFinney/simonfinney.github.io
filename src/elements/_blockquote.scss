@@ -1,0 +1,54 @@
+////
+/// Blockquote styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/colour', '../globals/sizing';
+
+/// Margin.
+/// @type Length
+$blockquote__margin: sizing-get(none);
+
+/// Padding.
+/// @type Length
+$blockquote__padding: sizing-get(medium);
+
+/// Style.
+/// @type String
+$blockquote__style: italic;
+
+/// Before background colour.
+/// @type Color
+$blockquote__before__colour__background: colour-get(brand--primary);
+
+/// Before position left.
+/// @type Length
+$blockquote__before__position--left: sizing-get(none);
+
+/// Before position top.
+/// @type Length
+$blockquote__before__position--top: sizing-get(none);
+
+/// Breakpoint.
+/// @type Length
+$blockquote__before__size: sizing-get(extra-small);
+
+blockquote {
+  position: relative;
+  padding-right: $blockquote__padding;
+  padding-left: $blockquote__padding;
+  margin-left: $blockquote__margin;
+  font-style: $blockquote__style;
+
+  &::before {
+    position: absolute;
+    top: $blockquote__before__position--top;
+    left: $blockquote__before__position--left;
+    display: inline-block;
+    width: $blockquote__before__size;
+    height: 100%;
+    background-color: $blockquote__before__colour__background;
+    content: '';
+  }
+}

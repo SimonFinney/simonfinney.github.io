@@ -1,0 +1,20 @@
+////
+/// Heading 2 styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../../globals/colour', '../../globals/typography';
+
+/// Colour.
+/// @type Color
+$h2__colour: colour-get(brand--primary);
+
+/// Font weight.
+/// @type Length
+$h2__font__weight: weight-get(light);
+
+h2 {
+  font-weight: $h2__font__weight;
+  color: $h2__colour;
+}

@@ -1,0 +1,35 @@
+////
+/// Footer component styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../../globals/sizing';
+
+/// Section margin.
+/// @type Length
+$footer__section__margin: sizing-get(medium);
+
+/// Section width.
+/// @type Length
+$footer__section__width: calc(50% - #{$footer__section__margin});
+
+.footer {
+  &__section {
+    &--next,
+    &--previous {
+      width: $footer__section__width;
+    }
+
+    &--next {
+      float: right;
+      margin-left: $footer__section__margin;
+      text-align: right;
+    }
+
+    &--previous {
+      float: left;
+      margin-right: $footer__section__margin;
+    }
+  }
+}

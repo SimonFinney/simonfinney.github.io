@@ -1,0 +1,48 @@
+////
+/// Iconography definitions.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import 'sizing';
+
+/// Icons.
+/// @type Map<String>
+$icons: (
+  codepen,
+  email,
+  github,
+  instagram,
+  linkedin,
+  medium,
+  twitter
+);
+
+/// Icon sizes.
+/// @type Map<Length>
+$icon__sizes: (small: sizing-get(medium));
+
+/// Returns a value from the icon sizes map.
+/// @param {String} $icon-size - The icon size to return.
+/// @returns {Length} - The icon size from the icon size map.
+@function icon-sizes-get ($icon-size) {
+  @return map-get($icon__sizes, $icon-size);
+}
+
+/// Adds an icon to the element's before pseudo element.
+/// @param {String} $icon-type - The icon to use.
+/// @example scss
+///   a {
+///     @include icon('codepen');
+///   }
+/// @output css
+///   a[data-icon='codepen']::before {
+///     background-image: url('images/assets/icons/codepen.svg');
+///   }
+@mixin icon ($icon-type) {
+  &[data-icon='#{$icon-type}'] {
+    &::before {
+      background-image: url('images/assets/icons/#{$icon-type}.svg');
+    }
+  }
+}

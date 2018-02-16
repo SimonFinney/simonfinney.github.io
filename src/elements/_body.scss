@@ -1,0 +1,27 @@
+////
+/// Body styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/colour', '../globals/sizing';
+
+/// Background colour.
+/// @type Color
+$body__colour__background: colour-get(colour__background);
+
+/// Margin.
+/// @type String
+$body__margin: auto;
+
+/// Padding.
+/// @type <List>Length
+$body__padding: sizing-get(none) sizing-get(large);
+
+body {
+  max-width: 1024px;
+  padding: $body__padding;
+  margin-right: $body__margin;
+  margin-left: $body__margin;
+  background-color: $body__colour__background;
+}

@@ -1,0 +1,32 @@
+////
+/// HTML styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/colour', '../globals/typography';
+
+/// Colour.
+/// @type Color
+$html__colour: colour-get(text--primary);
+
+/// Font family.
+/// @type String
+$html__font__family: $font__family;
+
+/// Line height.
+/// @type Length
+$html__font__line-height: $font__line-height;
+
+/// Font weight.
+/// @type String
+$html__font__weight: weight-get(light);
+
+html {
+  font-family: $html__font__family;
+  font-weight: $html__font__weight;
+  line-height: $html__font__line-height;
+  color: $html__colour;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,19 @@
+////
+/// Media definitions.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+// TODO: Document
+@mixin media-query ($breakpoint) {
+  @media only screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+// TODO: Document
+@mixin print {
+  @media print {
+    @content;
+  }
+}

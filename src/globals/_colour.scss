@@ -1,0 +1,37 @@
+////
+/// Colour definitions.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+/// Black.
+/// @type Color
+$colour__black: #393939;
+
+/// Blue.
+/// @type Color
+$colour__blue: #1193E8;
+
+/// Neutral white.
+/// @type Color
+$colour__neutral-white: #f4f4f4;
+
+/// White.
+/// @type Color
+$colour__white: #fff;
+
+/// Colours.
+/// @type Map<Color>
+$colours: (
+  text--primary: $colour__black,
+  background: $colour__white,
+  brand--primary: $colour__blue,
+  brand--secondary: $colour__neutral-white
+);
+
+/// Returns a value from the colour map.
+/// @param {String} $colour - The colour to return.
+/// @returns {Color} - The colour from the colour map.
+@function colour-get ($colour) {
+  @return map-get($colours, $colour);
+}

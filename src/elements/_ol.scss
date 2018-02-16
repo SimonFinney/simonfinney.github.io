@@ -1,0 +1,15 @@
+////
+/// Ordered list styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/sizing';
+
+/// Padding.
+/// @type Length
+$ol__padding: sizing-get(medium);
+
+ol {
+  padding-left: $ol__padding;
+}

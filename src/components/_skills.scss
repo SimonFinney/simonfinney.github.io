@@ -1,0 +1,49 @@
+////
+/// Skills component styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../globals/colour', '../globals/media', '../globals/sizing';
+
+/// Padding.
+/// @type Length
+$skills__padding: sizing-get(none);
+
+/// Style.
+/// @type String
+$skills__style: none;
+
+/// List item background colour.
+/// @type Colour
+$skills__li__colour__background: colour-get(brand--secondary);
+
+/// Font weight.
+/// @type Length
+$skills__li__font__weight: weight-get(bold);
+
+/// List item margin.
+/// @type Length
+$skills__li__margin: sizing-get(small);
+
+/// List item padding.
+/// @type Length
+$skills__li__padding: sizing-get(small);
+
+.skills {
+  padding-left: $skills__padding;
+  overflow: auto;
+  list-style: $skills__style;
+
+  > li {
+    display: inline-block;
+    padding: $skills__li__padding;
+    margin-right: $skills__li__margin;
+    margin-bottom: $skills__li__margin;
+    background-color: $skills__li__colour__background;
+
+    @include print {
+      font-weight: $skills__li__font__weight;
+    }
+  }
+}

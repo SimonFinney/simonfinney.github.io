@@ -1,0 +1,14 @@
+# Hidden folders
+.*/
+
+# Project dependencies - https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Output folders
+public
+
+# Always-ignore files
+*.log
+
+# Individual files
+.DS_Store

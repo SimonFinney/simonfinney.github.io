@@ -1,0 +1,78 @@
+////
+/// Header component styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../../globals/colour', '../../globals/media', '../../globals/sizing';
+
+/// Border style.
+/// @type List<*>
+$header__border: sizing-get(extra-small) solid colour-get(brand--secondary);
+
+/// Title font size.
+/// @type Length
+$header__title__font__size: font-size-get(extra-large);
+
+/// Title margin.
+/// @type <List>Length
+$header__title__margin: sizing-get(large) sizing-get(none);
+
+/// Title weight.
+/// @type String
+$header__title__weight: weight-get(light);
+
+/// List padding.
+/// @type Length
+$header__ul__padding: sizing-get(none);
+
+/// List item margin.
+/// @type Length
+$header__li__margin: sizing-get(medium);
+
+/// Link colour.
+/// @type Colour
+$header__a__colour: colour-get(text--primary);
+
+/// Link focus colour.
+/// @type Colour
+$header__a__colour--focus: colour-get(brand--primary);
+
+.header {
+  border-bottom: $header__border;
+
+  &__title {
+    @include font-size($header__title__font__size);
+    display: block;
+    margin: $header__title__margin;
+    font-weight: $header__title__weight;
+  }
+
+  &__ul {
+    padding-left: $header__ul__padding;
+
+    @include print {
+      display: none;
+    }
+  }
+
+  &__li {
+    display: inline-block;
+    margin-right: $header__li__margin;
+  }
+
+  &__a {
+    color: $header__a__colour;
+
+    &:focus,
+    &:hover,
+    &--active {
+      color: $header__a__colour--focus;
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration: initial;
+    }
+  }
+}

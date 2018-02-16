@@ -1,0 +1,26 @@
+////
+/// Aside component styles.
+/// @author Simon Finney <simonjfinney@gmail.com>
+/// @copyright Simon Finney 2017
+////
+
+@import '../../globals/media', '../../globals/sizing';
+
+/// List style.
+/// @type String
+$aside__list__style: none;
+
+/// List padding.
+/// @type Length
+$aside__list__padding: sizing-get(none);
+
+.aside {
+  &__list {
+    padding-left: $aside__list__padding;
+    list-style: $aside__list__style;
+
+    @include print {
+      list-style: initial;
+    }
+  }
+}
