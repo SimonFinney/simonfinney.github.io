@@ -63,9 +63,9 @@ without distracting the audience from their current task.
 I developed a very minimal colour palette, similar in simplicity to that of
 Yelp's, that was specific and fit-for-purpose across the application:
 
-* **Primary colour:** #4178be - Used for primary actions such as navigation
-* **Primary colour:** #e71d32 - Dominant background colour
-* **Secondary colour:** #4b8400 - Reserved for special actions like discovering
+- **Primary colour:** #4178be - Used for primary actions such as navigation
+- **Primary colour:** #e71d32 - Dominant background colour
+- **Secondary colour:** #4b8400 - Reserved for special actions like discovering
   prices
 
 ![Colour palette](../images/pages/high-fidelity-solution/Colour-palette.png)
@@ -104,10 +104,10 @@ Looking back at my
 [core sample content audit](https://drive.google.com/open?id=1CeML0_uEil-w-kM94HQg14zjiE_zuyzQ9Tv-YYDUjRU),
 I also addressed the following red flags from the current website:
 
-* High character counts on navigation links and subheadings
-* Removed any redundant headings and labels, making the content it conveyed more
+- High character counts on navigation links and subheadings
+- Removed any redundant headings and labels, making the content it conveyed more
   apparent
-* Produced consistent tone, voice, and wording across calls-to-action and labels
+- Produced consistent tone, voice, and wording across calls-to-action and labels
 
 Moving on from this, I'll discuss how I incorporated cognitive and social
 psychological aspects into my designs.
@@ -151,10 +151,10 @@ As discussed in my
 [post on this topic](/2016/4/10/universal-inclusive-design-accessibility#equitable-use),
 I've made considerations for a number of principles of universal design:
 
-* Equitable use
-* Flexibility in use
-* Simple and intuitive use
-* Size and space for approach and use
+- Equitable use
+- Flexibility in use
+- Simple and intuitive use
+- Size and space for approach and use
 
 To validate my proposed solution for equitable use, I tested my designs against
 different levels of colour blindness. One of the most challenging was
@@ -202,9 +202,9 @@ The goal of the testing was to determine whether the design approach used as a
 result of all the considerations I made throughout the project made sense, or in
 Krug's words, "Get it" testing (2006). Specifically:
 
-* A user will understand how to find information on events they care about
-* A user will be able to discover events to attend at any given time period
-* A user will be able to determine their best option for purchasing a ticket
+- A user will understand how to find information on events they care about
+- A user will be able to discover events to attend at any given time period
+- A user will be able to determine their best option for purchasing a ticket
 
 In order to streamline the testing, a
 [consent form](https://drive.google.com/open?id=0BzA9UyHASmcNUFY2a2Q4OFJnSFk),
@@ -229,13 +229,13 @@ the space of 10 minutes:
 
 The participant came across a number of issues within the application:
 
-* There was issues with the lack of scrolling functionality within Adobe
+- There was issues with the lack of scrolling functionality within Adobe
   Experience Design - the participant would inadvertently refresh the web
   browser when attempting to scroll, having to restart
-* The participant selected 'Upcoming' to see what events were on this weekend
-* The Floating Action Button was an unfamiliar concept to the participant
-* The icon for the filter reset confused the participant
-* It was not apparent to the participant that the button for confirming filters
+- The participant selected 'Upcoming' to see what events were on this weekend
+- The Floating Action Button was an unfamiliar concept to the participant
+- The icon for the filter reset confused the participant
+- It was not apparent to the participant that the button for confirming filters
   was a button
 
 If I were to produce another iteration of the prototype, there are a number of
@@ -260,9 +260,9 @@ Throughout the course of the last few months, as well as tightening up some
 visual design and prototype development skills, I gained some new knowledge in
 areas I had yet to touch on, including:
 
-* Information architecture and content strategy
-* Cognitive and social psychology
-* Universal design
+- Information architecture and content strategy
+- Cognitive and social psychology
+- Universal design
 
 Now that I've been exposed to these concepts and ideas, I'll be able to bring
 them forward into my designs naturally in the future.
@@ -281,11 +281,11 @@ has consolidated the entire process from start to finish.
 
 ## Resources
 
-* [Google material design](https://www.google.com/design/spec/material-design/introduction.html)
-* [High-fidelity solution](http://adobe.ly/1VAFHbh)
-* [Screencast](https://youtu.be/ukCEd6OgGpg)
-* [Screencast uploads](https://drive.google.com/open?id=0BzA9UyHASmcNWWdnS010NXNhUWc)
-* [Prototype uploads](https://drive.google.com/open?id=0BzA9UyHASmcNZlVsbGd2akh5M1U)
-* [Usability test](https://lookback.io/watch/tY9Ra3rgGoKfStW3A)
-* [User flow](https://drive.google.com/open?id=1FfljBzfQCazBGK0SXLC3GUzNUsXIMgyWoQ)
-* [Usability testing uploads](https://drive.google.com/open?id=0BzA9UyHASmcNc2xsUl81b01ZbWc)
+- [Google material design](https://www.google.com/design/spec/material-design/introduction.html)
+- [High-fidelity solution](http://adobe.ly/1VAFHbh)
+- [Screencast](https://youtu.be/ukCEd6OgGpg)
+- [Screencast uploads](https://drive.google.com/open?id=0BzA9UyHASmcNWWdnS010NXNhUWc)
+- [Prototype uploads](https://drive.google.com/open?id=0BzA9UyHASmcNZlVsbGd2akh5M1U)
+- [Usability test](https://lookback.io/watch/tY9Ra3rgGoKfStW3A)
+- [User flow](https://drive.google.com/open?id=1FfljBzfQCazBGK0SXLC3GUzNUsXIMgyWoQ)
+- [Usability testing uploads](https://drive.google.com/open?id=0BzA9UyHASmcNc2xsUl81b01ZbWc)

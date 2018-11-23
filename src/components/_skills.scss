@@ -31,15 +31,15 @@ $skills__li__margin: sizing-get(small);
 $skills__li__padding: sizing-get(small);
 
 .skills {
-  padding-left: $skills__padding;
   overflow: auto;
+  padding-left: $skills__padding;
   list-style: $skills__style;
 
   > li {
     display: inline-block;
-    padding: $skills__li__padding;
     margin-right: $skills__li__margin;
     margin-bottom: $skills__li__margin;
+    padding: $skills__li__padding;
     background-color: $skills__li__colour__background;
 
     @include print {

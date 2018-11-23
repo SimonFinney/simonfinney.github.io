@@ -17,9 +17,9 @@ the project.
 Out of all of those I glanced through, the two I found most comprehensive and
 intriguing were:
 
-* MailChimp [Content Style Guide](http://styleguide.mailchimp.com/) and
+- MailChimp [Content Style Guide](http://styleguide.mailchimp.com/) and
   [Voice & Tone](http://voiceandtone.com/)
-* [Yelp Styleguide](http://www.yelp.com/styleguide)
+- [Yelp Styleguide](http://www.yelp.com/styleguide)
 
 ## MailChimp Content Style Guide and Voice & Tone
 
@@ -28,10 +28,10 @@ excellent and goes into much depth on a lot of subjects. I found that the main
 takeaways emphasised appear to be in their definition of good content, which
 according to them is:
 
-* Appropriate
-* Clear
-* Friendly
-* Useful
+- Appropriate
+- Clear
+- Friendly
+- Useful
 
 Also, while reading through their guidelines on grammar and mechanics, I came
 across a tip which resonated with me for writing content:
@@ -56,10 +56,10 @@ After reading through what MailChimp has to offer, I've decided to follow a
 similar approach and have drafted some content principles to keep in mind while
 developing my designs:
 
-* Light-hearted
-* Informative
-* Human
-* To-the-point
+- Light-hearted
+- Informative
+- Human
+- To-the-point
 
 While the wording of these is subject to change, it provides a manner to be
 conscious of while designing.
@@ -113,5 +113,5 @@ mapping via storyboarding.
 
 ## Resources
 
-* [Prototyping Tools](http://www.cooper.com/prototyping-tools)
-* [Style Guide Resources](http://styleguides.io/)
+- [Prototyping Tools](http://www.cooper.com/prototyping-tools)
+- [Style Guide Resources](http://styleguides.io/)

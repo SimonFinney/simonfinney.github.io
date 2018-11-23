@@ -7,9 +7,9 @@ description: #
 To kick this project off, I knew from the top of my head that there were a
 number of things that had to put in place:
 
-* The idea or need that would be the design's focus
-* The platform I'd use to document my work
-* The tools and processes I'd use to manage my time
+- The idea or need that would be the design's focus
+- The platform I'd use to document my work
+- The tools and processes I'd use to manage my time
 
 This post will focus on where I landed on the above topics, and touch on how
 I'll move forward from here.
@@ -53,19 +53,19 @@ employ when searching for gigs to attend, and design a solution in the form of a
 high-fidelity interactive prototype, by applying knowledge from a wide variety
 of areas, including:
 
-* Psychology, in particular the cognitive, emotional, perceptual, and social
+- Psychology, in particular the cognitive, emotional, perceptual, and social
   aspects of it
-* Content strategy and information architecture
-* Accessibility and inclusive design
+- Content strategy and information architecture
+- Accessibility and inclusive design
 
 As well as looking at the above areas, throughout the course of the next month,
 I'll conduct the following tasks in an effort to improve the overall gig-finding
 experience:
 
-* Develop proto-personas and scenarios
-* Research a number of design languages, and pattern libraries, integrating
+- Develop proto-personas and scenarios
+- Research a number of design languages, and pattern libraries, integrating
   knowledge learned from this into the application
-* Conduct usability testing to evaluate my designs in an iterative manner
+- Conduct usability testing to evaluate my designs in an iterative manner
 
 ## Blog platform and project management
 
@@ -94,5 +94,5 @@ platforms I intend on using.
 
 ## Resources
 
-* [Jekyll - Transform your plain text into static websites and blogs](https://jekyllrb.com/)
-* [Project plan](https://docs.google.com/spreadsheets/d/1cslYNdrI2uEUQJJxMyQ1FbJkkaDBW0eMrTyV0VlHwAM/edit?usp=sharing)
+- [Jekyll - Transform your plain text into static websites and blogs](https://jekyllrb.com/)
+- [Project plan](https://docs.google.com/spreadsheets/d/1cslYNdrI2uEUQJJxMyQ1FbJkkaDBW0eMrTyV0VlHwAM/edit?usp=sharing)

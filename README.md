@@ -1,11 +1,9 @@
 # simonfinney.github.io
 
-[simonfinney.github.io](http://simonfinney.github.io/)
+[Simon Finney — Front End Specialist](simonfinney.github.io)
 
-## Usage
+## Scripts
 
-### npm scripts
-
-1. Development - `npm run start`
-2. Format - `npm run format`
-3. Build - `npm run build`
+- Development — `yarn start`
+- Format — `yarn format`
+- Build — `yarn build`

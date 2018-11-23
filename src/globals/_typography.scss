@@ -32,13 +32,14 @@ $font__size--desired: 16;
 $font__sizes: (
   small: 0.75,
   large: 1.5,
-  extra-large: 2
+  extra-large: 2,
 );
 
 /// Returns a value from the font size map.
 /// @param {String} $font-size - The font size to return.
 /// @returns {Length} - The font size from the font size map.
-@function font-size-get ($font-size) {
+
+@function font-size-get($font-size) {
   @return map-get($font__sizes, $font-size);
 }
 
@@ -54,7 +55,8 @@ $font__sizes: (
 ///     font-size: 12px;
 ///     font-size: 0.75rem;
 ///   }
-@mixin font-size ($font-size, $property: font-size) {
+
+@mixin font-size($font-size, $property: font-size) {
   #{$property}: ($font__size--desired * $font-size) + px;
   #{$property}: $font-size + rem;
 }
@@ -63,13 +65,14 @@ $font__sizes: (
 /// @type Map<Length>
 $font__weights: (
   light: 300,
-  bold: 600
+  bold: 600,
 );
 
 /// Returns a value from the font weight map.
 /// @param {String} $font-weight - The font weight to return.
 /// @returns {Length} - The font weight from the font weight map.
-@function weight-get ($font-weight) {
+
+@function weight-get($font-weight) {
   @return map-get($font__weights, $font-weight);
 }
 

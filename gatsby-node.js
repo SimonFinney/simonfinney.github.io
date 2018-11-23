@@ -4,7 +4,9 @@
  * @copyright Simon Finney 2017
  */
 
-const { createFilePath } = require(`gatsby-source-filesystem`);
+require('dotenv').config();
+
+const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 
 const blogQuery = `
@@ -55,9 +57,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         context: {
           previous: index === posts.length - 1 ? null : posts[index + 1].node,
           next: index === 0 ? null : posts[index - 1].node,
-          slug: node.fields.slug
+          slug: node.fields.slug,
         },
-        path: node.fields.slug
+        path: node.fields.slug,
       })
     );
   });
@@ -66,7 +68,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         component: path.resolve('./src/templates/section.js'),
         context: { slug: node.fields.slug },
-        path: node.fields.slug
+        path: node.fields.slug,
       })
     )
   );

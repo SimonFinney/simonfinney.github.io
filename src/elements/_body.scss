@@ -20,8 +20,8 @@ $body__padding: sizing-get(none) sizing-get(large);
 
 body {
   max-width: 1024px;
-  padding: $body__padding;
   margin-right: $body__margin;
   margin-left: $body__margin;
+  padding: $body__padding;
   background-color: $body__colour__background;
 }

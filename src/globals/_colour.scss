@@ -10,7 +10,7 @@ $colour__black: #393939;
 
 /// Blue.
 /// @type Color
-$colour__blue: #1193E8;
+$colour__blue: #1193e8;
 
 /// Neutral white.
 /// @type Color
@@ -26,12 +26,13 @@ $colours: (
   text--primary: $colour__black,
   background: $colour__white,
   brand--primary: $colour__blue,
-  brand--secondary: $colour__neutral-white
+  brand--secondary: $colour__neutral-white,
 );
 
 /// Returns a value from the colour map.
 /// @param {String} $colour - The colour to return.
 /// @returns {Color} - The colour from the colour map.
-@function colour-get ($colour) {
+
+@function colour-get($colour) {
   @return map-get($colours, $colour);
 }

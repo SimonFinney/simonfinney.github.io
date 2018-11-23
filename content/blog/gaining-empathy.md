@@ -26,8 +26,8 @@ some of the issues that plague gig listing websites today:
 
 MCD.ie makes it pretty difficult to discover upcoming gigs:
 
-* Everything is in-your-face — it's a classic case of information overload
-* Flexible filtering options are nowhere to be seen
+- Everything is in-your-face — it's a classic case of information overload
+- Flexible filtering options are nowhere to be seen
 
 Tickets.ie, while slightly better than MCD, still lacks in many regards:
 
@@ -35,10 +35,10 @@ Tickets.ie, while slightly better than MCD, still lacks in many regards:
 
 <figcaption>Tickets.ie</figcaption>
 
-* Filtering can only occur one genre at a time — good luck to anyone trying to
+- Filtering can only occur one genre at a time — good luck to anyone trying to
   filter by date or their location productively!
-* There's no way to focus on what I'm interested in or what's happening near me
-* How do I stop missing out on gigs that I really want to attend?
+- There's no way to focus on what I'm interested in or what's happening near me
+- How do I stop missing out on gigs that I really want to attend?
 
 With the above pain points in mind, I took a first pass at developing a
 proto-persona that captures the needs of what I believe is a typical user.
@@ -115,13 +115,13 @@ improve the current experience.
 
 ## References
 
-* Cooper, A., Cronin, D., & Reimann, R. (2007). _About Face 3: The Essentials of
+- Cooper, A., Cronin, D., & Reimann, R. (2007). _About Face 3: The Essentials of
   Interaction Design_ (3rd ed.). Wiley Publishing.
-* Gothelf, J., & Seiden, J. (2013). _Lean UX: Applying Lean Principles to
+- Gothelf, J., & Seiden, J. (2013). _Lean UX: Applying Lean Principles to
   Improve User Experience_ (First ed.). O'Reilly Media.
 
 ## Resources
 
-* [Empathy map](https://drive.google.com/open?id=1khtyToAAB-aDxGTFHV9nsUqCNZ5flrX0AA)
-* [Experience map](https://drive.google.com/open?id=1KEw7yeCZFdgINj0N_u0EtsAZgEnSSR9dcA)
-* [Persona](https://drive.google.com/open?id=0BzA9UyHASmcNNlhldnFENlJOUmc)
+- [Empathy map](https://drive.google.com/open?id=1khtyToAAB-aDxGTFHV9nsUqCNZ5flrX0AA)
+- [Experience map](https://drive.google.com/open?id=1KEw7yeCZFdgINj0N_u0EtsAZgEnSSR9dcA)
+- [Persona](https://drive.google.com/open?id=0BzA9UyHASmcNNlhldnFENlJOUmc)

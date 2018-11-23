@@ -36,16 +36,16 @@ $blockquote__before__size: sizing-get(extra-small);
 
 blockquote {
   position: relative;
+  margin-left: $blockquote__margin;
   padding-right: $blockquote__padding;
   padding-left: $blockquote__padding;
-  margin-left: $blockquote__margin;
   font-style: $blockquote__style;
 
   &::before {
+    display: inline-block;
     position: absolute;
     top: $blockquote__before__position--top;
     left: $blockquote__before__position--left;
-    display: inline-block;
     width: $blockquote__before__size;
     height: 100%;
     background-color: $blockquote__before__colour__background;

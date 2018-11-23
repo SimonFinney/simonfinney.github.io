@@ -4,11 +4,8 @@
 /// @copyright Simon Finney 2017
 ////
 
-@import '../globals/colour',
-  '../globals/iconography',
-  '../globals/media',
-  '../globals/sizing',
-  '../globals/typography';
+@import '../globals/colour', '../globals/iconography', '../globals/media',
+  '../globals/sizing', '../globals/typography';
 
 /// Colour.
 /// @type Color
@@ -28,10 +25,14 @@ $a__icon__margin: sizing-get(small);
 
 a {
   font-weight: $a__font__weight;
-  color: $a__colour;
   text-decoration: none;
+  color: $a__colour;
   transition: 0.1s;
   text-decoration-skip: ink;
+
+  @each $icon in $icons {
+    @include icon($icon);
+  }
 
   &:focus,
   &:hover {
@@ -46,16 +47,12 @@ a {
       margin-right: $a__icon__margin;
       vertical-align: middle;
       background-repeat: no-repeat;
-      background-size: cover;
       content: '';
+      background-size: cover;
 
       @include print {
         display: none;
       }
     }
-  }
-
-  @each $icon in $icons {
-    @include icon($icon);
   }
 }

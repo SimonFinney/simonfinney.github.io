@@ -43,6 +43,7 @@ $header__a__colour--focus: colour-get(brand--primary);
 
   &__title {
     @include font-size($header__title__font__size);
+
     display: block;
     margin: $header__title__margin;
     font-weight: $header__title__weight;

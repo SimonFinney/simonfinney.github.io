@@ -6,12 +6,15 @@
 
 /// Breakpoints.
 /// @type Map<Length>
-$breakpoints: (medium: 60rem);
+$breakpoints: (
+  medium: 60rem,
+);
 
 /// Returns a value from the breakpoint map.
 /// @param {String} $breakpoint - The breakpoint to return.
 /// @returns {Length} - The breakpoint from the breakpoint map.
-@function breakpoint-get ($breakpoint) {
+
+@function breakpoint-get($breakpoint) {
   @return map-get($breakpoints, $breakpoint);
 }
 
@@ -22,17 +25,28 @@ $unit__size: 8px;
 /// Sizing sizes.
 /// @type Map<Length>
 $sizing__sizes: (
-  none: ($unit__size * 0),
-  extra-extra-small: ($unit__size / 4),
-  extra-small: ($unit__size / 2),
+  none: (
+    $unit__size * 0,
+  ),
+  extra-extra-small: (
+    $unit__size / 4,
+  ),
+  extra-small: (
+    $unit__size / 2,
+  ),
   small: $unit__size,
-  medium: ($unit__size * 2),
-  large: ($unit__size * 4)
+  medium: (
+    $unit__size * 2,
+  ),
+  large: (
+    $unit__size * 4,
+  ),
 );
 
 /// Returns a value from the sizing map.
 /// @param {String} $sizing - The sizing to return.
 /// @returns {Length} - The sizing from the sizing map.
-@function sizing-get ($sizing) {
+
+@function sizing-get($sizing) {
   @return map-get($sizing__sizes, $sizing);
 }

@@ -39,12 +39,12 @@ for how these can be improved and implemented in my designs going forward.
 Equitable use is concerned with ensuring a design is both useful and marketable
 to people with diverse abilities. It's guidelines are as follows:
 
-* 1a. Provide the same means of use for all users: identical whenever possible;
+- 1a. Provide the same means of use for all users: identical whenever possible;
   equivalent when not
-* 1b. Avoid segregating or stigmatising any users
-* 1c. Provisions for privacy, security, and safety should be equally available
+- 1b. Avoid segregating or stigmatising any users
+- 1c. Provisions for privacy, security, and safety should be equally available
   to all users
-* 1d. Make the design appealing to all users
+- 1d. Make the design appealing to all users
 
 Currently [Tickets.ie](https://www.tickets.ie) has a very limited colour palette
 (Numerous levels of grey and orange) which may not drastically affect users with
@@ -79,10 +79,10 @@ separate sections.
 Flexibility in use refers to a design accommodating a a wide range of individual
 preferences and abilities. The recommended guidelines for this context are:
 
-* 2a. Provide choice in methods of use
-* 2b. Accommodate right or left-handed access and use
-* 2c. Facilitate the user's accuracy and precision
-* 2d. Provide adaptability to the user's pace
+- 2a. Provide choice in methods of use
+- 2b. Accommodate right or left-handed access and use
+- 2c. Facilitate the user's accuracy and precision
+- 2d. Provide adaptability to the user's pace
 
 Tickets.ie in it's current form, doesn't provide a whole lot of flexibility in
 terms of filtering down or sorting search results:
@@ -103,11 +103,11 @@ the methods they use, and pivot easily within their context at their own pace.
 It's also important that a design is easy to understand, regardless of the
 user's experience or knowledge:
 
-* 3a. Eliminate unnecessary complexity
-* 3b. Be consistent with user expectations and intuition
-* 3c. Accommodate a wide range of literacy and language skills
-* 3d. Arrange information consistent with its importance
-* 3e. Provide effective prompting and feedback during and after task completion
+- 3a. Eliminate unnecessary complexity
+- 3b. Be consistent with user expectations and intuition
+- 3c. Accommodate a wide range of literacy and language skills
+- 3d. Arrange information consistent with its importance
+- 3e. Provide effective prompting and feedback during and after task completion
 
 The current website, as discussed in previous posts, operates in a funnel, and
 has appalling navigation between artists, events, and venues, a standard of
@@ -125,11 +125,11 @@ trapped.
 The final principle is concerned with providing appropriate size and space when
 using a product, regardless of a user's body size, posture, or mobility:
 
-* 7a. Provide a clear line of sight to important elements for any seated or
+- 7a. Provide a clear line of sight to important elements for any seated or
   standing user
-* 7b. Make reach to all components comfortable for any seated or standing user
-* 7c. Accommodate variations in hand and grip size
-* 7d. Provide adequate space for the use of assistive devices or personal
+- 7b. Make reach to all components comfortable for any seated or standing user
+- 7c. Accommodate variations in hand and grip size
+- 7d. Provide adequate space for the use of assistive devices or personal
   assistance
 
 The current Tickets.ie website is not optimised for mobile use, so therefore can
@@ -201,10 +201,10 @@ While my final prototype will show a proof-of-concept and not go as far as fully
 engineering the application, below are a number of recommendations I've
 suggested for improvement:
 
-* Text alternatives should be provided for any non-text content
-* Ensure semantic HTML document structure is provided to allow screen readers
+- Text alternatives should be provided for any non-text content
+- Ensure semantic HTML document structure is provided to allow screen readers
   navigate naturally throughout the document
-* Make the contrast between colour of text and it's background distinguishable
+- Make the contrast between colour of text and it's background distinguishable
   and legible
 
 With the last of considerations aside, I can continue with the design production
@@ -222,12 +222,12 @@ design, along with any materials produced.
 
 ## References
 
-* Cooper, M. (2016). _WAI-ARIA Overview_. Retrieved April 4, 2016, from
+- Cooper, M. (2016). _WAI-ARIA Overview_. Retrieved April 4, 2016, from
   https://www.w3.org/WAI/intro/aria
-* Miller, M.E. (2016). _Top Ten Inclusive Design Lessons_. Retrieved April 4,
+- Miller, M.E. (2016). _Top Ten Inclusive Design Lessons_. Retrieved April 4,
   2016, from
   http://ageandability.com/2016/01/14/top-ten-inclusive-design-lessons/
-* The Center for Universal Design (1997). _The Principles of Universal Design_
+- The Center for Universal Design (1997). _The Principles of Universal Design_
   (Version 2.0). NC State University.
 
 ## Resources

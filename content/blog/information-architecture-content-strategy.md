@@ -89,12 +89,12 @@ contribute greatly to the overall user experience.
 
 According to Kissane (2011), good content is all of the below:
 
-* Appropriate
-* Useful
-* User-centered
-* Clear
-* Consistent
-* Concise
+- Appropriate
+- Useful
+- User-centered
+- Clear
+- Consistent
+- Concise
 
 Content strategy is both a nuanced and multifaceted practice, with many
 possibilities (Bloomstein, 2012). A solid content strategy can help
@@ -121,11 +121,11 @@ develop some key overlapping points to carry through that I felt strongly
 reflected both the brand and audience needs, which would be used as a guide when
 producing content for the redesign:
 
-* Approachable, friendly, and informal
-* Consistent and modern
-* Reliable and trusted
-* Efficient and flexible
-* Current and tailored
+- Approachable, friendly, and informal
+- Consistent and modern
+- Reliable and trusted
+- Efficient and flexible
+- Current and tailored
 
 The next step I took was to traverse through the current website and perform a
 [core sample content audit](https://drive.google.com/open?id=1CeML0_uEil-w-kM94HQg14zjiE_zuyzQ9Tv-YYDUjRU)
@@ -170,15 +170,15 @@ improve the experience.
 
 ## References
 
-* Bloomstein, M. (2012). _Content Strategy at Work: Real-world stories to
+- Bloomstein, M. (2012). _Content Strategy at Work: Real-world stories to
   strengthen every interactive project_ (First ed.). Morgan Kaufmann.
-* Kissane, E. (2011). _The Elements of Content Strategy_ (First ed.). A Book
+- Kissane, E. (2011). _The Elements of Content Strategy_ (First ed.). A Book
   Apart.
-* Morville, P., Arango, J., & Rosenfeld, L. (2015). _Information Architecture
+- Morville, P., Arango, J., & Rosenfeld, L. (2015). _Information Architecture
   For the Web and Beyond_ (4th ed.). O’Reilly Media.
 
 ## Resources
 
-* [Core sample content audit](https://drive.google.com/open?id=1CeML0_uEil-w-kM94HQg14zjiE_zuyzQ9Tv-YYDUjRU)
-* [Content strategy uploads](https://drive.google.com/folderview?id=0BzA9UyHASmcNN3AxRVRsclV0XzQ&usp=sharing)
-* [Information architecture uploads](https://drive.google.com/folderview?id=0BzA9UyHASmcNWVZRcXViY3RGRGs&usp=sharing)
+- [Core sample content audit](https://drive.google.com/open?id=1CeML0_uEil-w-kM94HQg14zjiE_zuyzQ9Tv-YYDUjRU)
+- [Content strategy uploads](https://drive.google.com/folderview?id=0BzA9UyHASmcNN3AxRVRsclV0XzQ&usp=sharing)
+- [Information architecture uploads](https://drive.google.com/folderview?id=0BzA9UyHASmcNWVZRcXViY3RGRGs&usp=sharing)

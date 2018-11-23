@@ -10,44 +10,44 @@ const content = `${__dirname}/content/`;
 
 module.exports = {
   siteMetadata: {
-    title: 'Simon Finney - Front End Architect',
+    title: 'Simon Finney — Front End Specialist',
     contact: [
       {
         label: 'simonjfinney@gmail.com',
         url: 'mailto:',
         handle: 'simonjfinney@gmail.com',
-        icon: 'email'
+        icon: 'email',
       },
       {
         label: 'GitHub',
         url: 'http://github.com/',
         handle: 'simonfinney',
-        icon: 'github'
+        icon: 'github',
       },
       {
         label: 'CodePen',
         url: 'http://codepen.io/',
         handle: 'simonfinney',
-        icon: 'codepen'
+        icon: 'codepen',
       },
       {
         label: 'Medium',
         url: 'http://medium.com/@',
         handle: 'simonfinney',
-        icon: 'medium'
+        icon: 'medium',
       },
       {
         label: 'LinkedIn',
         url: 'https://www.linkedin.com/in/',
         handle: 'simonfinney',
-        icon: 'linkedin'
+        icon: 'linkedin',
       },
       {
         label: 'Instagram',
         url: 'https://www.instagram.com/',
         handle: 'simonfinney',
-        icon: 'instagram'
-      }
+        icon: 'instagram',
+      },
     ],
     skills: [
       'Front end architecture',
@@ -57,17 +57,16 @@ module.exports = {
       'Responsive design',
       'Design thinking',
       'User experience',
-      'User research'
+      'User research',
     ],
-    technology: ['HTML', 'Sass', 'ES.Next', 'Node.js', 'gulp.js', 'webpack']
+    technology: ['HTML', 'Sass', 'ES.Next', 'Node.js', 'gulp.js', 'webpack'],
   },
   plugins: [
-    'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {
-        postCssPlugins: [autoprefixer()]
-      }
+        postCssPlugins: [autoprefixer()],
+      },
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
@@ -75,15 +74,15 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'section',
-        path: `${content}sections/`
-      }
+        path: `${content}sections/`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${content}blog/`
-      }
+        path: `${content}blog/`,
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -94,8 +93,8 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               rel: 'noopener noreferrer',
-              target: '_blank'
-            }
+              target: '_blank',
+            },
           },
           {
             resolve: 'gatsby-remark-images',
@@ -104,11 +103,11 @@ module.exports = {
               maxWidth: 640,
 
               // Analyse images' pixel density to make decisions about target image size.
-              sizeByPixelDensity: true
-            }
-          }
-        ]
-      }
-    }
-  ]
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
+  ],
 };

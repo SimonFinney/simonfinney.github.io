@@ -5,13 +5,15 @@
 ////
 
 // TODO: Document
-@mixin media-query ($breakpoint) {
+
+@mixin media-query($breakpoint) {
   @media only screen and (min-width: #{$breakpoint}) {
     @content;
   }
 }
 
 // TODO: Document
+
 @mixin print {
   @media print {
     @content;

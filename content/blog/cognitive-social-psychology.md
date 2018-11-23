@@ -167,20 +167,20 @@ final designs.
 
 ## References
 
-* Cardello, J. (2014). _Social Proof in the User Experience_. Retrieved March
+- Cardello, J. (2014). _Social Proof in the User Experience_. Retrieved March
   27, 2016, from https://www.nngroup.com/articles/social-proof-ux/
-* Carey, V. (2011). _The Psychology of UX_. Retrieved March 27, 2016, from
+- Carey, V. (2011). _The Psychology of UX_. Retrieved March 27, 2016, from
   http://www.methodsandtools.com/archive/archive.php?id=126
-* Lanoue, S. (2015). _6 Psychological Triggers That Make UX Design Persuasive_.
+- Lanoue, S. (2015). _6 Psychological Triggers That Make UX Design Persuasive_.
   Retrieved March 27, 2016, from
   https://www.usertesting.com/blog/2015/05/12/6-psychological-triggers-that-make-ux-design-persuasive
-* Norman, D. (1988). _The Design of Everyday Things_ (First ed.). MIT Press.
-* Rogers, Y., Sharp, H., & Preece, J. (2012). _Interaction Design: Beyond
+- Norman, D. (1988). _The Design of Everyday Things_ (First ed.). MIT Press.
+- Rogers, Y., Sharp, H., & Preece, J. (2012). _Interaction Design: Beyond
   Human-Computer Interaction_ (3rd ed.). John Wiley & Sons.
-* Weinschenk, S. (2010). _The Psychologist’s View of UX Design_. Retrieved March
+- Weinschenk, S. (2010). _The Psychologist’s View of UX Design_. Retrieved March
   27, 2016, from https://uxmag.com/articles/the-psychologists-view-of-ux-design
 
 ## Resources
 
-* [Cognitive psychology](https://drive.google.com/open?id=1HFWzqUILtQKfsRJ9CP2X3SVF7GFW3COMVA)
-* [Social psychology](https://drive.google.com/folderview?id=0BzA9UyHASmcNTHdHVU5KamhSMVU&usp=sharing)
+- [Cognitive psychology](https://drive.google.com/open?id=1HFWzqUILtQKfsRJ9CP2X3SVF7GFW3COMVA)
+- [Social psychology](https://drive.google.com/folderview?id=0BzA9UyHASmcNTHdHVU5KamhSMVU&usp=sharing)
