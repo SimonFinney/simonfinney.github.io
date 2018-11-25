@@ -1,19 +1,18 @@
 /**
  * @file 404.
- * @author Simon Finney <simonjfinney@gmail.com>
- * @copyright Simon Finney 2017
+ * @copyright Simon Finney 2018
  */
 
 import React from 'react';
 
+import Layout from '../layout';
+
 import Heading from '../elements/heading';
 import Paragraph from '../elements/paragraph';
 
-const { Fragment } = React;
-
 export default () => (
-  <Fragment>
+  <Layout>
     <Heading level="1" content="Just where do you think you're going?" />
     <Paragraph content="Nothing to see here..." />
-  </Fragment>
+  </Layout>
 );

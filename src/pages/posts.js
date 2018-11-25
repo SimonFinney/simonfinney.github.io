@@ -1,20 +1,20 @@
 /**
  * @file Posts.
- * @author Simon Finney <simonjfinney@gmail.com>
- * @copyright Simon Finney 2017
+ * @copyright Simon Finney 2018
  */
 
+import { graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import React from 'react';
+
+import Layout from '../layout';
 
 import Heading from '../elements/heading';
 import Paragraph from '../elements/paragraph';
 import Time from '../elements/time';
 
-const { Fragment } = React;
-
 export default ({ data }) => (
-  <Fragment>
+  <Layout>
     <Heading level="1" content="Posts" />
     <ul className="posts">
       {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -29,7 +29,7 @@ export default ({ data }) => (
         </li>
       ))}
     </ul>
-  </Fragment>
+  </Layout>
 );
 
 export const postsQuery = graphql`

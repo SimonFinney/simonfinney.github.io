@@ -1,23 +1,24 @@
 /**
  * @file Section.
- * @author Simon Finney <simonjfinney@gmail.com>
  * @copyright Simon Finney 2018
  */
 
+import { graphql } from 'gatsby';
+
 import React from 'react';
+
+import Layout from '../layout';
 
 import Article from '../elements/article';
 import Heading from '../elements/heading';
 
-const { Fragment } = React;
-
 export default ({ data }) => (
-  <Fragment>
+  <Layout>
     <header>
       <Heading level="1" content={data.markdownRemark.frontmatter.title} />
     </header>
     <Article html={data.markdownRemark.html} />
-  </Fragment>
+  </Layout>
 );
 
 export const postQuery = graphql`

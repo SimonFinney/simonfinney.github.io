@@ -1,7 +1,6 @@
 /**
  * @file Gatsby node configuration.
- * @author Simon Finney <simonjfinney@gmail.com>
- * @copyright Simon Finney 2017
+ * @copyright Simon Finney 2018
  */
 
 require('dotenv').config();
@@ -46,8 +45,8 @@ query {
 }
 `;
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   graphql(blogQuery).then(result => {
     const posts = result.data.allMarkdownRemark.edges;
@@ -74,8 +73,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   );
 };
 
-exports.onCreateNode = ({ boundActionCreators, getNode, node }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ actions, getNode, node }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
     const filePath = createFilePath({ basePath: 'pages', getNode, node });

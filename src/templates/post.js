@@ -1,10 +1,12 @@
 /**
  * @file Post.
- * @author Simon Finney <simonjfinney@gmail.com>
- * @copyright Simon Finney 2017
+ * @copyright Simon Finney 2018
  */
 
+import { graphql } from 'gatsby';
 import React from 'react';
+
+import Layout from '../layout';
 
 import Article from '../elements/article';
 import Heading from '../elements/heading';
@@ -12,17 +14,15 @@ import Time from '../elements/time';
 
 import Footer from '../components/footer';
 
-const { Fragment } = React;
-
-export default ({ data, pathContext }) => (
-  <Fragment>
+export default ({ data, pageContext }) => (
+  <Layout>
     <header>
       <Heading level="1" content={data.markdownRemark.frontmatter.title} />
       <Time dateTime={data.markdownRemark.frontmatter.date} />
     </header>
     <Article html={data.markdownRemark.html} />
-    <Footer data={pathContext} />
-  </Fragment>
+    <Footer data={pageContext} />
+  </Layout>
 );
 
 export const postQuery = graphql`

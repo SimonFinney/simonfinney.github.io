@@ -1,10 +1,7 @@
 /**
  * @file Gatsby configuration.
- * @author Simon Finney <simonjfinney@gmail.com>
- * @copyright Simon Finney 2017
+ * @copyright Simon Finney 2018
  */
-
-const autoprefixer = require('autoprefixer');
 
 const content = `${__dirname}/content/`;
 
@@ -62,14 +59,7 @@ module.exports = {
     technology: ['HTML', 'Sass', 'ES.Next', 'Node.js', 'gulp.js', 'webpack'],
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-postcss-sass',
-      options: {
-        postCssPlugins: [autoprefixer()],
-      },
-    },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -77,6 +67,7 @@ module.exports = {
         path: `${content}sections/`,
       },
     },
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

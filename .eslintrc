@@ -22,9 +22,6 @@
     "browser": true,
     "jest": true
   },
-  "globals": {
-    "graphql": true
-  },
   "rules": {
     "import/no-extraneous-dependencies": "warn",
     "quotes": [
