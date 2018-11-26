@@ -29,7 +29,6 @@
     "gh-pages": "yarn build && gh-pages -d public",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
     "lint:scss": "stylelint --fix --ignore-path .gitignore '**/*.scss'",
-    "precommit": "lint-staged",
     "start": "gatsby develop"
   },
   "devDependencies": {
