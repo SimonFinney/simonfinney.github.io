@@ -7,7 +7,9 @@
 
 /// Padding.
 /// @type Length
-$ul__padding: sizing-get(medium);
+$ul__padding: sizing-get(
+  $sizing: md,
+);
 
 ul {
   padding-left: $ul__padding;

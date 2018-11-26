@@ -7,11 +7,15 @@
 
 /// Margin.
 /// @type Length
-$blockquote__margin: sizing-get(none);
+$blockquote__margin: sizing-get(
+  $sizing: none,
+);
 
 /// Padding.
 /// @type Length
-$blockquote__padding: sizing-get(medium);
+$blockquote__padding: sizing-get(
+  $sizing: md,
+);
 
 /// Style.
 /// @type String
@@ -19,19 +23,27 @@ $blockquote__style: italic;
 
 /// Before background colour.
 /// @type Color
-$blockquote__before__colour__background: colour-get(brand--primary);
+$blockquote__before__colour__background: colour-get(
+  $colour: brand--primary,
+);
 
 /// Before position left.
 /// @type Length
-$blockquote__before__position--left: sizing-get(none);
+$blockquote__before__position--left: sizing-get(
+  $sizing: none,
+);
 
 /// Before position top.
 /// @type Length
-$blockquote__before__position--top: sizing-get(none);
+$blockquote__before__position--top: sizing-get(
+  $sizing: none,
+);
 
 /// Breakpoint.
 /// @type Length
-$blockquote__before__size: sizing-get(extra-small);
+$blockquote__before__size: sizing-get(
+  $sizing: xs,
+);
 
 blockquote {
   position: relative;

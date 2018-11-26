@@ -8,19 +8,27 @@
 
 /// Colour.
 /// @type Color
-$a__colour: colour-get(brand--primary);
+$a__colour: colour-get(
+  $colour: brand--primary,
+);
 
 /// Font weight.
 /// @type Length
-$a__font__weight: weight-get(bold);
+$a__font__weight: weight-get(
+  $font-weight: bold,
+);
 
 /// Icon size.
 /// @type Length
-$a__icon__size: icon-sizes-get(small);
+$a__icon__size: icon-sizes-get(
+  $icon-size: sm,
+);
 
 /// Icon margin.
 /// @type Length
-$a__icon__margin: sizing-get(small);
+$a__icon__margin: sizing-get(
+  $sizing: sm,
+);
 
 a {
   font-weight: $a__font__weight;
@@ -30,7 +38,7 @@ a {
   text-decoration-skip: ink;
 
   @each $icon in $icons {
-    @include icon($icon);
+    @include icon($icon-type: $icon);
   }
 
   &:focus,

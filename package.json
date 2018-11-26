@@ -28,7 +28,7 @@
     "format": "prettier --ignore-path .gitignore --write '**/*.{js,json,md,scss}'",
     "gh-pages": "yarn build && gh-pages -d public",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
-    "lint:scss": "stylelint --fix --ignore-path .gitignore .",
+    "lint:scss": "stylelint --fix --ignore-path .gitignore '**/*.scss'",
     "precommit": "lint-staged",
     "start": "gatsby develop"
   },
@@ -62,7 +62,7 @@
     "gatsby-remark-autolink-headers": "^2.0.11",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.0.0",
-    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-source-filesystem": "^2.0.9",
     "gatsby-transformer-remark": "^2.1.12",
     "gh-pages": "^2.0.1",
     "husky": "^1.2.0",

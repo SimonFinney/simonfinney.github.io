@@ -7,7 +7,9 @@
 
 /// Padding.
 /// @type Length
-$skills__padding: sizing-get(none);
+$skills__padding: sizing-get(
+  $sizing: none,
+);
 
 /// Style.
 /// @type String
@@ -23,11 +25,15 @@ $skills__li__font__weight: weight-get(bold);
 
 /// List item margin.
 /// @type Length
-$skills__li__margin: sizing-get(small);
+$skills__li__margin: sizing-get(
+  $sizing: sm,
+);
 
 /// List item padding.
 /// @type Length
-$skills__li__padding: sizing-get(small);
+$skills__li__padding: sizing-get(
+  $sizing: sm,
+);
 
 .skills {
   overflow: auto;

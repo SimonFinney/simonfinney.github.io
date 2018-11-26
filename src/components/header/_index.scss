@@ -7,41 +7,64 @@
 
 /// Border style.
 /// @type List<*>
-$header__border: sizing-get(extra-small) solid colour-get(brand--secondary);
+$header__border: sizing-get(
+    $sizing: xs,
+  )
+  solid
+  colour-get(
+    $colour: brand--secondary,
+  );
 
 /// Title font size.
 /// @type Length
-$header__title__font__size: font-size-get(extra-large);
+$header__title__font__size: font-size-get(
+  $font-size: extra-large,
+);
 
 /// Title margin.
 /// @type <List>Length
-$header__title__margin: sizing-get(large) sizing-get(none);
+$header__title__margin: sizing-get(
+    $sizing: lg,
+  )
+  sizing-get(
+    $sizing: none,
+  );
 
 /// Title weight.
 /// @type String
-$header__title__weight: weight-get(light);
+$header__title__weight: weight-get(
+  $font-weight: light,
+);
 
 /// List padding.
 /// @type Length
-$header__ul__padding: sizing-get(none);
+$header__ul__padding: sizing-get(
+  $sizing: none,
+);
 
 /// List item margin.
 /// @type Length
-$header__li__margin: sizing-get(medium);
+$header__li__margin: sizing-get(
+  $sizing: md,
+);
 
 /// Link colour.
 /// @type Colour
-$header__a__colour: colour-get(text--primary);
+$header__a__colour: colour-get(
+  $colour: text--primary,
+);
 
 /// Link focus colour.
 /// @type Colour
-$header__a__colour--focus: colour-get(brand--primary);
+$header__a__colour--focus: colour-get(
+  $colour: brand--primary,
+);
 
 .header {
   border-bottom: $header__border;
 
   &__title {
-    @include font-size($header__title__font__size);
+    @include font-size($font-size: $header__title__font__size);
 
     display: block;
     margin: $header__title__margin;

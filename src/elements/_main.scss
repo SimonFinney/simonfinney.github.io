@@ -7,17 +7,21 @@
 
 /// Breakpoint.
 /// @type Length
-$main__breakpoint: breakpoint-get(medium);
+$main__breakpoint: breakpoint-get(
+  $breakpoint: md,
+);
 
 /// Margin.
 /// @type Length
-$main__margin: sizing-get(large);
+$main__margin: sizing-get(
+  $sizing: lg,
+);
 
 /// Width.
 /// @type Length
 $main__width: calc(66% - #{$main__margin});
 
-@include media-query($main__breakpoint) {
+@include media-query($breakpoint: $main__breakpoint) {
   main {
     float: left;
     width: $main__width;

@@ -6,7 +6,7 @@
 /// Breakpoints.
 /// @type Map<Length>
 $breakpoints: (
-  medium: 60rem,
+  md: 60rem,
 );
 
 /// Returns a value from the breakpoint map.
@@ -27,17 +27,17 @@ $sizing__sizes: (
   none: (
     $unit__size * 0,
   ),
-  extra-extra-small: (
+  xxsm: (
     $unit__size / 4,
   ),
-  extra-small: (
+  xs: (
     $unit__size / 2,
   ),
-  small: $unit__size,
-  medium: (
+  sm: $unit__size,
+  md: (
     $unit__size * 2,
   ),
-  large: (
+  lg: (
     $unit__size * 4,
   ),
 );

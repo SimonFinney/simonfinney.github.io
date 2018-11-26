@@ -11,7 +11,9 @@ $aside__list__style: none;
 
 /// List padding.
 /// @type Length
-$aside__list__padding: sizing-get(none);
+$aside__list__padding: sizing-get(
+  $sizing: none,
+);
 
 .aside {
   &__list {

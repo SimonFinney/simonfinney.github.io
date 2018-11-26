@@ -7,11 +7,19 @@
 
 /// Border style.
 /// @type List<*>
-$posts__border: sizing-get(extra-extra-small) solid colour-get(brand--secondary);
+$posts__border: sizing-get(
+    $sizing: xxs,
+  )
+  solid
+  colour-get(
+    $colour: brand--secondary,
+  );
 
 /// Padding.
 /// @type Length
-$posts__padding: sizing-get(none);
+$posts__padding: sizing-get(
+  $sizing: none,
+);
 
 /// Style.
 /// @type String
@@ -19,7 +27,9 @@ $posts__style: none;
 
 /// List item padding.
 /// @type Length
-$posts__li__padding: sizing-get(small);
+$posts__li__padding: sizing-get(
+  $sizing: sm,
+);
 
 .posts {
   padding: $posts__padding;

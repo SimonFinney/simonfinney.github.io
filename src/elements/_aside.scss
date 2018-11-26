@@ -7,9 +7,11 @@
 
 /// Breakpoint.
 /// @type Length
-$aside__breakpoint: breakpoint-get(medium);
+$aside__breakpoint: breakpoint-get(
+  $breakpoint: medium,
+);
 
-@include media-query($aside__breakpoint) {
+@include media-query($breakpoint: $aside__breakpoint) {
   aside {
     float: left;
     width: 33%;

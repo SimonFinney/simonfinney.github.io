@@ -4,7 +4,7 @@
  */
 
 import { graphql } from 'gatsby';
-
+import { shape, string } from 'prop-types';
 import React from 'react';
 
 import Layout from '../layout';
@@ -12,16 +12,31 @@ import Layout from '../layout';
 import Article from '../elements/article';
 import Heading from '../elements/heading';
 
-export default ({ data }) => (
-  <Layout>
-    <header>
-      <Heading level="1" content={data.markdownRemark.frontmatter.title} />
-    </header>
-    <Article html={data.markdownRemark.html} />
-  </Layout>
-);
+const Section = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark;
 
-export const postQuery = graphql`
+  return (
+    <Layout>
+      <header>
+        <Heading level="1" content={frontmatter.title} />
+      </header>
+      <Article html={html} />
+    </Layout>
+  );
+};
+
+Section.propTypes = {
+  data: shape({
+    markdownRemark: shape({
+      frontmatter: shape({
+        title: string.isRequired,
+      }).isRequired,
+      html: string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
+export const sectionQuery = graphql`
   query SectionQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -31,3 +46,5 @@ export const postQuery = graphql`
     }
   }
 `;
+
+export default Section;

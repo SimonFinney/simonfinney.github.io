@@ -7,7 +7,9 @@
 
 /// Padding.
 /// @type Length
-$ol__padding: sizing-get(medium);
+$ol__padding: sizing-get(
+  $sizing: md,
+);
 
 ol {
   padding-left: $ol__padding;

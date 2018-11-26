@@ -7,8 +7,10 @@
 
 /// Font size.
 /// @type Length
-$figcaption__font__size: font-size-get(small);
+$figcaption__font__size: font-size-get(
+  $font-size: small,
+);
 
 figcaption {
-  @include font-size($figcaption__font__size);
+  @include font-size($font-size: $figcaption__font__size);
 }

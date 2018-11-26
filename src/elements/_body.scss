@@ -7,7 +7,9 @@
 
 /// Background colour.
 /// @type Color
-$body__colour__background: colour-get(colour__background);
+$body__colour__background: colour-get(
+  $colour: colour__background,
+);
 
 /// Margin.
 /// @type String
@@ -15,7 +17,12 @@ $body__margin: auto;
 
 /// Padding.
 /// @type <List>Length
-$body__padding: sizing-get(none) sizing-get(large);
+$body__padding: sizing-get(
+    $sizing: none,
+  )
+  sizing-get(
+    $sizing: lg,
+  );
 
 body {
   max-width: 1024px;

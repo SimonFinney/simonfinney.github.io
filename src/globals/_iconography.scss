@@ -12,7 +12,10 @@ $icons: (codepen, email, github, instagram, linkedin, medium, twitter);
 /// Icon sizes.
 /// @type Map<Length>
 $icon__sizes: (
-  small: sizing-get(medium),
+  sm:
+    sizing-get(
+      $sizing: md,
+    ),
 );
 
 /// Returns a value from the icon sizes map.
@@ -27,7 +30,7 @@ $icon__sizes: (
 /// @param {String} $icon-type - The icon to use.
 /// @example scss
 ///   a {
-///     @include icon('codepen');
+///     @include icon($icon-type: codepen);
 ///   }
 /// @output css
 ///   a[data-icon='codepen']::before {
