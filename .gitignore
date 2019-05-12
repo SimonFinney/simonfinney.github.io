@@ -12,9 +12,6 @@ public
 # Logs.
 *.log
 
-# Environment variables.
-.env
-
 # Operating system.
 .DS_Store
 

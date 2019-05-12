@@ -52,7 +52,7 @@ colour blindness. If we invert the colours, we can also see that it performs for
 those sensitive to brightness, and easier to distinguish for those suffering
 from colour blindness:
 
-![Equitable Use - Problem](../images/pages/universal-inclusive-design-accessibility/Tickets.ie_Equitable-Use.png)
+![Equitable Use - Problem](../images/universal-inclusive-design-accessibility/Tickets.ie_Equitable-Use.png)
 
 <figcaption>Equitable Use - Problem</figcaption>
 
@@ -65,7 +65,7 @@ with deuteranopia, a common form of colour blindness, by integrating a limited
 but effective colour palette to differentiate between different sections and
 navigation elements.
 
-![Equitable Use - Solution](../images/pages/universal-inclusive-design-accessibility/Yelp_Equitable-Use.png)
+![Equitable Use - Solution](../images/universal-inclusive-design-accessibility/Yelp_Equitable-Use.png)
 
 <figcaption>Equitable Use - Solution</figcaption>
 
@@ -87,14 +87,14 @@ preferences and abilities. The recommended guidelines for this context are:
 Tickets.ie in it's current form, doesn't provide a whole lot of flexibility in
 terms of filtering down or sorting search results:
 
-![Flexibility in Use](../images/pages/gaining-empathy/Tickets.ie.png)
+![Flexibility in Use](../images/gaining-empathy/Tickets.ie.png)
 
 <figcaption>Flexibility in Use - Problem</figcaption>
 
 Providing flexibile filtering controls would allow the target audience choice in
 the methods they use, and pivot easily within their context at their own pace.
 
-![Flexibility in Use](../images/pages/universal-inclusive-design-accessibility/Flexibility-in-Use.jpg)
+![Flexibility in Use](../images/universal-inclusive-design-accessibility/Flexibility-in-Use.jpg)
 
 <figcaption>Flexibility in Use - Solution</figcaption>
 
@@ -141,14 +141,14 @@ functionality.
 Regardless of left or right-handed users, any task would be difficult to
 achieve:
 
-![Size and Space for Approach and Use - Problem](../images/pages/universal-inclusive-design-accessibility/Tickets.ie_Size-Space-Approach-Use.png)
+![Size and Space for Approach and Use - Problem](../images/universal-inclusive-design-accessibility/Tickets.ie_Size-Space-Approach-Use.png)
 
 <figcaption>Size and Space for Approach and Use - Problem</figcaption>
 
 In an effort to minimise fatigue for the current website on mobile, I've drafted
 a quick solution below:
 
-![Size and Space for Approach and Use - Solution](../images/pages/universal-inclusive-design-accessibility/Size-Space-Approach-Use.jpg)
+![Size and Space for Approach and Use - Solution](../images/universal-inclusive-design-accessibility/Size-Space-Approach-Use.jpg)
 
 <figcaption>Size and Space for Approach and Use - Solution</figcaption>
 
@@ -180,7 +180,7 @@ is employed (Cooper, 2016).
 To meet the criteria for accessibility standards, the current website was
 scanned using an accessibility policy tester, against a number of guidelines:
 
-![Accessibility policy testing](../images/pages/universal-inclusive-design-accessibility/Tickets.ie_Policy-testing.png)
+![Accessibility policy testing](../images/universal-inclusive-design-accessibility/Tickets.ie_Policy-testing.png)
 
 <figcaption>Accessibility policy testing</figcaption>
 

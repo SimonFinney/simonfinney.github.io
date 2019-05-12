@@ -48,7 +48,7 @@ their customers, providing encouragement and a sense of accomplishment once any
 task has been completed. It's full of hidden delight, and they're also not
 afraid to throw a bit of humour into the mix!
 
-![MailChimp Voice & Tone](../images/pages/design-languages-pattern-libraries/mailchimp-voice-tone.jpg)
+![MailChimp Voice & Tone](../images/design-languages-pattern-libraries/mailchimp-voice-tone.jpg)
 
 <figcaption>MailChimp Voice & Tone</figcaption>
 
@@ -71,7 +71,7 @@ regarding how to write content, but it does it provide plenty of insight and
 usage guidelines into patterns, both basic and complex, and visual elements such
 as typography, colour, and layout.
 
-![Yelp styleguide](../images/pages/design-languages-pattern-libraries/yelp-styleguide.png)
+![Yelp styleguide](../images/design-languages-pattern-libraries/yelp-styleguide.png)
 
 <figcaption>Yelp Styleguide</figcaption>
 

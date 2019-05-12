@@ -25,7 +25,7 @@ learn mental models and remember how to carry out everyday tasks.
 The wise Don Norman describes how people do things as the Seven Stages of
 Action:
 
-![Seven Stages of Action](../images/pages/cognitive-social-psychology/Seven-Stages-of-Action.gif)
+![Seven Stages of Action](../images/cognitive-social-psychology/Seven-Stages-of-Action.png)
 
 <figcaption>Seven Stages of Action</figcaption>
 
@@ -50,14 +50,14 @@ When we look at all of the events on
 wasn't a whole lot of consideration for cognitive load, and making the
 information easier to scan.
 
-![People Have Limitations - Problem](../images/pages/cognitive-social-psychology/Tickets.ie_Cognitive-psychology.png)
+![People Have Limitations - Problem](../images/cognitive-social-psychology/Tickets.ie_Cognitive-psychology.png)
 
 <figcaption>People Have Limitations - Problem</figcaption>
 
 It may have been a better approach to structure the event information in more
 digestible manner, providing some media to make each listing easier to consume:
 
-![People Have Limitations - Solution](../images/pages/cognitive-social-psychology/Cognitive-psychology.jpg)
+![People Have Limitations - Solution](../images/cognitive-social-psychology/Cognitive-psychology.jpg)
 
 <figcaption>People Have Limitations - Solution</figcaption>
 
@@ -98,7 +98,7 @@ people to engage with a product and take some form of action:
 When looking for some social elements on Tickets.ie, there doesn't seem to be a
 whole lot:
 
-![Social psychology - Problem](../images/pages/cognitive-social-psychology/Tickets.ie_Social-psychology.png)
+![Social psychology - Problem](../images/cognitive-social-psychology/Tickets.ie_Social-psychology.png)
 
 <figcaption>Social psychology - Problem</figcaption>
 
@@ -119,14 +119,14 @@ into my designs:
 With reciprocation, our users could be offered a chance to win tickets for the
 event, or to track it, in exchange for creating an account with us.
 
-![Social psychology - Reciprocation](../images/pages/cognitive-social-psychology/Reciprocation.jpg)
+![Social psychology - Reciprocation](../images/cognitive-social-psychology/Reciprocation.jpg)
 
 <figcaption>Social psychology - Reciprocation</figcaption>
 
 To piggyback off social influence, the application's audience can see just who's
 attending the event, including those they're friends with on social media.
 
-![Social psychology - Social Proof](../images/pages/cognitive-social-psychology/Social-Proof.jpg)
+![Social psychology - Social Proof](../images/cognitive-social-psychology/Social-Proof.jpg)
 
 <figcaption>Social psychology - Social Proof</figcaption>
 
@@ -134,7 +134,7 @@ The final redesign could include an indicator showing exactly how many tickets
 are left for the event, so depending on how scarce they're becoming the user may
 act quickly to make sure they don't miss out!
 
-![Social psychology - Scarcity](../images/pages/cognitive-social-psychology/Scarcity.jpg)
+![Social psychology - Scarcity](../images/cognitive-social-psychology/Scarcity.jpg)
 
 <figcaption>Social psychology - Scarcity</figcaption>
 
@@ -142,7 +142,7 @@ Depending on what our audience has already viewed, artist's they're interested
 in, and even they're current location, salience can be applied to surface events
 that are most relevant to them, increasing chance of purchase.
 
-![Social psychology - Salience](../images/pages/cognitive-social-psychology/Salience.jpg)
+![Social psychology - Salience](../images/cognitive-social-psychology/Salience.jpg)
 
 <figcaption>Social psychology - Salience</figcaption>
 
@@ -150,7 +150,7 @@ Finally, contrast can be applied to most important calls-to-action for ticket
 vendors, such as the action of buying a ticket, to make them stand out and catch
 the eyes of the audience.
 
-![Social psychology - Contrast](../images/pages/cognitive-social-psychology/Contrast.jpg)
+![Social psychology - Contrast](../images/cognitive-social-psychology/Contrast.jpg)
 
 <figcaption>Social psychology - Contrast</figcaption>
 

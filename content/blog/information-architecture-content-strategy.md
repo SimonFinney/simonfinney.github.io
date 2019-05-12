@@ -49,7 +49,7 @@ Instead of forcing those who are browsing for events down a funnel with no
 return, the updated sitemap conveys the idea that someone can manipulate the
 event listings purely by toggling on and off options of their choice.
 
-![Information architecture](../images/pages/information-architecture-content-strategy/Information-architecture.jpg)
+![Information architecture](../images/information-architecture-content-strategy/Information-architecture.jpg)
 
 <figcaption>Information architecture</figcaption>
 
@@ -111,7 +111,7 @@ Using only a few materials, I started to describe everything I felt the
 redesigns brand should offer, as well as what the audience's needs were for the
 product.
 
-![Message architecture](../images/pages/information-architecture-content-strategy/Message-architecture.jpg)
+![Message architecture](../images/information-architecture-content-strategy/Message-architecture.jpg)
 
 <figcaption>Message architecture</figcaption>
 
@@ -140,21 +140,21 @@ addressing:
 There was a number of high character counts littered around the website,
 particularly on navigation links and subheadings.
 
-![Core content audit - High character counts](../images/pages/information-architecture-content-strategy/Core-content-audit_1-3.png)
+![Core content audit - High character counts](../images/information-architecture-content-strategy/Core-content-audit_1-3.png)
 
 <figcaption>Core content audit- High character counts</figcaption>
 
 Throughout the artists, events, and venue pages there was redundant headings and
 labels, with some of these being truncated in certain places.
 
-![Core content audit - Redundancy](../images/pages/information-architecture-content-strategy/Core-content-audit_2-3.png)
+![Core content audit - Redundancy](../images/information-architecture-content-strategy/Core-content-audit_2-3.png)
 
 <figcaption>Core content audit - Redundancy</figcaption>
 
 Finally, calls-to-action were inconsistent with each other, both in styling and
 wording.
 
-![Core content audit - Inconsistency](../images/pages/information-architecture-content-strategy/Core-content-audit_3-3.png)
+![Core content audit - Inconsistency](../images/information-architecture-content-strategy/Core-content-audit_3-3.png)
 
 <figcaption>Core content audit - Inconsistency</figcaption>
 

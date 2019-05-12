@@ -36,15 +36,15 @@ with word-of-mouth to get the job done and find the information I need.
 Here's some samples outlining the lack of customisability, flexibility and
 variety of information my current means provide:
 
-![entertainment.ie](../images/pages/introduction/entertainment.ie.png)
+![entertainment.ie](../images/introduction/entertainment.ie.png)
 
 <figcaption>entertainment.ie</figcaption>
 
-![NME](../images/pages/introduction/NME.png)
+![NME](../images/introduction/NME.png)
 
 <figcaption>NME</figcaption>
 
-![Tickets.ie](../images/pages/introduction/Tickets.ie.png)
+![Tickets.ie](../images/introduction/Tickets.ie.png)
 
 <figcaption>Tickets.ie</figcaption>
 

@@ -20,7 +20,7 @@ Below are some samples from [MCD.ie](http://www.mcd.ie/listings/) and
 [Tickets.ie](http://www.tickets.ie/events.aspx/category/Music/1), highlighting
 some of the issues that plague gig listing websites today:
 
-![MCD.ie](../images/pages/gaining-empathy/MCD.ie.png)
+![MCD.ie](../images/gaining-empathy/MCD.png)
 
 <figcaption>MCD.ie</figcaption>
 
@@ -31,7 +31,7 @@ MCD.ie makes it pretty difficult to discover upcoming gigs:
 
 Tickets.ie, while slightly better than MCD, still lacks in many regards:
 
-![Tickets.ie](../images/pages/gaining-empathy/Tickets.ie.png)
+![Tickets.ie](../images/gaining-empathy/Tickets.ie.png)
 
 <figcaption>Tickets.ie</figcaption>
 
@@ -58,7 +58,7 @@ their pains and opportunities. From here, I borrowed some formatting guidelines
 points to develop a best guess as to who exactly is using these products and
 why.
 
-![Empathy map](../images/pages/gaining-empathy/Empathy-map.jpg)
+![Empathy map](../images/gaining-empathy/Empathy-map.jpg)
 
 <figcaption>Empathy map</figcaption>
 
@@ -73,7 +73,7 @@ outline the scenario of Eoin attempting to discover a gig for the weekend.
 Mapping out the experience helped me understand the possible settings in which
 the current applications are used (Cooper, Cronin, & Reimann, 2007).
 
-![Experience map](../images/pages/gaining-empathy/Experience-map.jpg)
+![Experience map](../images/gaining-empathy/Experience-map.jpg)
 
 <figcaption>Experience map</figcaption>
 
@@ -82,7 +82,7 @@ better. Storyboarding would help communicate opportunities and pain points by
 telling a user-centric story, as well as provide a narrative I could use when
 producing screencasts.
 
-![Storyboard](../images/pages/gaining-empathy/Storyboard.jpg)
+![Storyboard](../images/gaining-empathy/Storyboard.jpg)
 
 <figcaption>Storyboard</figcaption>
 

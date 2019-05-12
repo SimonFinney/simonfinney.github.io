@@ -30,7 +30,7 @@ and the
 [experience mapping and storyboarding](../gaining-empathy#experience-mapping-and-storyboarding)
 exercises I conducted in my previous post on gaining empathy.
 
-![User flow](/images/high-fidelity-solution/User-flow.jpg)
+![User flow](../images/high-fidelity-solution/User-flow.jpg)
 
 <figcaption>User flow</figcaption>
 
@@ -68,7 +68,7 @@ Yelp's, that was specific and fit-for-purpose across the application:
 - **Secondary colour:** #4b8400 - Reserved for special actions like discovering
   prices
 
-![Colour palette](../images/pages/high-fidelity-solution/Colour-palette.png)
+![Colour palette](../images/high-fidelity-solution/Colour-palette.png)
 
 <figcaption>Colour palette</figcaption>
 
@@ -76,7 +76,7 @@ The filter button present on the landing view shows how I adapted the
 [Floating Action Button](https://www.google.com/design/spec/components/buttons-floating-action-button.html)
 of material design to fall in line with the colour palette I adopted:
 
-![Filter](../images/pages/high-fidelity-solution/Filter.png)
+![Filter](../images/high-fidelity-solution/Filter.png)
 
 <figcaption>Filter</figcaption>
 
@@ -120,7 +120,7 @@ I spoke about reducing cognitive load by making information easier to digest
 using a combination of media and text - here's an example of that in the design
 solution:
 
-![Reducing cognitive load](../images/pages/high-fidelity-solution/Reducing-cognitive-load.png)
+![Reducing cognitive load](../images/high-fidelity-solution/Reducing-cognitive-load.png)
 
 <figcaption>Reducing cognitive load</figcaption>
 
@@ -135,7 +135,7 @@ Seeing just how many people you know are attending the event may sway you to
 attend yourself, so the concept of social proof comes into play at the bottom of
 any events details page:
 
-![Social proof and contrast load](../images/pages/high-fidelity-solution/Social-proof-contrast.png)
+![Social proof and contrast load](../images/high-fidelity-solution/Social-proof-contrast.png)
 
 <figcaption>Social proof and contrast</figcaption>
 
@@ -162,7 +162,7 @@ tritanopia, an extremely rare condition that renders blue and green almost
 indistinguishable. The colour palette I developed above provides what I feel is
 enough of a noticeable distinction between actions:
 
-![Tritanopia comparison](../images/pages/high-fidelity-solution/Tritanopia-comparison.png)
+![Tritanopia comparison](../images/high-fidelity-solution/Tritanopia-comparison.png)
 
 <figcaption>Tritanopia comparison</figcaption>
 
@@ -170,7 +170,7 @@ To demonstrate flexibility in use, I produced filtering controls that would
 provide the target audience choice in the methods that they used for discovering
 upcoming events, which they could do at their own pace:
 
-![Filter panel](../images/pages/high-fidelity-solution/Filter-panel.png)
+![Filter panel](../images/high-fidelity-solution/Filter-panel.png)
 
 <figcaption>Filter panel</figcaption>
 
@@ -179,7 +179,7 @@ flexibility of manipulating the event listings depending on the options they
 select. There are also multiple avenues of navigation between artist, event, and
 venue:
 
-![Navigation](../images/pages/high-fidelity-solution/Navigation.png)
+![Navigation](../images/high-fidelity-solution/Navigation.png)
 
 <figcaption>Navigation</figcaption>
 
