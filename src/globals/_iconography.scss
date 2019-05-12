@@ -1,6 +1,6 @@
 ////
 /// Iconography definitions.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import 'sizing';
@@ -34,13 +34,13 @@ $icon__sizes: (
 ///   }
 /// @output css
 ///   a[data-icon='codepen']::before {
-///     background-image: url('images/assets/icons/codepen.svg');
+///     background-image: url('assets/icons/codepen.svg');
 ///   }
 
 @mixin icon($icon-type) {
   &[data-icon='#{$icon-type}'] {
     &::before {
-      background-image: url('images/assets/icons/#{$icon-type}.svg');
+      background-image: url('assets/icons/#{$icon-type}.svg');
     }
   }
 }

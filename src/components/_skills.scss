@@ -1,54 +1,30 @@
 ////
 /// Skills component styles.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/media', '../globals/sizing';
 
-/// Padding.
-/// @type Length
-$skills__padding: sizing-get(
-  $sizing: none,
-);
-
-/// Style.
-/// @type String
-$skills__style: none;
-
-/// List item background colour.
-/// @type Colour
-$skills__li__colour__background: colour-get(brand--secondary);
-
-/// Font weight.
-/// @type Length
-$skills__li__font__weight: weight-get(bold);
-
-/// List item margin.
-/// @type Length
-$skills__li__margin: sizing-get(
-  $sizing: sm,
-);
-
-/// List item padding.
-/// @type Length
-$skills__li__padding: sizing-get(
-  $sizing: sm,
-);
-
 .skills {
+  /// List item margin.
+  /// @type Length
+  $skills__li__margin: sizing-get(
+    $sizing: sm,
+  );
+
   overflow: auto;
-  padding-left: $skills__padding;
-  list-style: $skills__style;
+  padding-left: sizing-get($sizing: none);
+  list-style: none;
 
   > li {
     display: inline-block;
     margin-right: $skills__li__margin;
     margin-bottom: $skills__li__margin;
-    padding: $skills__li__padding;
-    background-color: $skills__li__colour__background;
+    padding: sizing-get($sizing: sm);
+    background-color: colour-get(brand--secondary);
 
     @include print {
-      font-weight: $skills__li__font__weight;
+      font-weight: weight-get(bold);
     }
   }
 }

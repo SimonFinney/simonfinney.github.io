@@ -1,6 +1,6 @@
 ////
 /// Link styles.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/iconography', '../globals/media',
@@ -35,7 +35,7 @@ a {
   text-decoration: none;
   color: $a__colour;
   transition: 0.1s;
-  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 
   @each $icon in $icons {
     @include icon($icon-type: $icon);

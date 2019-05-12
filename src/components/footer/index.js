@@ -1,6 +1,6 @@
 /**
  * @file Footer.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
 
 import Link from 'gatsby-link';

@@ -1,25 +1,21 @@
 ////
 /// Footer component styles.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import '../../globals/sizing';
 
-/// Section margin.
-/// @type Length
-$footer__section__margin: sizing-get(
-  $sizing: md,
-);
-
-/// Section width.
-/// @type Length
-$footer__section__width: calc(50% - #{$footer__section__margin});
-
 .footer {
+  /// Section margin.
+  /// @type Length
+  $footer__section__margin: sizing-get(
+    $sizing: md,
+  );
+
   &__section {
     &--next,
     &--previous {
-      width: $footer__section__width;
+      width: calc(50% - #{$footer__section__margin});
     }
 
     &--next {

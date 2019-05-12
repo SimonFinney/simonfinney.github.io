@@ -1,6 +1,6 @@
 /**
  * @file Layout.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
 
 import { graphql, StaticQuery } from 'gatsby';
@@ -36,11 +36,11 @@ const query = graphql`
     }
     site {
       siteMetadata {
+        subtitle
         title
         contact {
-          label
-          url
-          handle
+          text
+          href
           icon
         }
       }
@@ -53,7 +53,7 @@ const Layout = ({ children }) => (
     query={query}
     render={data => {
       const { allMarkdownRemark, site } = data;
-      const { contact, title } = site.siteMetadata;
+      const { contact, subtitle, title } = site.siteMetadata;
 
       const postsListItems = allMarkdownRemark.edges.map(({ node }) => {
         const { fields, frontmatter, id } = node;
@@ -68,15 +68,15 @@ const Layout = ({ children }) => (
         );
       });
 
-      const contactListItems = contact.map(({ handle, icon, label, url }) => (
+      const contactListItems = contact.map(({ href, icon, text }) => (
         <li key={icon}>
           <a
-            href={`${url}${handle}`}
+            href={href}
             rel="noopener noreferrer"
             target="_blank"
             data-icon={icon}
           >
-            {label}
+            {text}
           </a>
         </li>
       ));
@@ -88,7 +88,7 @@ const Layout = ({ children }) => (
             <meta name="description" content="" />
           </Helmet>
 
-          <Header title={title} />
+          <Header subtitle={subtitle} title={title} />
           <main role="main">{children}</main>
           <aside>
             <Aside title="Posts" listItems={postsListItems} />

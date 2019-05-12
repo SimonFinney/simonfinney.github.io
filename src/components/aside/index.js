@@ -1,6 +1,6 @@
 /**
  * @file Aside list.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
 
 import React from 'react';

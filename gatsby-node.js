@@ -1,9 +1,7 @@
 /**
  * @file Gatsby node configuration.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
-
-require('dotenv').config();
 
 const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');

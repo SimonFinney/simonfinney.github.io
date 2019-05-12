@@ -1,6 +1,6 @@
 ////
 /// HTML styles.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/typography';
@@ -25,6 +25,7 @@ html {
   font-family: $html__font__family;
   line-height: $html__font__line-height;
   font-weight: $html__font__weight;
+  letter-spacing: 0.00625rem;
   color: $html__colour;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

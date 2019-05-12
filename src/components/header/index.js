@@ -1,28 +1,31 @@
 /**
  * @file Header.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
 
 import Link from 'gatsby-link';
 import React from 'react';
 
-const ListItem = ({ href, title }) => (
-  <li className="header__li">
-    <Link activeClassName="header__a--active" className="header__a" to={href}>
-      {title}
-    </Link>
-  </li>
-);
-
-export default ({ title }) => (
+const Header = ({ title, subtitle }) => (
   <header className="header" role="banner">
     <Link className="header__title" to="/">
       {title}
     </Link>
+    <span className="header__subtitle">{subtitle}</span>
     <nav role="navigation">
       <ul className="header__ul">
-        <ListItem href="/posts" title="Posts" />
+        <li className="header__li">
+          <Link
+            activeClassName="header__a--active"
+            className="header__a"
+            to="/posts"
+          >
+            Posts
+          </Link>
+        </li>
       </ul>
     </nav>
   </header>
 );
+
+export default Header;

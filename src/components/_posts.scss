@@ -1,43 +1,27 @@
 ////
 /// Posts component styles.
-/// @copyright Simon Finney 2018
+/// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/sizing';
 
-/// Border style.
-/// @type List<*>
-$posts__border: sizing-get(
-    $sizing: xxs,
-  )
-  solid
-  colour-get(
-    $colour: brand--secondary,
-  );
-
-/// Padding.
-/// @type Length
-$posts__padding: sizing-get(
-  $sizing: none,
-);
-
-/// Style.
-/// @type String
-$posts__style: none;
-
-/// List item padding.
-/// @type Length
-$posts__li__padding: sizing-get(
-  $sizing: sm,
-);
-
 .posts {
-  padding: $posts__padding;
-  list-style: $posts__style;
+  /// Border style.
+  /// @type List<*>
+  $posts__border: sizing-get(
+      $sizing: xxs,
+    )
+    solid
+    colour-get(
+      $colour: brand--secondary,
+    );
+
+  padding: sizing-get($sizing: none);
+  list-style: none;
 
   > li {
     display: inline-block;
-    padding: $posts__li__padding;
+    padding: sizing-get($sizing: sm);
     border-bottom: $posts__border;
 
     &:first-of-type {

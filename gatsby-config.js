@@ -1,80 +1,57 @@
 /**
  * @file Gatsby configuration.
- * @copyright Simon Finney 2018
+ * @copyright Simon Finney 2019
  */
-
-const content = `${__dirname}/content/`;
 
 module.exports = {
   siteMetadata: {
-    title: 'Simon Finney — Front End Specialist',
+    title: 'Simon Finney',
+    subtitle: 'Front End Specialist',
     contact: [
       {
-        label: 'simonjfinney@gmail.com',
-        url: 'mailto:',
-        handle: 'simonjfinney@gmail.com',
+        text: 'simonjfinney@gmail.com',
+        href: 'mailto:simonjfinney@gmail.com',
         icon: 'email',
       },
       {
-        label: 'GitHub',
-        url: 'http://github.com/',
-        handle: 'simonfinney',
+        text: 'GitHub',
+        href: 'http://github.com/simonfinney',
         icon: 'github',
       },
       {
-        label: 'CodePen',
-        url: 'http://codepen.io/',
-        handle: 'simonfinney',
+        text: 'CodePen',
+        href: 'http://codepen.io/simonfinney',
         icon: 'codepen',
       },
       {
-        label: 'Medium',
-        url: 'http://medium.com/@',
-        handle: 'simonfinney',
-        icon: 'medium',
-      },
-      {
-        label: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/',
-        handle: 'simonfinney',
+        text: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/simonfinney',
         icon: 'linkedin',
       },
       {
-        label: 'Instagram',
-        url: 'https://www.instagram.com/',
-        handle: 'simonfinney',
+        text: 'Medium',
+        href: 'http://medium.com/@simonfinney',
+        icon: 'medium',
+      },
+      {
+        text: 'Instagram',
+        href: 'https://www.instagram.com/simonfinney',
         icon: 'instagram',
       },
     ],
-    skills: [
-      'Front end architecture',
-      'Performance',
-      'Accessibility',
-      'Build optimisation',
-      'Responsive design',
-      'Design thinking',
-      'User experience',
-      'User research',
-    ],
-    technology: ['HTML', 'Sass', 'ES.Next', 'Node.js', 'gulp.js', 'webpack'],
   },
   plugins: [
+    ...['blog', 'images', 'sections'].map(name => ({
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name,
+        path: `${__dirname}/content/${name}`,
+      },
+    })),
+
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'section',
-        path: `${content}sections/`,
-      },
-    },
     'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'blog',
-        path: `${content}blog/`,
-      },
-    },
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -87,16 +64,7 @@ module.exports = {
               target: '_blank',
             },
           },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // This plugin uses this as the base for generating different widths of each image.
-              maxWidth: 640,
-
-              // Analyse images' pixel density to make decisions about target image size.
-              sizeByPixelDensity: true,
-            },
-          },
+          'gatsby-remark-images',
         ],
       },
     },
