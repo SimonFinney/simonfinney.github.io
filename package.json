@@ -23,7 +23,7 @@
     "build": "gatsby build",
     "deploy": "yarn run-s build gh-pages",
     "format": "prettier --ignore-path .gitignore --write '**/*.{js,json,md,scss}'",
-    "gh-pages": "gh-pages -d public",
+    "gh-pages": "gh-pages -b master -d public",
     "lint": "yarn run-s lint:*",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
     "lint:scss": "stylelint --fix --ignore-path .gitignore '**/*.scss'",
