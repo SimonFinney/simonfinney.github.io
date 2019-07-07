@@ -106,7 +106,7 @@ higher in comparison.
 
 ## Next steps
 
-In the next post, I'll look at gaining empathy for those exposed to the current
+In the next article, I'll look at gaining empathy for those exposed to the current
 gig-finding experience. The topics I'll cover will include proto-personas,
 identifying any issues with the current scenario, and experience and scenario
 mapping via storyboarding.

@@ -3,14 +3,13 @@
  * @copyright Simon Finney 2019
  */
 
-import React from 'react';
 import { string } from 'prop-types';
+import React from 'react';
 
-const time = ({ dateTime, label }) => <time dateTime={dateTime}>{label}</time>;
+const time = ({ dateTime }) => <time dateTime={dateTime}>{dateTime}</time>;
 
 time.propTypes = {
   dateTime: string.isRequired,
-  label: string.isRequired,
 };
 
 export default time;

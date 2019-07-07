@@ -4,7 +4,7 @@ title: Universal (inclusive) design and accessibility
 description: #
 ---
 
-For this post, I'm going to take a look at the principles of universal design,
+For this article, I'm going to take a look at the principles of universal design,
 or inclusive design as it's more commonly known, and how it and accessibility
 can be applied to the current website in my final designs.
 
@@ -109,11 +109,11 @@ user's experience or knowledge:
 - 3d. Arrange information consistent with its importance
 - 3e. Provide effective prompting and feedback during and after task completion
 
-The current website, as discussed in previous posts, operates in a funnel, and
+The current website, as discussed in previous articles, operates in a funnel, and
 has appalling navigation between artists, events, and venues, a standard of
 which any web user expects today.
 
-As addressed in my post on
+As addressed in my article on
 [information architecture and content strategy](/2016/3/27/information-architecture-content-strategy#information-architecture),
 it's intended that the target audience will be able to manipulate the event
 listings purely by toggling on and off options of their choice, and users should
@@ -212,7 +212,7 @@ process and finally start building!
 
 ## Next steps
 
-My final post will detail the production process of my design and prototype
+My final article will detail the production process of my design and prototype
 using Adobe Illustrator and Experience Design - I'll walk through the typical
 flow for Eoin, our primary user, and incorporate all of the artifacts I've
 produced so far.

@@ -1,14 +1,14 @@
 ////
-/// Skills component styles.
+/// Services component styles.
 /// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/media', '../globals/sizing';
 
-.skills {
+.services {
   /// List item margin.
   /// @type Length
-  $skills__li__margin: sizing-get(
+  $services__li__margin: sizing-get(
     $sizing: sm,
   );
 
@@ -18,8 +18,8 @@
 
   > li {
     display: inline-block;
-    margin-right: $skills__li__margin;
-    margin-bottom: $skills__li__margin;
+    margin-right: $services__li__margin;
+    margin-bottom: $services__li__margin;
     padding: sizing-get($sizing: sm);
     background-color: colour-get(brand--secondary);
 

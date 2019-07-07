@@ -164,7 +164,7 @@ provide the application with a consistent feel, and tone of voice.
 
 ## Next steps
 
-In the next post, I'll look at whether cognitive and social psychological
+In the next article, I'll look at whether cognitive and social psychological
 principles are present in the current website, and leverage them to further
 improve the experience.
 

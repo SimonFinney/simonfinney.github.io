@@ -1,7 +1,7 @@
 ---
 date: 2016-04-03
 title: Cognitive and social psychology
-description: Blog post outlining influential and motivating cognitive and social psychological principles applied to user experience design
+description: Article outlining influential and motivating cognitive and social psychological principles applied to user experience design
 ---
 
 This week I spent time researching cognitive and social psychological principles
@@ -161,7 +161,7 @@ mockups, we'll be able to see these concepts further take shape.
 
 ## Next steps
 
-In my next post, I'm going to examine concepts and principles of universal
+In my next article, I'm going to examine concepts and principles of universal
 design (inclusive design) and accessibility to see how they can be applied to my
 final designs.
 

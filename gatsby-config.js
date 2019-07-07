@@ -3,9 +3,12 @@
  * @copyright Simon Finney 2019
  */
 
+const { description } = require('./package.json');
+
 module.exports = {
   siteMetadata: {
     title: 'Simon Finney',
+    description,
     subtitle: 'Front End Specialist',
     contact: [
       {
@@ -41,7 +44,7 @@ module.exports = {
     ],
   },
   plugins: [
-    ...['blog', 'images', 'sections'].map(name => ({
+    ...['articles', 'images', 'sections'].map(name => ({
       resolve: 'gatsby-source-filesystem',
       options: {
         name,

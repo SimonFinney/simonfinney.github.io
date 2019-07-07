@@ -5,9 +5,9 @@
 
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import React, { Fragment } from 'react';
+import Helmet from 'react-helmet';
 
 import Header from '../components/header';
 import Aside from '../components/aside';
@@ -17,7 +17,7 @@ import '../index.scss';
 const query = graphql`
   query DefaultQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/articles/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -36,6 +36,7 @@ const query = graphql`
     }
     site {
       siteMetadata {
+        description
         subtitle
         title
         contact {
@@ -48,14 +49,14 @@ const query = graphql`
   }
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, head }) => (
   <StaticQuery
     query={query}
     render={data => {
       const { allMarkdownRemark, site } = data;
-      const { contact, subtitle, title } = site.siteMetadata;
+      const { contact, description, subtitle, title } = site.siteMetadata;
 
-      const postsListItems = allMarkdownRemark.edges.map(({ node }) => {
+      const articlesListItems = allMarkdownRemark.edges.map(({ node }) => {
         const { fields, frontmatter, id } = node;
         const { date, title } = frontmatter;
 
@@ -83,7 +84,7 @@ const Layout = ({ children }) => (
 
       return (
         <Fragment>
-          <Helmet title={title}>
+          <Helmet title={head ? `${head} — ${title}` : description}>
             <html dir="ltr" lang="en" />
             <meta name="description" content="" />
           </Helmet>
@@ -91,7 +92,7 @@ const Layout = ({ children }) => (
           <Header subtitle={subtitle} title={title} />
           <main role="main">{children}</main>
           <aside>
-            <Aside title="Posts" listItems={postsListItems} />
+            <Aside title="Articles" listItems={articlesListItems} />
             <Aside title="Contact" listItems={contactListItems} />
           </aside>
         </Fragment>
@@ -100,8 +101,12 @@ const Layout = ({ children }) => (
   />
 );
 
+Layout.defaultProps = {
+  head: null,
+};
+
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  head: string,
 };
 
 export default Layout;

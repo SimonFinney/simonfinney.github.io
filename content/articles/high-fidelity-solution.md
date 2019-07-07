@@ -16,7 +16,7 @@ prototype that incorporates a number of these considerations.
 
 Due to time constraints and resources, I only managed to perform usability
 testing with one participant, the details of which can be found at the end of
-this post.
+this article.
 
 As a learning challenge for myself, I decided to use some tools that I wasn't
 too familiar with, Adobe Experience Design and Illustrator, in an effort to try
@@ -28,7 +28,7 @@ My first task was to develop a user flow that I felt was suitable for my primary
 persona, [Eoin](https://drive.google.com/open?id=0BzA9UyHASmcNNlhldnFENlJOUmc),
 and the
 [experience mapping and storyboarding](../gaining-empathy#experience-mapping-and-storyboarding)
-exercises I conducted in my previous post on gaining empathy.
+exercises I conducted in my previous article on gaining empathy.
 
 ![User flow](../images/high-fidelity-solution/User-flow.jpg)
 
@@ -55,7 +55,7 @@ As I made the decision early on to develop the prototype to be used on a
 smartphone, I inevitably ended up conforming to Google's [material design]([https://www.google.com/design/spec/material-design/introduction]) guidelines in places, incorporating appropriate interface elements where
 necessary to ensure the application felt right.
 
-However, as discussed in my post on
+However, as discussed in my article on
 [design languages and pattern libraries](../design-languages-pattern-libraries#yelp-styleguide),
 I also wanted to apply bright, clear, and engaging aesthetics to the designs
 without distracting the audience from their current task.
@@ -114,7 +114,7 @@ psychological aspects into my designs.
 
 ## Cognitive and Social Psychology
 
-In my post on
+In my article on
 [cognitive and social psychology](../cognitive-social-psychology#cognitive-psychology),
 I spoke about reducing cognitive load by making information easier to digest
 using a combination of media and text - here's an example of that in the design
@@ -148,7 +148,7 @@ took the research I did in this area into my final designs.
 ## Universal design and accessibility
 
 As discussed in my
-[post on this topic](../universal-inclusive-design-accessibility#equitable-use),
+[article on this topic](../universal-inclusive-design-accessibility#equitable-use),
 I've made considerations for a number of principles of universal design:
 
 - Equitable use

@@ -1,5 +1,5 @@
 /**
- * @file Post.
+ * @file Article.
  * @copyright Simon Finney 2019
  */
 
@@ -14,19 +14,24 @@ import Time from '../elements/time';
 
 import Footer from '../components/footer';
 
-export default ({ data, pageContext }) => (
-  <Layout>
-    <header>
-      <Heading level="1" content={data.markdownRemark.frontmatter.title} />
-      <Time dateTime={data.markdownRemark.frontmatter.date} />
-    </header>
-    <Article html={data.markdownRemark.html} />
-    <Footer data={pageContext} />
-  </Layout>
-);
+export default ({ data, pageContext }) => {
+  const { frontmatter, html } = data.markdownRemark;
+  const { date, title } = frontmatter;
 
-export const postQuery = graphql`
-  query PostQuery($slug: String!) {
+  return (
+    <Layout head={title}>
+      <header>
+        <Heading level="1" content={title} />
+        <Time dateTime={date} />
+      </header>
+      <Article html={html} />
+      <Footer data={pageContext} />
+    </Layout>
+  );
+};
+
+export const articleQuery = graphql`
+  query ArticleQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

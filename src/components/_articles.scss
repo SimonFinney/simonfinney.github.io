@@ -1,14 +1,14 @@
 ////
-/// Posts component styles.
+/// Articles component styles.
 /// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/sizing';
 
-.posts {
+.articles {
   /// Border style.
   /// @type List<*>
-  $posts__border: sizing-get(
+  $articles__border: sizing-get(
       $sizing: xxs,
     )
     solid
@@ -20,12 +20,19 @@
   list-style: none;
 
   > li {
+    /// Article padding.
+    /// @type Length
+    $article__sizing__padding: sizing-get(
+      $sizing: xs,
+    );
+
     display: inline-block;
-    padding: sizing-get($sizing: sm);
-    border-bottom: $posts__border;
+    padding-top: $article__sizing__padding;
+    padding-bottom: $article__sizing__padding;
+    border-bottom: $articles__border;
 
     &:first-of-type {
-      border-top: $posts__border;
+      border-top: $articles__border;
     }
   }
 }

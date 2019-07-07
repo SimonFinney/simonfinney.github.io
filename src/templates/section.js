@@ -4,7 +4,6 @@
  */
 
 import { graphql } from 'gatsby';
-import { shape, string } from 'prop-types';
 import React from 'react';
 
 import Layout from '../layout';
@@ -14,26 +13,18 @@ import Heading from '../elements/heading';
 
 const Section = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
+  const { title } = frontmatter.title;
 
   return (
-    <Layout>
-      <header>
-        <Heading level="1" content={frontmatter.title} />
-      </header>
+    <Layout head={title}>
+      {title && (
+        <header>
+          <Heading level="1" content={title} />
+        </header>
+      )}
       <Article html={html} />
     </Layout>
   );
-};
-
-Section.propTypes = {
-  data: shape({
-    markdownRemark: shape({
-      frontmatter: shape({
-        title: string.isRequired,
-      }).isRequired,
-      html: string.isRequired,
-    }).isRequired,
-  }).isRequired,
 };
 
 export const sectionQuery = graphql`

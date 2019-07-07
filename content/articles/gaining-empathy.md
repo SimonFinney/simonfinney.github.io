@@ -4,7 +4,7 @@ title: Gaining Empathy
 description: #
 ---
 
-For this post, I spent some time dissecting the current state of gig listing, by
+For this article, I spent some time dissecting the current state of gig listing, by
 identifying some issues in what's already available. I also had a look at
 creating a rough persona for the project, as a means of quickly building empathy
 with our user, and developing a likely scenario in which they might use the

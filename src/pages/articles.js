@@ -1,5 +1,5 @@
 /**
- * @file Posts.
+ * @file Articles.
  * @copyright Simon Finney 2019
  */
 
@@ -13,10 +13,12 @@ import Heading from '../elements/heading';
 import Paragraph from '../elements/paragraph';
 import Time from '../elements/time';
 
+const title = 'Articles';
+
 export default ({ data }) => (
-  <Layout>
-    <Heading level="1" content="Posts" />
-    <ul className="posts">
+  <Layout head={title}>
+    <Heading level="1" content={title} />
+    <ul className="articles">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.id}>
           <header>
@@ -32,10 +34,10 @@ export default ({ data }) => (
   </Layout>
 );
 
-export const postsQuery = graphql`
-  query PostsQuery {
+export const articlesQuery = graphql`
+  query ArticlesQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      filter: { fileAbsolutePath: { regex: "/articles/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

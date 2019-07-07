@@ -11,7 +11,7 @@ number of things that had to put in place:
 - The platform I'd use to document my work
 - The tools and processes I'd use to manage my time
 
-This post will focus on where I landed on the above topics, and touch on how
+This article will focus on where I landed on the above topics, and touch on how
 I'll move forward from here.
 
 ## Area of focus
@@ -88,7 +88,7 @@ on track.
 
 ## Next steps
 
-In the next post, I'll discuss some of the design languages, and pattern
+In the next article, I'll discuss some of the design languages, and pattern
 libraries I'll be researching, as well as the prototype and visual design
 platforms I intend on using.
 
