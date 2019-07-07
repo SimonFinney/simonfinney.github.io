@@ -26,5 +26,5 @@ A selection of my current technology preference for projects:
 ## Features and Awards
 
 - [Designer as Collaborator: Simon Finney — 100 Archive](http://www.100archive.com/article/simon-finney/)
-- [Design Island — Commended (2016) — Institute of Creative Advertising and Design (ICAD)](https://www.icad.ie/award/design-island/)
-- [Design Island — 100 Archive Selection 2015](http://www.100archive.com/project/design-island/)
+- [Design: Digital - Mobile & App Design — Commended (2016) — Institute of Creative Advertising and Design (ICAD) — Design Island](https://www.icad.ie/award/design-island/)
+- [100 Archive Selection 2015 — Design Island](http://www.100archive.com/project/design-island/)
