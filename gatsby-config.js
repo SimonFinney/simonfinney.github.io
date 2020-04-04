@@ -34,7 +34,7 @@ module.exports = {
       {
         text: 'Twitter',
         href: 'https://twitter.com/SimonJFinney',
-        icon: 'medium',
+        icon: 'twitter',
       },
       {
         text: 'Instagram',
