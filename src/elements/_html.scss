@@ -1,13 +1,15 @@
 ////
 /// HTML styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../globals/colour', '../globals/typography';
 
 /// Colour.
 /// @type Color
-$html__colour: colour-get(text--primary);
+$html__colour: colour-get(
+  $colour: text,
+);
 
 /// Font family.
 /// @type String
@@ -19,7 +21,9 @@ $html__font__line-height: $font__line-height;
 
 /// Font weight.
 /// @type String
-$html__font__weight: weight-get(light);
+$html__font__weight: weight-get(
+  $font-weight: light,
+);
 
 html {
   font-family: $html__font__family;

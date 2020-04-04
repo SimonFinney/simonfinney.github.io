@@ -1,6 +1,6 @@
 /**
  * @file Gatsby configuration.
- * @copyright Simon Finney 2019
+ * @copyright Simon Finney 2019 - 2020
  */
 
 const { description } = require('./package.json');
@@ -18,12 +18,12 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        href: 'http://github.com/simonfinney',
+        href: 'https://github.com/simonfinney',
         icon: 'github',
       },
       {
         text: 'CodePen',
-        href: 'http://codepen.io/simonfinney',
+        href: 'https://codepen.io/simonfinney',
         icon: 'codepen',
       },
       {
@@ -32,8 +32,8 @@ module.exports = {
         icon: 'linkedin',
       },
       {
-        text: 'Medium',
-        href: 'http://medium.com/@simonfinney',
+        text: 'Twitter',
+        href: 'https://twitter.com/SimonJFinney',
         icon: 'medium',
       },
       {

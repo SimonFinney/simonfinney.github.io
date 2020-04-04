@@ -1,6 +1,6 @@
 ////
 /// Body styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../globals/colour', '../globals/sizing';
@@ -8,7 +8,7 @@
 /// Background colour.
 /// @type Color
 $body__colour__background: colour-get(
-  $colour: colour__background,
+  $colour: background,
 );
 
 /// Margin.

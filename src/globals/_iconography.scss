@@ -1,13 +1,13 @@
 ////
 /// Iconography definitions.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import 'sizing';
 
 /// Icons.
 /// @type Map<String>
-$icons: (codepen, email, github, instagram, linkedin, medium, twitter);
+$icons: (codepen, email, github, instagram, linkedin, twitter);
 
 /// Icon sizes.
 /// @type Map<Length>
@@ -34,13 +34,11 @@ $icon__sizes: (
 ///   }
 /// @output css
 ///   a[data-icon='codepen']::before {
-///     background-image: url('assets/icons/codepen.svg');
+///     mask-image: url('assets/icons/codepen.svg');
 ///   }
 
 @mixin icon($icon-type) {
-  &[data-icon='#{$icon-type}'] {
-    &::before {
-      background-image: url('assets/icons/#{$icon-type}.svg');
-    }
+  &[data-icon='#{$icon-type}']::before {
+    mask-image: url('assets/icons/#{$icon-type}.svg');
   }
 }

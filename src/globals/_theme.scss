@@ -1,0 +1,14 @@
+////
+/// Theme definitions.
+/// @copyright Simon Finney 2020
+////
+
+@import 'colour';
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $token, $color in $colours--dark {
+      #{css-custom-property-declaration-get($declaration: $token)}: #{$color};
+    }
+  }
+}

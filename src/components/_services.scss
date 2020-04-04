@@ -1,6 +1,6 @@
 ////
 /// Services component styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../globals/colour', '../globals/media', '../globals/sizing';
@@ -21,10 +21,10 @@
     margin-right: $services__li__margin;
     margin-bottom: $services__li__margin;
     padding: sizing-get($sizing: sm);
-    background-color: colour-get(brand--secondary);
+    background-color: colour-get($colour: brand--secondary);
 
     @include print {
-      font-weight: weight-get(bold);
+      font-weight: weight-get($font-weight: bold);
     }
   }
 }

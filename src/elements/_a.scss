@@ -1,6 +1,6 @@
 ////
 /// Link styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../globals/colour', '../globals/iconography', '../globals/media',
@@ -34,6 +34,7 @@ a {
   font-weight: $a__font__weight;
   text-decoration: none;
   color: $a__colour;
+  fill: currentColor;
   transition: 0.1s;
   text-decoration-skip-ink: auto;
 
@@ -46,20 +47,17 @@ a {
     text-decoration: underline;
   }
 
-  &[data-icon] {
-    &::before {
-      display: inline-block;
-      width: $a__icon__size;
-      height: $a__icon__size;
-      margin-right: $a__icon__margin;
-      vertical-align: middle;
-      background-repeat: no-repeat;
-      content: '';
-      background-size: cover;
+  &[data-icon]::before {
+    display: inline-block;
+    width: $a__icon__size;
+    height: $a__icon__size;
+    margin-right: $a__icon__margin;
+    vertical-align: middle;
+    background-color: colour-get($colour: text);
+    content: '';
 
-      @include print {
-        display: none;
-      }
+    @include print {
+      display: none;
     }
   }
 }
