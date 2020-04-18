@@ -1,6 +1,6 @@
 ////
 /// Aside component styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../../globals/media', '../../globals/sizing';
@@ -16,11 +16,18 @@ $aside__list__padding: sizing-get(
 );
 
 .aside {
+  &--articles {
+    @include print {
+      display: none;
+    }
+  }
+
   &__list {
     padding-left: $aside__list__padding;
     list-style: $aside__list__style;
 
     @include print {
+      padding-left: sizing-get($sizing: md);
       list-style: initial;
     }
   }

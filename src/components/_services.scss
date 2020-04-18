@@ -24,7 +24,7 @@
     background-color: colour-get($colour: brand--secondary);
 
     @include print {
-      font-weight: weight-get($font-weight: bold);
+      border: ($unit__size / 80) solid colour-get($colour: brand--secondary);
     }
   }
 }

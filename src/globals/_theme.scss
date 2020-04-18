@@ -4,11 +4,22 @@
 ////
 
 @import 'colour';
+@import 'media';
 
-@media (prefers-color-scheme: dark) {
+// TODO: Document.
+
+@mixin theme($colours) {
   :root {
-    @each $token, $color in $colours--dark {
-      #{css-custom-property-declaration-get($declaration: $token)}: #{$color};
+    @each $token, $colour in $colours {
+      #{css-custom-property-declaration-get($declaration: $token)}: #{$colour};
     }
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  @include theme($colours: $colours--dark);
+}
+
+@include print {
+  @include theme($colours: $colours);
 }

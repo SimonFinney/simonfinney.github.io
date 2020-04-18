@@ -5,11 +5,9 @@
 
 @import 'globals/colour', 'globals/iconography', 'globals/sizing',
   'globals/theme', 'globals/typography';
-
 @import 'elements/a', 'elements/aside', 'elements/blockquote', 'elements/body',
   'elements/figcaption', 'elements/footer', 'elements/heading/h1',
   'elements/heading/h2', 'elements/heading/h3', 'elements/html', 'elements/main',
   'elements/ol', 'elements/strong', 'elements/ul';
-
 @import 'components/articles', 'components/aside/index',
   'components/footer/index', 'components/header/index', 'components/services';

@@ -9,6 +9,10 @@
   border-bottom: sizing-get($sizing: xs) solid
     colour-get($colour: brand--secondary);
 
+  @include print {
+    padding-bottom: sizing-get($sizing: sm);
+  }
+
   &__title {
     @include font-size($font-size: font-size-get($font-size: extra-large));
 

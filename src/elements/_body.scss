@@ -3,7 +3,7 @@
 /// @copyright Simon Finney 2019 - 2020
 ////
 
-@import '../globals/colour', '../globals/sizing';
+@import '../globals/colour', '../globals/media', '../globals/sizing';
 
 /// Background colour.
 /// @type Color
@@ -30,4 +30,8 @@ body {
   margin-left: $body__margin;
   padding: $body__padding;
   background-color: $body__colour__background;
+
+  @include print {
+    max-width: 640px;
+  }
 }

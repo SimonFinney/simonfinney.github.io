@@ -17,6 +17,11 @@ module.exports = {
         icon: 'email',
       },
       {
+        text: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/simonfinney',
+        icon: 'linkedin',
+      },
+      {
         text: 'GitHub',
         href: 'https://github.com/simonfinney',
         icon: 'github',
@@ -27,19 +32,9 @@ module.exports = {
         icon: 'codepen',
       },
       {
-        text: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/simonfinney',
-        icon: 'linkedin',
-      },
-      {
         text: 'Twitter',
         href: 'https://twitter.com/SimonJFinney',
         icon: 'twitter',
-      },
-      {
-        text: 'Instagram',
-        href: 'https://www.instagram.com/simonfinney',
-        icon: 'instagram',
       },
     ],
   },

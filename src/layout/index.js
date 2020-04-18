@@ -1,6 +1,6 @@
 /**
  * @file Layout.
- * @copyright Simon Finney 2019
+ * @copyright Simon Finney 2019 - 2020
  */
 
 import { graphql, StaticQuery } from 'gatsby';
@@ -92,7 +92,11 @@ const Layout = ({ children, head }) => (
           <Header subtitle={subtitle} title={title} />
           <main role="main">{children}</main>
           <aside>
-            <Aside title="Articles" listItems={articlesListItems} />
+            <Aside
+              className="aside--articles"
+              title="Articles"
+              listItems={articlesListItems}
+            />
             <Aside title="Contact" listItems={contactListItems} />
           </aside>
         </Fragment>

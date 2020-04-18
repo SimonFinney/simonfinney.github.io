@@ -1,6 +1,6 @@
-I've been working in the industry professionally for seven years, coaching and consulting on **agile practices**, **front end**, and **user experience** to enterprise engineering teams — I take pride in promoting developer-oriented practices and advocating for writing accessible, consistent, and scalable user interfaces.
+I've been working in the industry professionally for seven years, coaching and consulting on **agile practices**, **front end**, and **user experience** to enterprise engineering teams — I take pride in promoting developer-oriented practices and writing accessible, consistent, and scalable user interfaces.
 
-If you'd like more information on the services I can provide, feel free to [drop me an email](mailto:simonjfinney@gmail.com).
+If you'd like more information on my experience or the services I can provide, feel free to [view my LinkedIn profile](https://www.linkedin.com/in/simonfinney) or [drop me an email](mailto:simonjfinney@gmail.com).
 
 ## Services
 
