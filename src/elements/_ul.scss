@@ -1,6 +1,6 @@
 ////
 /// Unordered list styles.
-/// @copyright Simon Finney 2019
+/// @copyright Simon Finney 2019 - 2020
 ////
 
 @import '../globals/sizing';
@@ -14,6 +14,8 @@ $ul__padding: sizing-get(
 .ul {
   padding-left: $ul__padding;
   list-style: none;
+
+  // TODO: Mixin.
 
   > li {
     position: relative;
