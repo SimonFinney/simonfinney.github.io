@@ -56,6 +56,14 @@ module.exports = {
         plugins: [
           'gatsby-remark-autolink-headers',
           {
+            resolve: 'gatsby-remark-classes',
+            options: {
+              classMap: {
+                'list[ordered=false]': 'ul',
+              },
+            },
+          },
+          {
             resolve: 'gatsby-remark-external-links',
             options: {
               rel: 'noopener noreferrer',

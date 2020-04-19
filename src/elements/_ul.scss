@@ -11,6 +11,17 @@ $ul__padding: sizing-get(
   $sizing: md,
 );
 
-ul {
+.ul {
   padding-left: $ul__padding;
+  list-style: none;
+
+  > li {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -$ul__padding;
+      content: '–';
+    }
+  }
 }

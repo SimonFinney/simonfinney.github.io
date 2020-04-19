@@ -9,12 +9,6 @@
 /// @type String
 $aside__list__style: none;
 
-/// List padding.
-/// @type Length
-$aside__list__padding: sizing-get(
-  $sizing: none,
-);
-
 .aside {
   &--articles {
     @include print {
@@ -23,12 +17,29 @@ $aside__list__padding: sizing-get(
   }
 
   &__list {
-    padding-left: $aside__list__padding;
+    padding-left: sizing-get($sizing: none);
     list-style: $aside__list__style;
 
     @include print {
-      padding-left: sizing-get($sizing: md);
-      list-style: initial;
+      /// List padding.
+      /// @type Length
+      $aside__list__padding: sizing-get(
+        $sizing: md,
+      );
+
+      padding-left: $aside__list__padding;
+
+      // TODO: Mixin.
+
+      > li {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          left: -$aside__list__padding;
+          content: '–';
+        }
+      }
     }
   }
 }
