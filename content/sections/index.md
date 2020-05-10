@@ -22,7 +22,7 @@ A selection of my current technology preference for projects:
   <li>JavaScript (ES.Next)</li>
   <li>Node.js</li>
   <li>React</li>
-  <li>JAMStack</li>
+  <li>JAMstack</li>
   <li>GraphQL</li>
 </ul>
 
