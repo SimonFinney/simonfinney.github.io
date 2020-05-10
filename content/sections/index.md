@@ -1,6 +1,6 @@
 I take pride in writing accessible, consistent, performant, and scalable **user experiences** and promoting **front end development** best practices.
 
-If you'd like more information on my work experience or the services I can provide, check out my [LinkedIn](https://www.linkedin.com/in/simonfinney), [GitHub](https://github.com/simonfinney), or [drop me an email](mailto:simonjfinney@gmail.com).
+If you'd like a better understanding of my experience or the services I can provide, check out [a selection of work](/work), [LinkedIn](https://www.linkedin.com/in/simonfinney), [GitHub](https://github.com/simonfinney), or [drop me an email](mailto:simonjfinney@gmail.com).
 
 ## Services
 

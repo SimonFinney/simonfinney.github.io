@@ -1,10 +1,21 @@
 /**
  * @file Header.
- * @copyright Simon Finney 2019
+ * @copyright Simon Finney 2019 - 2020
  */
 
 import Link from 'gatsby-link';
 import React from 'react';
+
+const navigation = [
+  {
+    children: 'Work',
+    to: '/work',
+  },
+  {
+    children: 'Archive',
+    to: '/archive',
+  },
+];
 
 const Header = ({ title, subtitle }) => (
   <header className="header" role="banner">
@@ -14,15 +25,15 @@ const Header = ({ title, subtitle }) => (
     <span className="header__subtitle">{subtitle}</span>
     <nav role="navigation">
       <ul className="header__ul">
-        <li className="header__li">
-          <Link
-            activeClassName="header__a--active"
-            className="header__a"
-            to="/archive"
-          >
-            Archive
-          </Link>
-        </li>
+        {navigation.map((navigationItemProps, index) => (
+          <li key={`header__li--${index}`} className="header__li">
+            <Link
+              activeClassName="header__a--active"
+              className="header__a"
+              {...navigationItemProps}
+            />
+          </li>
+        ))}
       </ul>
     </nav>
   </header>

@@ -1,6 +1,6 @@
 /**
  * @file Archive.
- * @copyright Simon Finney 2019
+ * @copyright Simon Finney 2019 - 2020
  */
 
 import { graphql } from 'gatsby';

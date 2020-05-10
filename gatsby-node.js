@@ -1,12 +1,12 @@
 /**
  * @file Gatsby node configuration.
- * @copyright Simon Finney 2019
+ * @copyright Simon Finney 2019 - 2020
  */
 
 const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 
-const archiveQuery = `
+const archivesQuery = `
 query {
   allMarkdownRemark(
     filter: { fileAbsolutePath: { regex: "/archive/" } }
@@ -46,7 +46,7 @@ query {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  graphql(archiveQuery).then(result => {
+  graphql(archivesQuery).then(result => {
     const archive = result.data.allMarkdownRemark.edges;
 
     archive.map(({ node }, index) =>
