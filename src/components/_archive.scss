@@ -1,14 +1,14 @@
 ////
-/// Articles component styles.
+/// Archive component styles.
 /// @copyright Simon Finney 2019
 ////
 
 @import '../globals/colour', '../globals/sizing';
 
-.articles {
+.archive {
   /// Border style.
   /// @type List<*>
-  $articles__border: sizing-get(
+  $archive__border: sizing-get(
       $sizing: xxs,
     )
     solid
@@ -20,19 +20,19 @@
   list-style: none;
 
   > li {
-    /// Article padding.
+    /// Archive padding.
     /// @type Length
-    $article__sizing__padding: sizing-get(
+    $archive__sizing__padding: sizing-get(
       $sizing: xs,
     );
 
     display: inline-block;
-    padding-top: $article__sizing__padding;
-    padding-bottom: $article__sizing__padding;
-    border-bottom: $articles__border;
+    padding-top: $archive__sizing__padding;
+    padding-bottom: $archive__sizing__padding;
+    border-bottom: $archive__border;
 
     &:first-of-type {
-      border-top: $articles__border;
+      border-top: $archive__border;
     }
   }
 }

@@ -8,7 +8,7 @@ import React from 'react';
 
 import Layout from '../layout';
 
-import Article from '../elements/article';
+import Archive from '../elements/archive';
 import Heading from '../elements/heading';
 
 const Section = ({ data }) => {
@@ -22,7 +22,7 @@ const Section = ({ data }) => {
           <Heading level="1" content={title} />
         </header>
       )}
-      <Article html={html} />
+      <Archive html={html} />
     </Layout>
   );
 };

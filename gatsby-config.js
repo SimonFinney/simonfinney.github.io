@@ -39,7 +39,7 @@ module.exports = {
     ],
   },
   plugins: [
-    ...['articles', 'images', 'sections'].map(name => ({
+    ...['archive', 'images', 'sections'].map(name => ({
       resolve: 'gatsby-source-filesystem',
       options: {
         name,

@@ -1,6 +1,6 @@
-I've been working in the industry professionally for seven years, coaching and consulting on **agile practices**, **front end**, and **user experience** to enterprise engineering teams — I take pride in promoting developer-oriented practices and writing accessible, consistent, and scalable user interfaces.
+I take pride in writing accessible, consistent, performant, and scalable **user experiences** and promoting **front end development** best practices.
 
-If you'd like more information on my experience or the services I can provide, feel free to [view my LinkedIn profile](https://www.linkedin.com/in/simonfinney) or [drop me an email](mailto:simonjfinney@gmail.com).
+If you'd like more information on my work experience or the services I can provide, check out my [LinkedIn](https://www.linkedin.com/in/simonfinney), [GitHub](https://github.com/simonfinney), or [drop me an email](mailto:simonjfinney@gmail.com).
 
 ## Services
 
@@ -8,19 +8,22 @@ If you'd like more information on my experience or the services I can provide, f
   <li>Front end</li>
   <li>Performance</li>
   <li>Accessibility</li>
+  <li>User experience</li>
   <li>Build optimisation</li>
   <li>Agile practices</li>
   <li>Responsive design</li>
-  <li>User experience</li>
 </ul>
 
 A selection of my current technology preference for projects:
 
 <ul class="services">
   <li>HTML</li>
-  <li>Sass</li>
-  <li>ES.Next</li>
+  <li>CSS (Sass)</li>
+  <li>JavaScript (ES.Next)</li>
   <li>Node.js</li>
+  <li>React</li>
+  <li>JAMStack</li>
+  <li>GraphQL</li>
 </ul>
 
 ## Features and Awards

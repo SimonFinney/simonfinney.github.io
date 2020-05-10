@@ -18,9 +18,9 @@ const Header = ({ title, subtitle }) => (
           <Link
             activeClassName="header__a--active"
             className="header__a"
-            to="/articles"
+            to="/archive"
           >
-            Articles
+            Archive
           </Link>
         </li>
       </ul>

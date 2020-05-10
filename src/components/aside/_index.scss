@@ -10,7 +10,7 @@
 $aside__list__style: none;
 
 .aside {
-  &--articles {
+  &--archive {
     @include print {
       display: none;
     }

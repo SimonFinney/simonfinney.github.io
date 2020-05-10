@@ -17,7 +17,7 @@ import '../index.scss';
 const query = graphql`
   query DefaultQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/articles/" } }
+      filter: { fileAbsolutePath: { regex: "/archive/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -56,7 +56,7 @@ const Layout = ({ children, head }) => (
       const { allMarkdownRemark, site } = data;
       const { contact, description, subtitle, title } = site.siteMetadata;
 
-      const articlesListItems = allMarkdownRemark.edges.map(({ node }) => {
+      const archiveListItems = allMarkdownRemark.edges.map(({ node }) => {
         const { fields, frontmatter, id } = node;
         const { date, title } = frontmatter;
 
@@ -93,9 +93,9 @@ const Layout = ({ children, head }) => (
           <main role="main">{children}</main>
           <aside>
             <Aside
-              className="aside--articles"
-              title="Articles"
-              listItems={articlesListItems}
+              className="aside--archive"
+              title="Archive"
+              listItems={archiveListItems}
             />
             <Aside title="Contact" listItems={contactListItems} />
           </aside>

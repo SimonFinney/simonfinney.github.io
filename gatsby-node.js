@@ -6,10 +6,10 @@
 const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 
-const articleQuery = `
+const archiveQuery = `
 query {
   allMarkdownRemark(
-    filter: { fileAbsolutePath: { regex: "/articles/" } }
+    filter: { fileAbsolutePath: { regex: "/archive/" } }
     sort: { fields: [frontmatter___date], order: DESC }
   ) {
       edges {
@@ -46,16 +46,16 @@ query {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  graphql(articleQuery).then(result => {
-    const articles = result.data.allMarkdownRemark.edges;
+  graphql(archiveQuery).then(result => {
+    const archive = result.data.allMarkdownRemark.edges;
 
-    articles.map(({ node }, index) =>
+    archive.map(({ node }, index) =>
       createPage({
-        component: path.resolve('./src/templates/article.js'),
+        component: path.resolve('./src/templates/archive.js'),
         context: {
           previous:
-            index === articles.length - 1 ? null : articles[index + 1].node,
-          next: index === 0 ? null : articles[index - 1].node,
+            index === archive.length - 1 ? null : archive[index + 1].node,
+          next: index === 0 ? null : archive[index - 1].node,
           slug: node.fields.slug,
         },
         path: node.fields.slug,
@@ -78,7 +78,7 @@ exports.onCreateNode = ({ actions, getNode, node }) => {
 
   if (node.internal.type === 'MarkdownRemark') {
     const filePath = createFilePath({ basePath: 'pages', getNode, node });
-    const value = node.fileAbsolutePath.includes('articles')
+    const value = node.fileAbsolutePath.includes('archive')
       ? `/${new Date(node.frontmatter.date).getFullYear()}${filePath}`
       : filePath;
 

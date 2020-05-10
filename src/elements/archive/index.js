@@ -1,5 +1,5 @@
 /**
- * @file Article.
+ * @file Archive.
  * @copyright Simon Finney 2019
  */
 

@@ -1,5 +1,5 @@
 /**
- * @file Article.
+ * @file Archive.
  * @copyright Simon Finney 2019
  */
 
@@ -8,7 +8,7 @@ import React from 'react';
 
 import Layout from '../layout';
 
-import Article from '../elements/article';
+import Archive from '../elements/archive';
 import Heading from '../elements/heading';
 import Time from '../elements/time';
 
@@ -24,14 +24,14 @@ export default ({ data, pageContext }) => {
         <Heading level="1" content={title} />
         <Time dateTime={date} />
       </header>
-      <Article html={html} />
+      <Archive html={html} />
       <Footer data={pageContext} />
     </Layout>
   );
 };
 
-export const articleQuery = graphql`
-  query ArticleQuery($slug: String!) {
+export const archiveQuery = graphql`
+  query ArchiveQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
