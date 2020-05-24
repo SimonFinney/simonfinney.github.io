@@ -5,112 +5,87 @@
 
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
-import { string } from 'prop-types';
-import React, { Fragment } from 'react';
+import { node } from 'prop-types';
+import React from 'react';
 import Helmet from 'react-helmet';
-
-import Header from '../components/header';
-import Aside from '../components/aside';
 
 import '../index.scss';
 
-const query = graphql`
-  query DefaultQuery {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/archive/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "D MMMM, YYYY")
-            description
-          }
-          id
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        description
-        subtitle
-        title
-        contact {
-          text
-          href
-          icon
-        }
-      }
-    }
-  }
-`;
-
-const Layout = ({ children, head }) => (
+const Layout = ({ children }) => (
   <StaticQuery
-    query={query}
-    render={data => {
-      const { allMarkdownRemark, site } = data;
-      const { contact, description, subtitle, title } = site.siteMetadata;
+    query={graphql`
+      query DefaultQuery {
+        site {
+          siteMetadata {
+            title
+            contact {
+              content
+              href
+            }
+          }
+        }
+      }
+    `}
+    render={({
+      site: {
+        siteMetadata: { contact, title },
+      },
+    }) => (
+      <>
+        <Helmet title={title} />
 
-      const archiveListItems = allMarkdownRemark.edges.map(({ node }) => {
-        const { fields, frontmatter, id } = node;
-        const { date, title } = frontmatter;
+        <header>
+          <h1>{title}</h1>
 
-        return (
-          <li key={id}>
-            <Link to={fields.slug} title={date}>
-              {title}
-            </Link>
-          </li>
-        );
-      });
+          <nav>
+            <ul>
+              {[
+                {
+                  children: 'About',
+                  to: '/',
+                },
+                {
+                  children: 'Work',
+                  to: '/work',
+                },
+              ].map((props, index) => {
+                const key = `header__li--${index}`;
 
-      const contactListItems = contact.map(({ href, icon, text }) => (
-        <li key={icon}>
-          <a
-            href={href}
-            rel="noopener noreferrer"
-            target="_blank"
-            data-icon={icon}
-          >
-            {text}
-          </a>
-        </li>
-      ));
+                return (
+                  <li key={key}>
+                    <Link activeClassName="a--active" {...props} />
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </header>
 
-      return (
-        <Fragment>
-          <Helmet title={head ? `${head} — ${title}` : description}>
-            <html dir="ltr" lang="en" />
-            <meta name="description" content="" />
-          </Helmet>
+        <main>{children}</main>
 
-          <Header subtitle={subtitle} title={title} />
-          <main role="main">{children}</main>
-          <aside>
-            <Aside
-              className="aside--archive"
-              title="Archive"
-              listItems={archiveListItems}
-            />
-            <Aside title="Contact" listItems={contactListItems} />
-          </aside>
-        </Fragment>
-      );
-    }}
+        <footer>
+          <nav>
+            <ul>
+              {contact.map(({ content, href }, index) => {
+                const key = `footer__li--${index}`;
+                return (
+                  <li key={key}>
+                    <a href={href} rel="noopener noreferrer" target="_blank">
+                      {content}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </footer>
+      </>
+    )}
   />
 );
 
-Layout.defaultProps = {
-  head: null,
-};
-
 Layout.propTypes = {
-  head: string,
+  children: node.isRequired,
 };
 
 export default Layout;

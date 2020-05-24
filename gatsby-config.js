@@ -3,64 +3,58 @@
  * @copyright Simon Finney 2019 - 2020
  */
 
+const { resolve } = require('path');
 const { description } = require('./package.json');
 
 module.exports = {
   siteMetadata: {
-    title: 'Simon Finney',
-    description,
-    subtitle: 'Front End Specialist',
+    title: description,
     contact: [
       {
-        text: 'simonjfinney@gmail.com',
-        href: 'mailto:simonjfinney@gmail.com',
-        icon: 'email',
+        content: 'hello@simonﬁnney.dev',
+        href: 'mailto:hello@simonfinney.dev',
       },
       {
-        text: 'LinkedIn',
+        content: 'LinkedIn',
         href: 'https://www.linkedin.com/in/simonfinney',
-        icon: 'linkedin',
       },
       {
-        text: 'GitHub',
+        content: 'GitHub',
         href: 'https://github.com/simonfinney',
-        icon: 'github',
-      },
-      {
-        text: 'CodePen',
-        href: 'https://codepen.io/simonfinney',
-        icon: 'codepen',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/SimonJFinney',
-        icon: 'twitter',
       },
     ],
   },
   plugins: [
-    ...['archive', 'images', 'sections'].map(name => ({
+    'gatsby-plugin-favicon',
+
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        display: 'swap',
+        fonts: ['Fira Code', 'Fira Sans'],
+      },
+    },
+
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name,
-        path: `${__dirname}/content/${name}`,
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
-    })),
+    },
 
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
-          'gatsby-remark-autolink-headers',
+        defaultLayouts: {
+          default: resolve('src/layout'),
+        },
+        gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-classes',
+            resolve: 'gatsby-remark-autolink-headers',
             options: {
-              classMap: {
-                'list[ordered=false]': 'ul',
-              },
+              elements: ['h3'],
+              isIconAfterHeader: true,
             },
           },
           {
@@ -70,9 +64,22 @@ module.exports = {
               target: '_blank',
             },
           },
+          {
+            resolve: 'gatsby-remark-classes',
+            options: {
+              classMap: {
+                'list[ordered=false]': 'ul',
+              },
+            },
+          },
+
           'gatsby-remark-images',
         ],
       },
     },
+
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
   ],
 };

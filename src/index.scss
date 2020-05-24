@@ -1,13 +1,148 @@
 ////
-/// Entry point.
+/// Styles.
 /// @copyright Simon Finney 2019 - 2020
 ////
 
-@import 'globals/colour', 'globals/iconography', 'globals/sizing',
-  'globals/theme', 'globals/typography';
-@import 'elements/a', 'elements/aside', 'elements/blockquote', 'elements/body',
-  'elements/figcaption', 'elements/footer', 'elements/heading/h1',
-  'elements/heading/h2', 'elements/heading/h3', 'elements/html', 'elements/main',
-  'elements/ol', 'elements/strong', 'elements/ul';
-@import 'components/archive', 'components/aside/index',
-  'components/footer/index', 'components/header/index', 'components/services';
+@import '../node_modules/reset-css/sass/reset';
+
+$accent-color: #93cfec;
+$background-color: #0f1219;
+$heading-color: #f6c97c;
+$text-color: #a7aeca;
+
+body {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.00625rem;
+  color: $text-color;
+  background-color: $background-color;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+.ul {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Fira Code', monospace;
+}
+
+h1,
+h3 {
+  color: $heading-color;
+
+  &::before {
+    margin-right: 8px;
+    color: $accent-color;
+  }
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+
+  &::before {
+    content: '#';
+  }
+}
+
+h2 {
+  font-size: 72px;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: 24px;
+
+  &::before {
+    content: '###';
+  }
+}
+
+header,
+footer {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  z-index: 9999;
+  background-color: $background-color;
+
+  li {
+    display: inline-block;
+  }
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  margin-left: auto;
+
+  li {
+    margin-left: 8px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $accent-color;
+  fill: currentColor;
+  background-color: transparent;
+  transition: 0.3s background-color;
+
+  &:focus {
+    background-color: rgba($heading-color, 0.1);
+    outline-width: 0;
+  }
+
+  &:hover {
+    outline: 1px solid #56575b;
+    outline-offset: -1px;
+    background-color: #0a0c11;
+  }
+
+  &::after {
+    content: ']';
+  }
+
+  &::before {
+    content: '[';
+  }
+}
+
+footer {
+  bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.a--active {
+  font-weight: bold;
+}
+
+.ul li {
+  position: relative;
+  padding-left: 12px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    color: $accent-color;
+    content: '-';
+  }
+}
