@@ -111,8 +111,10 @@ a {
   }
 
   &:hover {
-    outline: 1px solid #56575b;
-    outline-offset: -1px;
+    $outline-width: 1px;
+
+    outline: $outline-width solid #56575b;
+    outline-offset: -$outline-width;
     background-color: #0a0c11;
   }
 
@@ -122,6 +124,16 @@ a {
 
   &::before {
     content: '[';
+  }
+}
+
+.display {
+  &--0 {
+    color: #bd9be3;
+  }
+
+  &--1 {
+    color: $heading-color;
   }
 }
 

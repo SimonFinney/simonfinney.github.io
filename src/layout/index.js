@@ -8,79 +8,119 @@ import Link from 'gatsby-link';
 import { node } from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
+import Typist from 'react-typist';
 
 import '../index.scss';
 
-const Layout = ({ children }) => (
+const Layout = ({
+  children,
+  pageContext: {
+    frontmatter: { display, title },
+  },
+}) => (
   <StaticQuery
     query={graphql`
       query DefaultQuery {
         site {
           siteMetadata {
-            title
             contact {
               content
               href
             }
+            description
           }
         }
       }
     `}
     render={({
       site: {
-        siteMetadata: { contact, title },
+        siteMetadata: { contact, description },
       },
-    }) => (
-      <>
-        <Helmet title={title} />
+    }) => {
+      const { items, text } = display;
 
-        <header>
-          <h1>{title}</h1>
+      return (
+        <>
+          <Helmet title={`${title} | ${description}`} />
 
-          <nav>
-            <ul>
-              {[
-                {
-                  children: 'About',
-                  to: '/',
-                },
-                {
-                  children: 'Work',
-                  to: '/work',
-                },
-              ].map((props, index) => {
-                const key = `header__li--${index}`;
+          <header>
+            <h1>{description}</h1>
 
-                return (
-                  <li key={key}>
-                    <Link activeClassName="a--active" {...props} />
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </header>
+            <nav>
+              <ul>
+                {[
+                  {
+                    children: 'About',
+                    to: '/',
+                  },
+                  {
+                    children: 'Work',
+                    to: '/work',
+                  },
+                ].map((props, index) => {
+                  const key = `header__li--${index}`;
 
-        <main>{children}</main>
+                  return (
+                    <li key={key}>
+                      <Link activeClassName="a--active" {...props} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </header>
 
-        <footer>
-          <nav>
-            <ul>
-              {contact.map(({ content, href }, index) => {
-                const key = `footer__li--${index}`;
-                return (
-                  <li key={key}>
-                    <a href={href} rel="noopener noreferrer" target="_blank">
-                      {content}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </footer>
-      </>
-    )}
+          <main>
+            <Typist cursor={{ show: false }}>
+              <h2>
+                {text ? (
+                  <span>
+                    {text}
+                    {items.map((item, index) => {
+                      const key = `display--${index}`;
+
+                      return (
+                        <span key={key} className={key}>
+                          {item}
+
+                          {index < items.length - 1 ? (
+                            <Typist.Backspace count={item.length} />
+                          ) : (
+                            ''
+                          )}
+                        </span>
+                      );
+                    })}
+                    .
+                  </span>
+                ) : (
+                  display
+                )}
+              </h2>
+            </Typist>
+
+            {children}
+          </main>
+
+          <footer>
+            <nav>
+              <ul>
+                {contact.map(({ content, href }, index) => {
+                  const key = `footer__li--${index}`;
+                  return (
+                    <li key={key}>
+                      <a href={href} rel="noopener noreferrer" target="_blank">
+                        {content}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </footer>
+        </>
+      );
+    }}
   />
 );
 

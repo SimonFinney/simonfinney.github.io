@@ -8,7 +8,7 @@ const { description } = require('./package.json');
 
 module.exports = {
   siteMetadata: {
-    title: description,
+    description,
     contact: [
       {
         content: 'hello@simonﬁnney.dev',
