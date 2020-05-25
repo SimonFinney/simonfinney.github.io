@@ -3,6 +3,7 @@
 /// @copyright Simon Finney 2019 - 2020
 ////
 
+@import '../node_modules/react-typist/dist/standalone/Typist.min';
 @import '../node_modules/reset-css/sass/reset';
 
 $accent-color: #93cfec;
@@ -127,6 +128,12 @@ a {
   }
 }
 
+.section {
+  display: flex;
+  min-height: 66vh;
+  align-items: center;
+}
+
 .display {
   &--0 {
     color: #bd9be3;
@@ -134,6 +141,14 @@ a {
 
   &--1 {
     color: $heading-color;
+  }
+}
+
+.Typist {
+  background-color: darken($color: $background-color, $amount: 2.5);
+
+  > .Cursor {
+    color: lighten($color: $heading-color, $amount: 2.5);
   }
 }
 

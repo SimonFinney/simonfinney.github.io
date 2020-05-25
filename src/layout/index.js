@@ -3,11 +3,12 @@
  * @copyright Simon Finney 2019 - 2020
  */
 
+import classnames from 'classnames';
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
-import { node } from 'prop-types';
-import React from 'react';
-import Helmet from 'react-helmet';
+import { arrayOf, node, oneOfType, shape, string } from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Typist from 'react-typist';
 
 import '../index.scss';
@@ -17,31 +18,36 @@ const Layout = ({
   pageContext: {
     frontmatter: { display, title },
   },
-}) => (
-  <StaticQuery
-    query={graphql`
-      query DefaultQuery {
-        site {
-          siteMetadata {
-            contact {
-              content
-              href
+}) => {
+  const { items, text } = display;
+  const [isTyping, setIsTyping] = useState(false);
+
+  useEffect(() => setIsTyping(true));
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query DefaultQuery {
+          site {
+            siteMetadata {
+              contact {
+                content
+                href
+              }
+              description
             }
-            description
           }
         }
-      }
-    `}
-    render={({
-      site: {
-        siteMetadata: { contact, description },
-      },
-    }) => {
-      const { items, text } = display;
-
-      return (
+      `}
+      render={({
+        site: {
+          siteMetadata: { contact, description },
+        },
+      }) => (
         <>
-          <Helmet title={`${title} | ${description}`} />
+          <Helmet>
+            <title>{`${title} | ${description}`}</title>
+          </Helmet>
 
           <header>
             <h1>{description}</h1>
@@ -50,19 +56,21 @@ const Layout = ({
               <ul>
                 {[
                   {
-                    children: 'About',
+                    content: 'About',
                     to: '/',
                   },
                   {
-                    children: 'Work',
+                    content: 'Work',
                     to: '/work',
                   },
-                ].map((props, index) => {
+                ].map(({ content, to }, index) => {
                   const key = `header__li--${index}`;
 
                   return (
                     <li key={key}>
-                      <Link activeClassName="a--active" {...props} />
+                      <Link activeClassName="a--active" to={to}>
+                        {content}
+                      </Link>
                     </li>
                   );
                 })}
@@ -71,33 +79,37 @@ const Layout = ({
           </header>
 
           <main>
-            <Typist cursor={{ show: false }}>
+            <section className={classnames({ section: text })}>
               <h2>
                 {text ? (
-                  <span>
+                  <>
                     {text}
-                    {items.map((item, index) => {
-                      const key = `display--${index}`;
+                    {isTyping && (
+                      <Typist
+                        cursor={{ element: '_' }}
+                        onTypingDone={setIsTyping}
+                      >
+                        {items.map((item, index) => {
+                          const key = `display--${index}`;
 
-                      return (
-                        <span key={key} className={key}>
-                          {item}
-
-                          {index < items.length - 1 ? (
-                            <Typist.Backspace count={item.length} />
-                          ) : (
-                            ''
-                          )}
-                        </span>
-                      );
-                    })}
-                    .
-                  </span>
+                          return (
+                            <span key={key} className={key}>
+                              {item}
+                              <Typist.Backspace
+                                count={item.length}
+                                delay={500}
+                              />
+                            </span>
+                          );
+                        })}
+                      </Typist>
+                    )}
+                  </>
                 ) : (
                   display
                 )}
               </h2>
-            </Typist>
+            </section>
 
             {children}
           </main>
@@ -119,13 +131,22 @@ const Layout = ({
             </nav>
           </footer>
         </>
-      );
-    }}
-  />
-);
+      )}
+    />
+  );
+};
 
 Layout.propTypes = {
   children: node.isRequired,
+  pageContext: shape({
+    frontmatter: shape({
+      display: oneOfType([
+        shape({ items: arrayOf(string).isRequired, text: string.isRequired }),
+        string,
+      ]).isRequired,
+      title: string.isRequired,
+    }),
+  }).isRequired,
 };
 
 export default Layout;

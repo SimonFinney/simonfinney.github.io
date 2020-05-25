@@ -1,10 +1,12 @@
 {
   "parser": "babel-eslint",
+  "env": {
+    "node": true
+  },
   "extends": [
-    "airbnb",
+    "eslint:recommended",
     "plugin:compat/recommended",
     "plugin:import/recommended",
-    "plugin:jsdoc/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:security/recommended",
@@ -12,48 +14,14 @@
   ],
   "plugins": [
     "compat",
-    "jsdoc",
     "jsx-a11y",
     "react",
     "security",
     "tree-shaking"
   ],
-  "env": {
-    "browser": true,
-    "jest": true
-  },
-  "rules": {
-    "import/no-extraneous-dependencies": "warn",
-    "quotes": [
-      "error",
-      "single",
-      {
-        "avoidEscape": true
-      }
-    ],
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [".js"]
-      }
-    ],
-    "react/jsx-sort-props": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "noSortAlphabetically": true,
-        "reservedFirst": true,
-        "shorthandLast": true
-      }
-    ],
-    "react/sort-prop-types": [
-      "warn",
-      {
-        "callbacksLast": true,
-        "noSortAlphabetically": true,
-        "requiredFirst": true,
-        "sortShapeProp": true
-      }
-    ]
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

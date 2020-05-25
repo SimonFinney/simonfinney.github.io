@@ -1,11 +1,11 @@
 {
-  "name": "simonfinney.github.io",
+  "name": "simonfinney.dev",
   "description": "Simon Finney — Front End Specialist",
   "version": "0.1.0",
   "author": "Simon Finney <simonjfinney@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SimonFinney/simonfinney.github.io.git"
+    "url": "https://github.com/SimonFinney/simonfinney.dev.git"
   },
   "keywords": [
     "simon",
@@ -14,18 +14,18 @@
     "end",
     "specialist"
   ],
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SimonFinney/simonfinney.github.io/issues"
+    "url": "https://github.com/SimonFinney/simonfinney.dev/issues"
   },
-  "homepage": "https://simonfinney.github.io",
+  "homepage": "https://simonfinney.dev",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
     "deploy": "run-s build gh-pages",
     "dev": "gatsby develop",
     "dev:clean": "run-s clean dev",
-    "format": "prettier --ignore-path .gitignore --write '**/*.{js,json,mdx,scss}'",
+    "format": "prettier --ignore-path .gitignore --write '**/*.{js,json,md,mdx,scss}'",
     "gh-pages": "gh-pages -b master -d public",
     "lint": "run-s lint:*",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
@@ -33,11 +33,12 @@
     "run-s": "run-s"
   },
   "dependencies": {
-    "gatsby": "^2.22.9",
+    "classnames": "^2.2.6",
+    "gatsby": "^2.22.10",
     "gatsby-link": "^2.4.3",
     "prop-types": "^15.7.2",
     "react": "^16.6.3",
-    "react-helmet": "^5.2.0",
+    "react-helmet": "^6.0.0",
     "react-typist": "^2.0.5"
   },
   "devDependencies": {
@@ -46,16 +47,16 @@
     "@mdx-js/react": "^1.6.4",
     "babel-eslint": "^10.1.0",
     "babel-preset-gatsby": "^0.4.7",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-compat": "^2.6.3",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-compat": "^3.7.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsdoc": "^3.9.1",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-tree-shaking": "^1.7.3",
+    "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^1.2.12",
@@ -68,17 +69,17 @@
     "gatsby-remark-images": "^3.3.8",
     "gatsby-source-filesystem": "^2.3.8",
     "gh-pages": "^2.0.1",
-    "husky": "^1.2.0",
-    "lint-staged": "^8.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.6",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.10.2",
+    "prettier": "^2.0.5",
     "react-dom": "^16.6.3",
     "reset-css": "^5.0.1",
-    "stylelint": "^9.8.0",
-    "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-no-unsupported-browser-features": "^3.0.2",
-    "stylelint-order": "^2.0.0",
+    "stylelint": "^13.5.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-no-unsupported-browser-features": "^4.0.0",
+    "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.17.2",
     "yarn": "^1.12.3"
   },

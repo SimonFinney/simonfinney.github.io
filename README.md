@@ -1,9 +1,3 @@
-# simonfinney.github.io
+# simonfinney.dev
 
-[Simon Finney — Front End Specialist](simonfinney.github.io)
-
-## Scripts
-
-- Development — `yarn start`
-- Format — `yarn format`
-- Build — `yarn build`
+Simon Finney — Front End Specialist
