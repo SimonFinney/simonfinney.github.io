@@ -8,7 +8,7 @@ const { description } = require('./package.json');
 
 module.exports = {
   siteMetadata: {
-    description,
+    name: description,
     contact: [
       {
         content: 'hello@simonﬁnney.dev',
@@ -32,7 +32,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         display: 'swap',
-        fonts: ['Fira Code', 'Fira Sans'],
+        fonts: ['Fira Code', 'Open Sans'],
       },
     },
 
@@ -55,7 +55,7 @@ module.exports = {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
               elements: ['h3'],
-              isIconAfterHeader: true,
+              icon: false,
             },
           },
           {

@@ -3,7 +3,6 @@
  * @copyright Simon Finney 2019 - 2020
  */
 
-import classnames from 'classnames';
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
 import { arrayOf, node, oneOfType, shape, string } from 'prop-types';
@@ -16,10 +15,9 @@ import '../index.scss';
 const Layout = ({
   children,
   pageContext: {
-    frontmatter: { display, title },
+    frontmatter: { description, display, title },
   },
 }) => {
-  const { items, text } = display;
   const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => setIsTyping(true));
@@ -34,23 +32,23 @@ const Layout = ({
                 content
                 href
               }
-              description
+              name
             }
           }
         }
       `}
       render={({
         site: {
-          siteMetadata: { contact, description },
+          siteMetadata: { contact, name },
         },
       }) => (
         <>
           <Helmet>
-            <title>{`${title} | ${description}`}</title>
+            <title>{`${title} | ${name}`}</title>
           </Helmet>
 
           <header>
-            <h1>{description}</h1>
+            <h1>{name}</h1>
 
             <nav>
               <ul>
@@ -79,36 +77,27 @@ const Layout = ({
           </header>
 
           <main>
-            <section className={classnames({ section: text })}>
+            <section className="section">
               <h2>
-                {text ? (
-                  <>
-                    {text}
-                    {isTyping && (
-                      <Typist
-                        cursor={{ element: '_' }}
-                        onTypingDone={setIsTyping}
-                      >
-                        {items.map((item, index) => {
-                          const key = `display--${index}`;
+                {isTyping && (
+                  <Typist cursor={{ element: '_' }} onTypingDone={setIsTyping}>
+                    {display.map((item, index) => {
+                      const key = `display--${index}`;
 
-                          return (
-                            <span key={key} className={key}>
-                              {item}
-                              <Typist.Backspace
-                                count={item.length}
-                                delay={500}
-                              />
-                            </span>
-                          );
-                        })}
-                      </Typist>
-                    )}
-                  </>
-                ) : (
-                  display
+                      return (
+                        <span
+                          key={key}
+                          className={`display--${index % 2 ? 'odd' : 'even'}`}
+                        >
+                          {item}
+                          <Typist.Backspace count={item.length} delay={500} />
+                        </span>
+                      );
+                    })}
+                  </Typist>
                 )}
               </h2>
+              {description && <p className="description">{description}</p>}
             </section>
 
             {children}

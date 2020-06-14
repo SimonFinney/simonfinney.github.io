@@ -5,6 +5,8 @@
 
 @import '../node_modules/react-typist/dist/standalone/Typist.min';
 @import '../node_modules/reset-css/sass/reset';
+@import '../src/components/Features/index';
+@import '../src/components/Feature/index';
 
 $accent-color: #93cfec;
 $background-color: #0f1219;
@@ -12,12 +14,12 @@ $heading-color: #f6c97c;
 $text-color: #a7aeca;
 
 body {
-  max-width: 768px;
+  max-width: 1024px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.00625rem;
@@ -62,41 +64,13 @@ h1 {
 }
 
 h2 {
+  width: 100%;
   font-size: 72px;
   line-height: 1.15;
 }
 
 h3 {
   font-size: 24px;
-
-  &::before {
-    content: '###';
-  }
-}
-
-header,
-footer {
-  display: flex;
-  position: sticky;
-  align-items: center;
-  z-index: 9999;
-  background-color: $background-color;
-
-  li {
-    display: inline-block;
-  }
-}
-
-header {
-  top: 0;
-}
-
-nav {
-  margin-left: auto;
-
-  li {
-    margin-left: 8px;
-  }
 }
 
 a {
@@ -118,33 +92,68 @@ a {
     outline-offset: -$outline-width;
     background-color: #0a0c11;
   }
+}
 
-  &::after {
-    content: ']';
+header,
+footer {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  z-index: 9999;
+  background-color: $background-color;
+
+  li {
+    display: inline-block;
   }
 
-  &::before {
-    content: '[';
+  a {
+    &::after {
+      content: ']';
+    }
+
+    &::before {
+      content: '[';
+    }
+  }
+}
+
+header {
+  top: 0;
+  border-bottom: 1px solid currentColor;
+}
+
+nav {
+  margin-left: auto;
+
+  li {
+    margin-left: 8px;
   }
 }
 
 .section {
   display: flex;
-  min-height: 66vh;
-  align-items: center;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  flex-wrap: wrap;
+}
+
+.description {
+  max-width: 640px;
+  font-size: 24px;
 }
 
 .display {
-  &--0 {
+  &--odd {
     color: #bd9be3;
   }
 
-  &--1 {
+  &--even {
     color: $heading-color;
   }
 }
 
 .Typist {
+  display: inline;
   background-color: darken($color: $background-color, $amount: 2.5);
 
   > .Cursor {
@@ -156,6 +165,7 @@ footer {
   bottom: 0;
   padding-top: 16px;
   padding-bottom: 16px;
+  border-top: 1px solid currentColor;
 }
 
 .a--active {
