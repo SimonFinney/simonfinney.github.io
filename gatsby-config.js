@@ -23,6 +23,7 @@ module.exports = {
         href: 'https://github.com/simonfinney',
       },
     ],
+    siteUrl: 'https://simonfinney.dev',
   },
   plugins: [
     'gatsby-plugin-eslint',

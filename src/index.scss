@@ -31,17 +31,15 @@ body {
 h1,
 h2,
 h3,
-p,
-.ul {
-  margin-top: 16px;
-  margin-bottom: 16px;
+h4 {
+  font-family: 'Fira Code', monospace;
 }
 
 h1,
 h2,
-h3,
-h4 {
-  font-family: 'Fira Code', monospace;
+h3 {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 h1,
@@ -80,9 +78,6 @@ a {
   position: relative;
   text-decoration: none;
   color: $accent-color;
-  fill: currentColor;
-  background-color: transparent;
-  transition: 0.3s background-color;
 
   &::before {
     display: inline-block;
@@ -105,6 +100,10 @@ a {
   }
 }
 
+.a--active {
+  font-weight: bold;
+}
+
 header,
 footer {
   display: flex;
@@ -112,10 +111,6 @@ footer {
   align-items: center;
   z-index: 9999;
   background-color: $background-color;
-
-  li {
-    display: inline-block;
-  }
 }
 
 header {
@@ -127,6 +122,7 @@ nav {
   margin-left: auto;
 
   li {
+    display: inline-block;
     margin-left: 8px;
   }
 }
@@ -184,8 +180,4 @@ footer {
   padding-top: 16px;
   padding-bottom: 16px;
   border-top: 1px solid darken($color: $text-color, $amount: 50);
-}
-
-.a--active {
-  font-weight: bold;
 }
