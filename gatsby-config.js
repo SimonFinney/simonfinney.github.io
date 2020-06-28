@@ -65,15 +65,6 @@ module.exports = {
               target: '_blank',
             },
           },
-          {
-            resolve: 'gatsby-remark-classes',
-            options: {
-              classMap: {
-                'list[ordered=false]': 'ul',
-              },
-            },
-          },
-
           'gatsby-remark-images',
         ],
       },
