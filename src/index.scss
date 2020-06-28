@@ -3,7 +3,6 @@
 /// @copyright Simon Finney 2019 - 2020
 ////
 
-@import '../node_modules/react-typist/dist/standalone/Typist.min';
 @import '../node_modules/reset-css/sass/reset';
 @import '../src/components/Features/index';
 @import '../src/components/Feature/index';
@@ -19,7 +18,7 @@ body {
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.00625rem;
@@ -40,18 +39,15 @@ p,
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: 'Fira Code', monospace;
 }
 
 h1,
-h3 {
+h3,
+h4 {
   color: $heading-color;
-
-  &::before {
-    margin-right: 8px;
-    color: $accent-color;
-  }
 }
 
 h1 {
@@ -59,6 +55,8 @@ h1 {
   font-weight: bold;
 
   &::before {
+    margin-right: 8px;
+    color: $accent-color;
     content: '#';
   }
 }
@@ -73,24 +71,37 @@ h3 {
   font-size: 24px;
 }
 
+h4 {
+  font-size: 16px;
+  line-height: 1.375;
+}
+
 a {
+  position: relative;
   text-decoration: none;
   color: $accent-color;
   fill: currentColor;
   background-color: transparent;
   transition: 0.3s background-color;
 
-  &:focus {
-    background-color: rgba($heading-color, 0.1);
-    outline-width: 0;
+  &::before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    background-color: darken($color: $background-color, $amount: 3);
+    content: '';
+    transition: 0.3s width;
   }
 
+  &:focus,
   &:hover {
-    $outline-width: 1px;
-
-    outline: $outline-width solid #56575b;
-    outline-offset: -$outline-width;
-    background-color: #0a0c11;
+    &::before {
+      width: 100%;
+    }
   }
 }
 
@@ -105,21 +116,11 @@ footer {
   li {
     display: inline-block;
   }
-
-  a {
-    &::after {
-      content: ']';
-    }
-
-    &::before {
-      content: '[';
-    }
-  }
 }
 
 header {
   top: 0;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid darken($color: $text-color, $amount: 50);
 }
 
 nav {
@@ -132,14 +133,31 @@ nav {
 
 .section {
   display: flex;
+  position: relative;
   padding-top: 128px;
   padding-bottom: 128px;
   flex-wrap: wrap;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    background-image: url('images/illustration.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.075;
+    content: '';
+  }
 }
 
 .description {
   max-width: 640px;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 1.3;
 }
 
 .display {
@@ -165,21 +183,9 @@ footer {
   bottom: 0;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: 1px solid currentColor;
+  border-top: 1px solid darken($color: $text-color, $amount: 50);
 }
 
 .a--active {
   font-weight: bold;
-}
-
-.ul li {
-  position: relative;
-  padding-left: 12px;
-
-  &::before {
-    position: absolute;
-    left: 0;
-    color: $accent-color;
-    content: '-';
-  }
 }

@@ -80,7 +80,11 @@ const Layout = ({
             <section className="section">
               <h2>
                 {isTyping && (
-                  <Typist cursor={{ element: '_' }} onTypingDone={setIsTyping}>
+                  <Typist
+                    avgTypingDelay={35}
+                    cursor={{ element: '_' }}
+                    onTypingDone={setIsTyping}
+                  >
                     {display.map((item, index) => {
                       const key = `display--${index}`;
 

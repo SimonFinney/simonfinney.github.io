@@ -6,15 +6,16 @@
 import { string } from 'prop-types';
 import React from 'react';
 
-const Feature = ({ description, title }) => (
-  <article className="feature">
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </article>
+const Feature = ({ description, href, title }) => (
+  <a className="feature" href={href} rel="noopener noreferrer" target="_blank">
+    <h4>{title}</h4>
+    {description && <p>{description}</p>}
+  </a>
 );
 
 Feature.propTypes = {
-  description: string.isRequired,
+  description: string,
+  href: string.isRequired,
   title: string.isRequired,
 };
 

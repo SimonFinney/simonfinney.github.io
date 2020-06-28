@@ -32,7 +32,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         display: 'swap',
-        fonts: ['Fira Code', 'Open Sans'],
+        fonts: ['Fira Code', 'Fira Sans'],
       },
     },
 
