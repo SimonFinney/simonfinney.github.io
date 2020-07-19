@@ -8,35 +8,50 @@ display:
   - React
   - JAMstack
   - GraphQL
+
 description: If you'd like a better understanding of my experience, check out a selection of work below, or on GitHub.
 ---
 
 import Features from '../../components/Features';
 import Feature from '../../components/Feature';
 
+import carbonForIBMSecurity from './images/carbon-for-ibm-security.jpg';
+import ibmSecurityExperienceGuide from './images/ibm-security-experience-guide.png';
+import id2015DesignIsland from './images/id2015-design-island.jpg';
+import seeHowMuchYoureExposing from "./images/see-how-much-you're-exposing.png";
+import watsonConversationPoster from './images/watson-conversation-poster.png';
+
 ### Work
 
 <Features>
   <Feature
+    description="Lead developer and maintainer of open source React pattern and asset library for IBM Security"
     href="https://github.com/carbon-design-system/ibm-security/"
+    src={carbonForIBMSecurity}
     title="Carbon for IBM Security"
   />
-
-<Feature
-  href="https://www.ibm.com/brand/systems/security/"
-  title="IBM Security Experience Guide"
-/>
-
   <Feature
-    href="http://www.irishdesign2015.ie/news/single/design-island-new-app-to-help-visitors-experience-the-best-of-irish-design/press"
-    title="ID2015 — Design Island"
+    description="Lead developer of GatsbyJS website for essential guidelines when working within or on behalf of IBM Security"
+    href="https://www.ibm.com/brand/systems/security/"
+    src={ibmSecurityExperienceGuide}
+    title="IBM Security Experience Guide"
   />
   <Feature
+    description="Data engineer for OFFSET Dublin 2018 natural language understanding project"
+    href="http://www.100archive.com/project/conversation"
+    src={watsonConversationPoster}
+    title="Watson Conversation Poster"
+  />
+  <Feature
+    description="Developer of SXSW 2017 data privacy augmented reality project"
     href="https://offset.mybluemix.net/"
+    src={seeHowMuchYoureExposing}
     title="See How Much You’re Exposing"
   />
   <Feature
-    href="http://www.100archive.com/project/conversation"
-    title="Watson Conversation Poster"
+    description="Developer of hybrid application for discovering and experiencing the best of Irish design"
+    href="http://www.irishdesign2015.ie/news/single/design-island-new-app-to-help-visitors-experience-the-best-of-irish-design/press"
+    src={id2015DesignIsland}
+    title="ID2015 — Design Island"
   />
 </Features>

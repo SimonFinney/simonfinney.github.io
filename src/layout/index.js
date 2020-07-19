@@ -5,7 +5,7 @@
 
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
-import { arrayOf, node, oneOfType, shape, string } from 'prop-types';
+import { arrayOf, node, shape, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Typist from 'react-typist';
@@ -33,22 +33,26 @@ const Layout = ({
                 href
               }
               name
+              role
             }
           }
         }
       `}
       render={({
         site: {
-          siteMetadata: { contact, name },
+          siteMetadata: { contact, name, role },
         },
       }) => (
         <>
           <Helmet>
-            <title>{`${title} | ${name}`}</title>
+            <title>{`${title} | ${name} — ${role}`}</title>
           </Helmet>
 
           <header>
-            <h1>{name}</h1>
+            <h1>
+              <span className="title">{name}</span>
+              <div>{role}</div>
+            </h1>
 
             <nav>
               <ul>
@@ -81,7 +85,7 @@ const Layout = ({
               <h2>
                 {isTyping && (
                   <Typist
-                    avgTypingDelay={35}
+                    avgTypingDelay={50}
                     cursor={{ element: '_' }}
                     onTypingDone={setIsTyping}
                   >
@@ -101,7 +105,7 @@ const Layout = ({
                   </Typist>
                 )}
               </h2>
-              {description && <p className="description">{description}</p>}
+              <p className="description">{description}</p>
             </section>
 
             {children}
@@ -133,10 +137,8 @@ Layout.propTypes = {
   children: node.isRequired,
   pageContext: shape({
     frontmatter: shape({
-      display: oneOfType([
-        shape({ items: arrayOf(string).isRequired, text: string.isRequired }),
-        string,
-      ]).isRequired,
+      description: string.isRequired,
+      display: arrayOf(string).isRequired,
       title: string.isRequired,
     }),
   }).isRequired,

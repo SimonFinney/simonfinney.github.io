@@ -4,13 +4,14 @@
 ////
 
 @import '../node_modules/reset-css/sass/reset';
-@import '../src/components/Features/index';
-@import '../src/components/Feature/index';
 
 $accent-color: #93cfec;
 $background-color: #0f1219;
 $heading-color: #f6c97c;
 $text-color: #a7aeca;
+
+@import '../src/components/Features/index';
+@import '../src/components/Feature/index';
 
 body {
   max-width: 1024px;
@@ -35,43 +36,35 @@ h4 {
   font-family: 'Fira Code', monospace;
 }
 
-h1,
-h2,
-h3 {
-  margin-top: 16px;
-  margin-bottom: 16px;
+.title {
+  font-weight: bold;
 }
 
-h1,
-h3,
-h4 {
-  color: $heading-color;
+h2,
+h3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
 }
 
 h1 {
   font-size: 16px;
-  font-weight: bold;
-
-  &::before {
-    margin-right: 8px;
-    color: $accent-color;
-    content: '#';
-  }
 }
 
 h2 {
   width: 100%;
-  font-size: 72px;
-  line-height: 1.15;
-}
 
-h3 {
-  font-size: 24px;
+  @media (min-width: 768px) {
+    font-size: 72px;
+    line-height: 1.15;
+  }
 }
 
 h4 {
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 1.375;
+  font-weight: bold;
 }
 
 a {
@@ -108,14 +101,15 @@ header,
 footer {
   display: flex;
   position: sticky;
-  align-items: center;
   z-index: 9999;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: $background-color;
+  align-items: center;
 }
 
 header {
   top: 0;
-  border-bottom: 1px solid darken($color: $text-color, $amount: 50);
 }
 
 nav {
@@ -123,30 +117,20 @@ nav {
 
   li {
     display: inline-block;
-    margin-left: 8px;
+
+    &:not(:first-of-type) {
+      margin-left: 24px;
+    }
   }
 }
 
 .section {
-  display: flex;
-  position: relative;
-  padding-top: 128px;
-  padding-bottom: 128px;
-  flex-wrap: wrap;
+  padding-top: 144px;
+  padding-bottom: 144px;
 
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 50%;
-    z-index: -1;
-    background-image: url('images/illustration.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.075;
-    content: '';
+  @media (min-width: 768px) {
+    padding-top: 224px;
+    padding-bottom: 224px;
   }
 }
 
@@ -168,16 +152,9 @@ nav {
 
 .Typist {
   display: inline;
-  background-color: darken($color: $background-color, $amount: 2.5);
-
-  > .Cursor {
-    color: lighten($color: $heading-color, $amount: 2.5);
-  }
 }
 
 footer {
   bottom: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
   border-top: 1px solid darken($color: $text-color, $amount: 50);
 }
