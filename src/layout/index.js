@@ -19,7 +19,6 @@ const Layout = ({
   },
 }) => {
   const [isTyping, setIsTyping] = useState(false);
-
   useEffect(() => setIsTyping(true));
 
   return (
@@ -50,38 +49,34 @@ const Layout = ({
 
           <header>
             <h1>
-              <span className="title">{name}</span>
-              <div>{role}</div>
+              {name}
+              <div className="role">{role}</div>
             </h1>
 
             <nav>
               <ul>
                 {[
                   {
-                    content: 'About',
+                    children: 'About',
                     to: '/',
                   },
                   {
-                    content: 'Work',
+                    children: 'Work',
                     to: '/work',
                   },
-                ].map(({ content, to }, index) => {
-                  const key = `header__li--${index}`;
-
-                  return (
-                    <li key={key}>
-                      <Link activeClassName="a--active" to={to}>
-                        {content}
-                      </Link>
-                    </li>
-                  );
-                })}
+                ].map(({ children, to }, index) => (
+                  <li key={`header__li--${index}`}>
+                    <Link activeClassName="a--active" to={to}>
+                      {children}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </header>
 
           <main>
-            <section className="section">
+            <section className="hero">
               <h2>
                 {isTyping && (
                   <Typist
@@ -89,22 +84,19 @@ const Layout = ({
                     cursor={{ element: '_' }}
                     onTypingDone={setIsTyping}
                   >
-                    {display.map((item, index) => {
-                      const key = `display--${index}`;
-
-                      return (
-                        <span
-                          key={key}
-                          className={`display--${index % 2 ? 'odd' : 'even'}`}
-                        >
-                          {item}
-                          <Typist.Backspace count={item.length} delay={500} />
-                        </span>
-                      );
-                    })}
+                    {display.map((item, index) => (
+                      <span
+                        key={`display--${index}`}
+                        className={`display--${index % 2 ? 'odd' : 'even'}`}
+                      >
+                        {item}
+                        <Typist.Backspace count={item.length} delay={500} />
+                      </span>
+                    ))}
                   </Typist>
                 )}
               </h2>
+
               <p className="description">{description}</p>
             </section>
 
@@ -114,16 +106,13 @@ const Layout = ({
           <footer>
             <nav>
               <ul>
-                {contact.map(({ content, href }, index) => {
-                  const key = `footer__li--${index}`;
-                  return (
-                    <li key={key}>
-                      <a href={href} rel="noopener noreferrer" target="_blank">
-                        {content}
-                      </a>
-                    </li>
-                  );
-                })}
+                {contact.map(({ content, href }, index) => (
+                  <li key={`footer__li--${index}`}>
+                    <a href={href} rel="noopener noreferrer" target="_blank">
+                      {content}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </footer>

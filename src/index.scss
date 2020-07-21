@@ -5,28 +5,53 @@
 
 @import '../node_modules/reset-css/sass/reset';
 
-$accent-color: #93cfec;
-$background-color: #0f1219;
-$heading-color: #f6c97c;
-$text-color: #a7aeca;
+$color--accent: #f6c97c;
+$color--background: #0f1219;
+$color--text: #a7aeca;
 
-@import '../src/components/Features/index';
-@import '../src/components/Feature/index';
+@function units($count) {
+  @return 0.5rem * $count;
+}
+
+$sizing--border: units(
+  $count: 0.125,
+);
+
+@mixin breakpoint {
+  @media (min-width: units($count: 96)) {
+    @content;
+  }
+}
 
 body {
-  max-width: 1024px;
+  max-width: units($count: 128);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: units($count: 2);
+  padding-left: units($count: 2);
   font-family: 'Fira Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.00625rem;
-  color: $text-color;
-  background-color: $background-color;
+  color: $color--text;
+  background-color: $color--background;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+header,
+footer {
+  display: flex;
+  position: sticky;
+  padding-top: units($count: 1);
+  padding-bottom: units($count: 1);
+  background-color: $color--background;
+  align-items: center;
+}
+
+header {
+  top: 0;
+  z-index: 9999;
 }
 
 h1,
@@ -36,51 +61,42 @@ h4 {
   font-family: 'Fira Code', monospace;
 }
 
-.title {
-  font-weight: bold;
-}
-
-h2,
-h3 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font-size: 24px;
-}
-
-h1 {
-  font-size: 16px;
-}
-
-h2 {
-  width: 100%;
-
-  @media (min-width: 768px) {
-    font-size: 72px;
-    line-height: 1.15;
-  }
-}
-
+h1,
 h4 {
-  margin-bottom: 8px;
   font-size: 16px;
   line-height: 1.375;
   font-weight: bold;
 }
 
+.role {
+  font-weight: normal;
+}
+
+nav {
+  margin-left: auto;
+
+  li {
+    display: inline;
+
+    &:not(:first-of-type) {
+      margin-left: units($count: 2);
+    }
+  }
+}
+
 a {
   position: relative;
   text-decoration: none;
-  color: $accent-color;
+  color: inherit;
 
   &::before {
-    display: inline-block;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     z-index: -1;
     width: 0;
-    background-color: darken($color: $background-color, $amount: 3);
+    background-color: darken($color: $color--background, $amount: 5);
     content: '';
     transition: 0.3s width;
   }
@@ -91,53 +107,38 @@ a {
       width: 100%;
     }
   }
+
+  &:focus {
+    outline: $sizing--border solid $color--accent;
+  }
 }
 
 .a--active {
   font-weight: bold;
 }
 
-header,
-footer {
-  display: flex;
-  position: sticky;
-  z-index: 9999;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  background-color: $background-color;
-  align-items: center;
-}
+.hero {
+  padding-top: units($count: 18);
+  padding-bottom: units($count: 18);
 
-header {
-  top: 0;
-}
-
-nav {
-  margin-left: auto;
-
-  li {
-    display: inline-block;
-
-    &:not(:first-of-type) {
-      margin-left: 24px;
-    }
+  @include breakpoint {
+    padding-top: units($count: 28);
+    padding-bottom: units($count: 28);
   }
 }
 
-.section {
-  padding-top: 144px;
-  padding-bottom: 144px;
-
-  @media (min-width: 768px) {
-    padding-top: 224px;
-    padding-bottom: 224px;
-  }
+h2,
+h3 {
+  margin-top: units($count: 1);
+  margin-bottom: units($count: 1);
+  font-size: 24px;
 }
 
-.description {
-  max-width: 640px;
-  font-size: 20px;
-  line-height: 1.3;
+h2 {
+  @include breakpoint {
+    font-size: 72px;
+    line-height: 1.15;
+  }
 }
 
 .display {
@@ -146,15 +147,64 @@ nav {
   }
 
   &--even {
-    color: $heading-color;
+    color: $color--accent;
   }
 }
 
-.Typist {
-  display: inline;
+.description {
+  max-width: units($count: 80);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.features {
+  display: grid;
+  padding-bottom: units($count: 2);
+  grid-gap: units($count: 2);
+
+  @include breakpoint {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    background-color: darken($color: $color--background, $amount: 2.5);
+    content: '';
+  }
+
+  &__image {
+    width: 100%;
+    height: units($count: 25);
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: units($count: 4);
+  }
+
+  &__icon {
+    margin: auto units($count: 2) units($count: 2) auto;
+    fill: currentColor;
+  }
+}
+
+h4 {
+  margin-bottom: units($count: 1);
 }
 
 footer {
   bottom: 0;
-  border-top: 1px solid darken($color: $text-color, $amount: 50);
+  border-top: $sizing--border solid
+    lighten($color: $color--background, $amount: 5);
 }
