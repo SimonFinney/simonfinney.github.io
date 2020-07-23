@@ -29,7 +29,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-eslint',
     'gatsby-plugin-favicon',
-
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-35182446-4',
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -37,23 +42,7 @@ module.exports = {
         fonts: ['Fira Code', 'Fira Sans'],
       },
     },
-
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /\.inline\.svg$/,
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`,
-      },
-    },
-
+    'gatsby-plugin-manifest',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -79,10 +68,24 @@ module.exports = {
         ],
       },
     },
-    'gatsby-plugin-manifest',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
+      },
+    },
   ],
 };
