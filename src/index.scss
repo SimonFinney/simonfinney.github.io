@@ -63,9 +63,12 @@ h4 {
 
 h1,
 h4 {
-  font-size: 16px;
-  line-height: 1.375;
   font-weight: bold;
+
+  @include breakpoint {
+    font-size: 16px;
+    line-height: 1.375;
+  }
 }
 
 .role {
@@ -126,16 +129,21 @@ a {
 }
 
 h2,
-h3 {
+h3,
+.description {
   margin-top: units($count: 1);
   margin-bottom: units($count: 1);
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 1.3;
 }
 
 h2 {
+  min-height: 26px;
+
   @include breakpoint {
-    font-size: 72px;
-    line-height: 1.15;
+    min-height: 64px;
+    font-size: 54px;
+    line-height: 1.19;
   }
 }
 
@@ -150,9 +158,7 @@ h2 {
 }
 
 .description {
-  max-width: units($count: 80);
-  font-size: 20px;
-  line-height: 1.3;
+  max-width: units($count: 96);
 }
 
 .features {
