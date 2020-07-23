@@ -44,6 +44,7 @@ const Layout = ({
       }) => (
         <>
           <Helmet>
+            <html lang="en" />
             <title>{`${title} | ${name} — ${role}`}</title>
           </Helmet>
 
