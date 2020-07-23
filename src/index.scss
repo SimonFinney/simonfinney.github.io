@@ -110,6 +110,7 @@ a {
 
   &:focus {
     outline: $sizing--border solid $color--accent;
+    outline-offset: -$sizing--border;
   }
 }
 
@@ -118,13 +119,10 @@ a {
 }
 
 .hero {
-  padding-top: units($count: 18);
-  padding-bottom: units($count: 18);
+  $hero__spacing__padding: 20vh;
 
-  @include breakpoint {
-    padding-top: units($count: 28);
-    padding-bottom: units($count: 28);
-  }
+  padding-top: $hero__spacing__padding;
+  padding-bottom: $hero__spacing__padding;
 }
 
 h2,
@@ -159,8 +157,7 @@ h2 {
 
 .features {
   display: grid;
-  padding-bottom: units($count: 2);
-  grid-gap: units($count: 2);
+  grid-gap: units($count: 1);
 
   @include breakpoint {
     grid-template-columns: repeat(3, 1fr);
@@ -169,7 +166,6 @@ h2 {
 
 .feature {
   display: flex;
-  position: relative;
   flex-wrap: wrap;
 
   &::after {
