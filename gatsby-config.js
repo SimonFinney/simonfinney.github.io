@@ -23,7 +23,7 @@ module.exports = {
         href: 'https://github.com/simonfinney',
       },
     ],
-    role: 'Front End Specialist',
+    role: 'Creative Technologist',
     siteUrl: 'https://simonfinney.dev',
   },
   plugins: [

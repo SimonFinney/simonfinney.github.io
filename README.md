@@ -1,3 +1,3 @@
 # simonfinney.dev
 
-Simon Finney — Front End Specialist
+Simon Finney — Creative Technologist
