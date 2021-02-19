@@ -1,14 +1,14 @@
 /**
  * @file Gatsby configuration.
- * @copyright Simon Finney 2019 - 2020
+ * @copyright Simon Finney 2019 - 2021
  */
 
 const { resolve } = require('path');
-const { description } = require('./package.json');
+const path = resolve(__dirname, 'src');
 
 module.exports = {
   siteMetadata: {
-    name: description,
+    name: require('./package.json').description,
     contact: [
       {
         content: 'hello@simonﬁnney.dev',
@@ -23,7 +23,7 @@ module.exports = {
         href: 'https://github.com/simonfinney',
       },
     ],
-    role: 'Creative Technologist',
+    role: 'Creative technologist',
     siteUrl: 'https://simonfinney.dev',
   },
   plugins: [
@@ -47,7 +47,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: resolve('src/layout'),
+          default: resolve(path, 'layout'),
         },
         gatsbyRemarkPlugins: [
           {
@@ -84,7 +84,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`,
+        path: resolve(path, 'pages'),
       },
     },
   ],

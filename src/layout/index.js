@@ -1,6 +1,6 @@
 /**
  * @file Layout.
- * @copyright Simon Finney 2019 - 2020
+ * @copyright Simon Finney 2019 - 2021
  */
 
 import { graphql, StaticQuery } from 'gatsby';
@@ -54,7 +54,7 @@ const Layout = ({
               <div className="role">{role}</div>
             </h1>
 
-            <nav>
+            <nav aria-label="Website">
               <ul>
                 {[
                   {
@@ -105,7 +105,7 @@ const Layout = ({
           </main>
 
           <footer>
-            <nav>
+            <nav aria-label="Contact">
               <ul>
                 {contact.map(({ content, href }, index) => (
                   <li key={`footer__li--${index}`}>
