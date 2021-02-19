@@ -26,6 +26,7 @@ module.exports = {
     role: 'Creative technologist',
     siteUrl: 'https://simonfinney.dev',
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     'gatsby-plugin-eslint',
     'gatsby-plugin-favicon',
@@ -42,7 +43,12 @@ module.exports = {
         fonts: ['Fira Code', 'Fira Sans'],
       },
     },
-    'gatsby-plugin-manifest',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: resolve(path, 'favicon.png'),
+      },
+    },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
