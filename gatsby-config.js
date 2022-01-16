@@ -23,13 +23,11 @@ module.exports = {
         href: 'https://github.com/simonfinney',
       },
     ],
-    role: 'Creative technologist',
+    role: 'UX engineering',
     siteUrl: 'https://simonfinney.dev',
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     'gatsby-plugin-eslint',
-    'gatsby-plugin-favicon',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
