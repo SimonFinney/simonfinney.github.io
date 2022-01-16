@@ -3,19 +3,15 @@
   "description": "Simon Finney",
   "version": "0.1.0",
   "author": "Simon Finney <hello@simonfinney.dev>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SimonFinney/simonfinney.dev.git"
-  },
+  "repository": "https://github.com/SimonFinney/simonfinney.github.io.git",
   "keywords": [
     "simon",
     "finney",
-    "creative",
-    "technologist"
+    "UX",
+    "engineer"
   ],
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SimonFinney/simonfinney.dev/issues"
+    "url": "https://github.com/SimonFinney/simonfinney.github.io/issues"
   },
   "homepage": "https://simonfinney.dev",
   "scripts": {
