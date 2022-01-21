@@ -24,22 +24,22 @@ module.exports = {
         href: 'https://github.com/simonfinney',
       },
     ],
-    role: 'UX engineering',
-    siteUrl: 'https://simonfinney.dev',
   },
   plugins: [
     'gatsby-plugin-eslint',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-fonts-v2',
       options: {
-        trackingId: 'UA-35182446-4',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        display: 'swap',
-        fonts: ['Fira Code', 'Fira Sans'],
+        fonts: [
+          {
+            family: 'Fira Sans',
+            weights: ['400', '700'],
+          },
+          {
+            family: 'JetBrains Mono',
+            weights: ['400', '700'],
+          },
+        ],
       },
     },
     {
