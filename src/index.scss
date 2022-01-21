@@ -1,20 +1,23 @@
-////
-/// Styles.
-/// @copyright Simon Finney 2019 - 2020
-////
+///
+// Copyright Simon Finney 2019, 2022
+///
 
-@import '../node_modules/reset-css/sass/reset';
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:math';
+
+@import 'the-new-css-reset/css/reset.css';
 
 $color--accent: #f6c97c;
 $color--background: #0f1219;
 $color--text: #a7aeca;
 
 @function z-index($name) {
-  @return map-get($map: $z-indexes, $key: $name);
+  @return map.get($map: $z-indexes, $key: $name);
 }
 
 @function rem($px) {
-  @return ($px / 16) * 1rem;
+  @return math.div($number1: $px, $number2: 16) * 1rem;
 }
 
 @function units($count) {
@@ -28,13 +31,17 @@ $color--text: #a7aeca;
 }
 
 @mixin type($name) {
-  $type: map-get(
+  $type: map.get(
     $map: $styles--type,
     $key: $name,
   );
 
-  min-height: map-get($map: $type, $key: font-size) *
-    map-get($map: $type, $key: line-height);
+  $font-size: map.get(
+    $map: $type,
+    $key: font-size,
+  );
+
+  min-height: $font-size * map.get($map: $type, $key: line-height);
 
   @each $property, $value in $type {
     #{$property}: $value;
@@ -127,7 +134,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Fira Code', monospace;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 h1,
@@ -171,7 +178,7 @@ a {
     left: 0;
     z-index: z-index($name: hidden);
     width: 0;
-    background-color: darken($color: $color--background, $amount: 5);
+    background-color: color.adjust($color: $color--background, $lightness: -5%);
     content: '';
     transition: 0.3s width;
   }
@@ -249,7 +256,10 @@ h2 {
     bottom: 0;
     left: 0;
     z-index: z-index($name: hidden) - 1;
-    background-color: darken($color: $color--background, $amount: 2.5);
+    background-color: color.adjust(
+      $color: $color--background,
+      $lightness: -2.5%
+    );
     content: '';
   }
 
@@ -280,5 +290,5 @@ h4 {
 footer {
   bottom: 0;
   border-top: $sizing--border solid
-    lighten($color: $color--background, $amount: 5);
+    color.adjust($color: $color--background, $lightness: 5%);
 }
