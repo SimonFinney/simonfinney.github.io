@@ -1,3 +1,3 @@
 # simonfinney.dev
 
-Simon Finney — Creative Technologist
+Simon Finney — UX engineering
