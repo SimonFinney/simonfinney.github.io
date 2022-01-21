@@ -8,6 +8,8 @@ const path = resolve(__dirname, 'src');
 module.exports = {
   siteMetadata: {
     name: require('./package.json').description,
+    role: 'UX engineering',
+    siteUrl: 'https://simonfinney.dev',
     contact: [
       {
         content: 'hello@simonﬁnney.dev',
