@@ -20,7 +20,7 @@
     "deploy": "run-s build gh-pages",
     "dev": "gatsby develop",
     "dev:clean": "run-s clean dev",
-    "format": "prettier --ignore-path .gitignore --write '**/*.{js,json,md,mdx,scss}'",
+    "format": "prettier --ignore-path .gitignore -w .",
     "gh-pages": "gh-pages -b master -d public",
     "lint": "run-s lint:*",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
