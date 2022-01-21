@@ -4,7 +4,7 @@ Simon Finney — UX engineering.
 
 ## Prerequisite
 
-[pnpm](https://pnpm.io/installation)
+[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
 
 ## Getting started
 
