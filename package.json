@@ -24,7 +24,7 @@
     "gh-pages": "gh-pages -b master -d public",
     "lint": "run-s lint:*",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
-    "lint:scss": "stylelint --fix --ignore-path .gitignore '**/*.scss'",
+    "lint:scss": "stylelint --fix -i .gitignore '**/*.scss'",
     "run-s": "run-s"
   },
   "dependencies": {
