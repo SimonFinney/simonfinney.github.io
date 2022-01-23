@@ -210,10 +210,13 @@ h3,
     $count: 1,
   );
 
-  @include type($name: heading-02);
-
   margin-top: $heading__spacing;
   margin-bottom: $heading__spacing;
+}
+
+h2,
+h3 {
+  @include type($name: heading-02);
 }
 
 h2 {
@@ -234,6 +237,10 @@ h2 {
 
 .description {
   max-width: units($count: 96);
+
+  @include breakpoint {
+    @include type($name: heading-02);
+  }
 }
 
 .features {
