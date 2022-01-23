@@ -41,8 +41,6 @@ $color--text: #a7aeca;
     $key: font-size,
   );
 
-  min-height: $font-size * map.get($map: $type, $key: line-height);
-
   @each $property, $value in $type {
     #{$property}: $value;
   }
@@ -100,10 +98,10 @@ body {
   @include type($name: body);
 
   max-width: units($count: 128);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $body__spacing;
-  padding-left: $body__spacing;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  padding-inline-end: $body__spacing;
+  padding-inline-start: $body__spacing;
   font-family: 'Fira Sans', sans-serif;
   color: $color--text;
   background-color: $color--background;
@@ -119,14 +117,14 @@ footer {
 
   display: flex;
   position: sticky;
-  padding-top: $navigation__spacing;
-  padding-bottom: $navigation__spacing;
+  padding-block-start: $navigation__spacing;
+  padding-block-end: $navigation__spacing;
   background-color: $color--background;
   align-items: center;
 }
 
 header {
-  top: 0;
+  inset-block-start: 0;
   z-index: z-index($name: header);
 }
 
@@ -155,13 +153,13 @@ h4 {
 }
 
 nav {
-  margin-left: auto;
+  margin-inline-start: auto;
 
   li {
     display: inline;
 
     &:not(:first-of-type) {
-      margin-left: units($count: 2);
+      margin-inline-start: units($count: 2);
     }
   }
 }
@@ -173,20 +171,20 @@ a {
 
   &::before {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
     z-index: z-index($name: hidden);
-    width: 0;
+    inline-size: 0;
     background-color: color.adjust($color: $color--background, $lightness: -5%);
     content: '';
-    transition: 0.3s width;
+    transition: 0.3s inline-size;
   }
 
   &:focus,
   &:hover {
     &::before {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 
@@ -199,8 +197,8 @@ a {
 .hero {
   $hero__spacing: 20vh;
 
-  padding-top: $hero__spacing;
-  padding-bottom: $hero__spacing;
+  padding-block-start: $hero__spacing;
+  padding-block-end: $hero__spacing;
 }
 
 h2,
@@ -210,8 +208,8 @@ h3,
     $count: 1,
   );
 
-  margin-top: $heading__spacing;
-  margin-bottom: $heading__spacing;
+  margin-block-start: $heading__spacing;
+  margin-block-end: $heading__spacing;
 }
 
 h2,
@@ -236,7 +234,7 @@ h2 {
 }
 
 .description {
-  max-width: units($count: 96);
+  max-inline-size: units($count: 96);
 
   @include breakpoint {
     @include type($name: heading-02);
@@ -258,10 +256,7 @@ h2 {
 
   &::after {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: z-index($name: hidden) - 1;
     background-color: color.adjust(
       $color: $color--background,
@@ -271,8 +266,8 @@ h2 {
   }
 
   &__image {
-    width: 100%;
-    height: units($count: 25);
+    inline-size: 100%;
+    block-size: units($count: 25);
     object-fit: cover;
   }
 
@@ -291,11 +286,11 @@ h2 {
 }
 
 h4 {
-  margin-bottom: units($count: 1);
+  margin-block-end: units($count: 1);
 }
 
 footer {
-  bottom: 0;
-  border-top: $sizing--border solid
+  inset-block-end: 0;
+  border-block-start: $sizing--border solid
     color.adjust($color: $color--background, $lightness: 5%);
 }
