@@ -3,23 +3,21 @@ title: Work
 display:
   - HTML
   - CSS (Sass)
-  - JavaScript (ES.Next)
-  - Node.js
+  - JavaScript (TypeScript)
   - React
-  - JAMstack
+  - Gatsby
+  - Node.js
 
 description: If you’d like a better understanding of my experience, check out a selection of my work both here and on GitHub.
 ---
 
-import Features from '../../components/Features';
-import Feature from '../../components/Feature';
+import { Features } from '../../components/Features';
+import { Feature } from '../../components/Feature';
 
 import carbonForIBMSecurity from './images/carbon-for-ibm-security.jpg';
 import ibmSecurityExperienceGuide from './images/ibm-security-experience-guide.png';
-import id2015DesignIsland from './images/id2015-design-island.jpg';
 import perceivedLoadingTimeOfAnimation from './images/perceived-loading-time-of-animation.png';
 import seeHowMuchYoureExposing from "./images/see-how-much-you're-exposing.png";
-import watsonConversationPoster from './images/watson-conversation-poster.png';
 
 <Features title="Work">
 <Feature
@@ -37,13 +35,6 @@ import watsonConversationPoster from './images/watson-conversation-poster.png';
 />
 
 <Feature
-  description="OFFSET Dublin 2018 natural language understanding project"
-  href="http://www.100archive.com/project/conversation"
-  src={watsonConversationPoster}
-  title="Watson Conversation Poster"
-/>
-
-<Feature
   description="Interactive research study examining animation principles against scores for perceived loading times and overall satisfaction"
   href="https://github.com/simonfinney/research-project"
   src={perceivedLoadingTimeOfAnimation}
@@ -57,10 +48,4 @@ import watsonConversationPoster from './images/watson-conversation-poster.png';
   title="See How Much You’re Exposing"
 />
 
-<Feature
-  description="Hybrid application for discovering and experiencing the best of Irish design"
-  href="http://www.irishdesign2015.ie/news/single/design-island-new-app-to-help-visitors-experience-the-best-of-irish-design/press"
-  src={id2015DesignIsland}
-  title="ID2015 — Design Island"
-/>
 </Features>
