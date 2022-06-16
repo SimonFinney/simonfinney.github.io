@@ -2,14 +2,16 @@
 
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';
+
 import { arrayOf, node, shape, string } from 'prop-types';
+
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Typist from 'react-typist';
 
 import '../index.scss';
 
-function Layout({
+export default function Layout({
   children,
   pageContext: {
     frontmatter: { description, display, title },
@@ -62,8 +64,8 @@ function Layout({
                     children: 'Work',
                     to: '/work',
                   },
-                ].map(({ children, to }, index) => (
-                  <li key={`header__li--${index}`}>
+                ].map(({ children, to }) => (
+                  <li key={`header__li--${to}`}>
                     <Link activeClassName="a--active" to={to}>
                       {children}
                     </Link>
@@ -84,7 +86,7 @@ function Layout({
                   >
                     {display.map((item, index) => (
                       <span
-                        key={`display--${index}`}
+                        key={`display--${item}`}
                         className={`display--${index % 2 ? 'odd' : 'even'}`}
                       >
                         {item}
@@ -104,8 +106,8 @@ function Layout({
           <footer>
             <nav aria-label="Contact">
               <ul>
-                {contact.map(({ content, href }, index) => (
-                  <li key={`footer__li--${index}`}>
+                {contact.map(({ content, href }) => (
+                  <li key={`footer__li--${content}`}>
                     <a href={href} rel="noopener noreferrer" target="_blank">
                       {content}
                     </a>
@@ -130,5 +132,3 @@ Layout.propTypes = {
     }),
   }).isRequired,
 };
-
-export default Layout;
