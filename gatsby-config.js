@@ -1,6 +1,4 @@
-/**
- * Copyright Simon Finney 2019, 2022
- */
+/** Copyright Simon Finney 2019, 2022 */
 
 const { resolve } = require('path');
 const path = resolve(__dirname, 'src');

@@ -1,7 +1,4 @@
-/**
- * @file Layout.
- * @copyright Simon Finney 2019 - 2021
- */
+/** Copyright Simon Finney 2019, 2021 */
 
 import { graphql, StaticQuery } from 'gatsby';
 import Link from 'gatsby-link';

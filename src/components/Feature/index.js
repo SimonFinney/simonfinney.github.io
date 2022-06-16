@@ -1,7 +1,4 @@
-/**
- * @file Feature.
- * @copyright Simon Finney 2020
- */
+/** Copyright Simon Finney 2019, 2022 */
 
 import { string } from 'prop-types';
 import React from 'react';
