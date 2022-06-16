@@ -7,21 +7,23 @@ import ExternalLinkIcon from '../../images/icons/external-link.inline.svg';
 
 const namespace = 'feature';
 
-const Feature = ({ description, href, src, title }) => (
-  <a
-    className={namespace}
-    href={href}
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    {src && <img className={`${namespace}__image`} alt={title} src={src} />}
-    <div className={`${namespace}__content`}>
-      <h4>{title}</h4>
-      {description && <p>{description}</p>}
-    </div>
-    <ExternalLinkIcon className={`${namespace}__icon`} />
-  </a>
-);
+export function Feature({ description, href, src, title }) {
+  return (
+    <a
+      className={namespace}
+      href={href}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      {src && <img className={`${namespace}__image`} alt={title} src={src} />}
+      <div className={`${namespace}__content`}>
+        <h4>{title}</h4>
+        {description && <p>{description}</p>}
+      </div>
+      <ExternalLinkIcon className={`${namespace}__icon`} />
+    </a>
+  );
+}
 
 Feature.propTypes = {
   href: string.isRequired,
@@ -29,10 +31,3 @@ Feature.propTypes = {
   src: string,
   description: string,
 };
-
-Feature.defaultProps = {
-  src: null,
-  description: null,
-};
-
-export default Feature;

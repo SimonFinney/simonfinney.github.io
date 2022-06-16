@@ -9,12 +9,12 @@ import Typist from 'react-typist';
 
 import '../index.scss';
 
-const Layout = ({
+function Layout({
   children,
   pageContext: {
     frontmatter: { description, display, title },
   },
-}) => {
+}) {
   const [isTyping, setIsTyping] = useState(false);
   useEffect(() => setIsTyping(true));
 
@@ -118,7 +118,7 @@ const Layout = ({
       )}
     />
   );
-};
+}
 
 Layout.propTypes = {
   children: node.isRequired,
