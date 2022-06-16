@@ -21,7 +21,7 @@
     "dev": "gatsby develop",
     "dev:clean": "run-s clean dev",
     "format": "prettier --ignore-path .gitignore -w .",
-    "gh-pages": "gh-pages -b main -d public",
+    "gh-pages": "gh-pages -b main -d public -f",
     "lint": "run-s lint:*",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
     "lint:scss": "stylelint --fix -i .gitignore '**/*.scss'"
