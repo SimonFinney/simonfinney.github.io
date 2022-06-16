@@ -147,44 +147,42 @@ h4 {
 
 nav {
   margin-inline-start: auto;
+}
 
-  li {
-    display: inline;
+nav li {
+  display: inline;
+}
 
-    &:not(:first-of-type) {
-      margin-inline-start: -units($count: 2);
-    }
-  }
+nav li:not(:first-of-type) {
+  margin-inline-start: -units($count: 2);
 }
 
 a {
   position: relative;
   text-decoration: none;
   color: inherit;
+}
 
-  &::before {
-    position: absolute;
-    inset-block-start: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    z-index: -z-index($name: hidden);
-    inline-size: 0;
-    background-color: color.adjust($color: $color-background, $lightness: -5%);
-    content: '';
-    transition: 0.3s inline-size;
-  }
+a::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  z-index: -z-index($name: hidden);
+  inline-size: 0;
+  background-color: color.adjust($color: $color-background, $lightness: -5%);
+  content: '';
+  transition: 0.3s inline-size;
+}
 
-  &:focus,
-  &:hover {
-    &::before {
-      inline-size: 100%;
-    }
-  }
+a:focus::before,
+a:hover::before {
+  inline-size: 100%;
+}
 
-  &:focus {
-    outline: $sizing-border solid $color-accent;
-    outline-offset: -$sizing-border;
-  }
+a:focus {
+  outline: $sizing-border solid $color-accent;
+  outline-offset: -$sizing-border;
 }
 
 .hero {
