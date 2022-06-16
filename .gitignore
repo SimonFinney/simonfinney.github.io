@@ -10,3 +10,7 @@ public
 
 # Operating system.
 .DS_Store
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/unplugged
+.yarn/install-state.gz
