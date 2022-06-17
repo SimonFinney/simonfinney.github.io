@@ -16,10 +16,13 @@ export function Feature({ description, href, src, title }) {
       target="_blank"
     >
       {src && <img className={`${namespace}__image`} alt={title} src={src} />}
+
       <div className={`${namespace}__content`}>
         <h4>{title}</h4>
+
         {description && <p>{description}</p>}
       </div>
+
       <ExternalLinkIcon className={`${namespace}__icon`} />
     </a>
   );

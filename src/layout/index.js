@@ -18,6 +18,7 @@ export default function Layout({
   },
 }) {
   const [isTyping, setIsTyping] = useState(false);
+
   useEffect(() => setIsTyping(true));
 
   return (
@@ -44,12 +45,14 @@ export default function Layout({
         <>
           <Helmet>
             <html lang="en" />
+
             <title>{`${title} | ${name} — ${role}`}</title>
           </Helmet>
 
           <header>
             <h1>
               {name}
+
               <div className="role">{role}</div>
             </h1>
 
@@ -90,6 +93,7 @@ export default function Layout({
                         className={`display--${index % 2 ? 'odd' : 'even'}`}
                       >
                         {item}
+
                         <Typist.Backspace count={item.length} delay={500} />
                       </span>
                     ))}

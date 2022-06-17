@@ -7,6 +7,7 @@ export function Features({ children, title }) {
   return (
     <>
       <h3>{title}</h3>
+
       <section className="features">{children}</section>
     </>
   );

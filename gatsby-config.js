@@ -23,8 +23,14 @@ module.exports = {
       },
     ],
   },
+
   plugins: [
     'gatsby-plugin-eslint',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-sharp',
+
     {
       resolve: 'gatsby-plugin-google-fonts-v2',
       options: {
@@ -40,12 +46,14 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: resolve(path, 'favicon.png'),
       },
     },
+
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -53,6 +61,8 @@ module.exports = {
           default: resolve(path, 'layout'),
         },
         gatsbyRemarkPlugins: [
+          'gatsby-remark-images',
+
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
@@ -60,6 +70,7 @@ module.exports = {
               icon: false,
             },
           },
+
           {
             resolve: 'gatsby-remark-external-links',
             options: {
@@ -67,12 +78,10 @@ module.exports = {
               target: '_blank',
             },
           },
-          'gatsby-remark-images',
         ],
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-react-helmet',
+
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -81,8 +90,7 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-sharp',
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {

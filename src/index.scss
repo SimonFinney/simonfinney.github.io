@@ -175,8 +175,7 @@ a::before {
   transition: 0.3s inline-size;
 }
 
-a:focus::before,
-a:hover::before {
+a:is(:focus, :hover)::before {
   inline-size: 100%;
 }
 

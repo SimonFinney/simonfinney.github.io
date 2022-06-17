@@ -22,7 +22,7 @@
     "dev:clean": "run-s clean dev",
     "format": "prettier --ignore-path .gitignore -w .",
     "gh-pages": "gh-pages -b main -d public -f",
-    "lint": "run-s lint:*",
+    "lint": "run-p 'lint:*'",
     "lint:js": "eslint --fix --ignore-path .gitignore .",
     "lint:scss": "stylelint --fix -i .gitignore '**/*.scss'"
   },
@@ -72,8 +72,5 @@
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-no-unsupported-browser-features": "^5.0.3",
     "the-new-css-reset": "^1.6.1"
-  },
-  "browserslist": [
-    "> 1%"
-  ]
+  }
 }
