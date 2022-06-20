@@ -24,13 +24,14 @@ export default function Layout({
   return (
     <StaticQuery
       query={graphql`
-        query DefaultQuery {
+        query {
           site {
             siteMetadata {
               contact {
                 content
                 href
               }
+              meta
               name
               role
             }
@@ -39,7 +40,7 @@ export default function Layout({
       `}
       render={({
         site: {
-          siteMetadata: { contact, name, role },
+          siteMetadata: { contact, meta, name, role },
         },
       }) => (
         <>
@@ -47,7 +48,7 @@ export default function Layout({
             <html lang="en" />
 
             <meta name="description" content={description} />
-            <title>{`${title} | ${name} — ${role}`}</title>
+            <title>{`${title} | ${meta}`}</title>
           </Helmet>
 
           <header>

@@ -3,11 +3,17 @@
 const { resolve } = require('path');
 const src = resolve(__dirname, 'src');
 
+const { description: name, homepage: siteUrl } = require('./package.json');
+
+const role = 'UX engineering';
+const meta = `${name} — ${role}`;
+
 module.exports = {
   siteMetadata: {
-    name: require('./package.json').description,
-    role: 'UX engineering',
-    siteUrl: 'https://simonfinney.dev',
+    meta,
+    name,
+    role,
+    siteUrl,
     contact: [
       {
         content: 'hello@simonﬁnney.dev',
@@ -34,6 +40,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: meta,
         icon: resolve(src, 'favicon.png'),
       },
     },
