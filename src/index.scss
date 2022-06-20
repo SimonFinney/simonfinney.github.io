@@ -95,8 +95,8 @@ body {
   margin-inline-start: auto;
   padding-inline-end: $spacing-body;
   padding-inline-start: $spacing-body;
-  font-family: 'Fira Sans', sans-serif;
   color: $color-text;
+  font-family: system-ui, sans-serif;
   background-color: $color-background;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -125,7 +125,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: ui-monospace, monospace;
 }
 
 h1,

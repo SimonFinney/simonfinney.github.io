@@ -32,22 +32,6 @@ module.exports = {
     'gatsby-plugin-sharp',
 
     {
-      resolve: 'gatsby-plugin-google-fonts-v2',
-      options: {
-        fonts: [
-          {
-            family: 'Fira Sans',
-            weights: ['400', '700'],
-          },
-          {
-            family: 'JetBrains Mono',
-            weights: ['400', '700'],
-          },
-        ],
-      },
-    },
-
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: resolve(path, 'favicon.png'),
