@@ -8,6 +8,8 @@ const { description: name, homepage: siteUrl } = require('./package.json');
 const role = 'UX engineering';
 const meta = `${name} — ${role}`;
 
+const color = '#0f1219';
+
 module.exports = {
   siteMetadata: {
     meta,
@@ -19,10 +21,12 @@ module.exports = {
         content: 'hello@simonﬁnney.dev',
         href: 'mailto:hello@simonfinney.dev',
       },
+
       {
         content: 'LinkedIn',
         href: 'https://www.linkedin.com/in/simonfinney',
       },
+
       {
         content: 'GitHub',
         href: 'https://github.com/simonfinney',
@@ -42,6 +46,9 @@ module.exports = {
       options: {
         name: meta,
         icon: resolve(src, 'favicon.png'),
+
+        background_color: color,
+        theme_color: color,
       },
     },
 
