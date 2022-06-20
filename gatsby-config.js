@@ -1,7 +1,7 @@
 /** Copyright Simon Finney 2019, 2022 */
 
 const { resolve } = require('path');
-const path = resolve(__dirname, 'src');
+const src = resolve(__dirname, 'src');
 
 module.exports = {
   siteMetadata: {
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: resolve(path, 'favicon.png'),
+        icon: resolve(src, 'favicon.png'),
       },
     },
 
@@ -42,7 +42,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: resolve(path, 'layout'),
+          default: resolve(src, 'layout'),
         },
         gatsbyRemarkPlugins: [
           'gatsby-remark-images',
@@ -79,7 +79,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: resolve(path, 'pages'),
+        path: resolve(src, 'pages'),
       },
     },
   ],
