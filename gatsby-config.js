@@ -45,10 +45,11 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: meta,
-        icon: resolve(src, 'favicon.png'),
-
+        start_url: '/',
         background_color: color,
         theme_color: color,
+        display: 'standalone',
+        icon: resolve(src, 'favicon.png'),
       },
     },
 
