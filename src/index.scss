@@ -6,8 +6,9 @@
 
 @use 'the-new-css-reset/css/reset';
 
+// `$color-background` is defined in `src/colors` and shared between JavaScript and Sass.
+
 $color-accent: #f6c97c;
-$color-background: #0f1219;
 $color-text: #a7aeca;
 
 @function -z-index($name) {

@@ -5,10 +5,14 @@ const src = resolve(__dirname, 'src');
 
 const { description: name, homepage: siteUrl } = require('./package.json');
 
+function path(path) {
+  return resolve(src, path);
+}
+
 const role = 'UX engineering';
 const meta = `${name} — ${role}`;
 
-const color = '#0f1219';
+const { background } = require(path('color'));
 
 module.exports = {
   siteMetadata: {
@@ -38,7 +42,6 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
 
     {
@@ -46,10 +49,10 @@ module.exports = {
       options: {
         name: meta,
         start_url: '/',
-        background_color: color,
-        theme_color: color,
+        background_color: background,
+        theme_color: background,
         display: 'standalone',
-        icon: resolve(src, 'favicon.png'),
+        icon: path('favicon.png'),
       },
     },
 
@@ -57,7 +60,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: resolve(src, 'layout'),
+          default: path('layout'),
         },
         gatsbyRemarkPlugins: [
           'gatsby-remark-images',
@@ -91,10 +94,17 @@ module.exports = {
     },
 
     {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        additionalData: `$color-background: ${background};`,
+      },
+    },
+
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: resolve(src, 'pages'),
+        path: path('pages'),
       },
     },
   ],
