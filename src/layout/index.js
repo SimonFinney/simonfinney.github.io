@@ -46,6 +46,7 @@ export default function Layout({
           <Helmet>
             <html lang="en" />
 
+            <meta name="description" content={description} />
             <title>{`${title} | ${name} — ${role}`}</title>
           </Helmet>
 
