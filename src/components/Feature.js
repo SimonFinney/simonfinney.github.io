@@ -1,13 +1,13 @@
 /** Copyright Simon Finney 2019, 2022 */
 
-import { string } from 'prop-types';
-import React from 'react';
+import { node, string } from 'prop-types';
+import React, { cloneElement } from 'react';
 
-import ExternalLinkIcon from '../../images/icons/external-link.inline.svg';
+import ExternalLink20 from '../images/icons/external-link.inline.svg';
 
 const namespace = 'feature';
 
-export function Feature({ description, href, src, title }) {
+export function Feature({ children, description, href, title }) {
   return (
     <a
       className={namespace}
@@ -15,7 +15,7 @@ export function Feature({ description, href, src, title }) {
       rel="noopener noreferrer"
       target="_blank"
     >
-      {src && <img className={`${namespace}__image`} alt={title} src={src} />}
+      {children && cloneElement(children, { className: `${namespace}__image` })}
 
       <div className={`${namespace}__content`}>
         <h4>{title}</h4>
@@ -23,14 +23,14 @@ export function Feature({ description, href, src, title }) {
         {description && <p>{description}</p>}
       </div>
 
-      <ExternalLinkIcon className={`${namespace}__icon`} />
+      <ExternalLink20 className={`${namespace}__icon`} />
     </a>
   );
 }
 
 Feature.propTypes = {
+  children: node,
+  description: string,
   href: string.isRequired,
   title: string.isRequired,
-  src: string,
-  description: string,
 };

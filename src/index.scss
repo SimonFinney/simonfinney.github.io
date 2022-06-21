@@ -11,6 +11,8 @@
 $color-accent: #f6c97c;
 $color-text: #a7aeca;
 
+// `$max-width` is defined in `src/breakpoint`.
+
 @function -z-index($name) {
   @return map.get($map: $z-indexes, $key: $name);
 }
@@ -91,7 +93,7 @@ body {
 
   @include -type($name: body);
 
-  max-width: -units($count: 128);
+  max-width: -rem($px: $max-width);
   margin-inline-end: auto;
   margin-inline-start: auto;
   padding-inline-end: $spacing-body;

@@ -9,7 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Typist from 'react-typist';
 
-import '../index.scss';
+import './index.scss';
 
 export default function Layout({
   children,

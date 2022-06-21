@@ -12,6 +12,7 @@ function path(path) {
 const role = 'UX engineering';
 const meta = `${name} — ${role}`;
 
+const { maxWidth } = require(path('breakpoint'));
 const { background } = require(path('color'));
 
 module.exports = {
@@ -67,7 +68,7 @@ module.exports = {
           default: path('layout'),
         },
         gatsbyRemarkPlugins: [
-          'gatsby-remark-images',
+          'gatsby-remark-unwrap-images',
 
           {
             resolve: 'gatsby-remark-autolink-headers',
@@ -82,6 +83,14 @@ module.exports = {
             options: {
               rel: 'noopener noreferrer',
               target: '_blank',
+            },
+          },
+
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth,
             },
           },
         ],
@@ -100,7 +109,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        additionalData: `$color-background: ${background};`,
+        additionalData: [
+          ['color-background', background],
+          ['max-width', maxWidth],
+        ].reduce(
+          (variables, [variable, value]) =>
+            `${variables}$${variable}: ${value}; `,
+          ''
+        ),
       },
     },
 
