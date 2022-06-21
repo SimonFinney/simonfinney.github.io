@@ -53,6 +53,10 @@ module.exports = {
         theme_color: background,
         display: 'standalone',
         icon: path('icon.png'),
+
+        icon_options: {
+          purpose: 'maskable',
+        },
       },
     },
 
