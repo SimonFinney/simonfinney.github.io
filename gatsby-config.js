@@ -55,7 +55,7 @@ module.exports = {
         icon: path('icon.png'),
 
         icon_options: {
-          purpose: 'maskable',
+          purpose: 'any maskable',
         },
       },
     },
