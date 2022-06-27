@@ -11,7 +11,7 @@
 $color-accent: #f6c97c;
 $color-text: #a7aeca;
 
-// `$max-width` is defined in `src/breakpoint`.
+// `$max-inline-size` is defined in `src/breakpoint`.
 
 @function -z-index($name) {
   @return map.get($map: $z-indexes, $key: $name);
@@ -93,7 +93,7 @@ body {
 
   @include -type($name: body);
 
-  max-width: -rem($px: $max-width);
+  max-inline-size: -rem($px: $max-inline-size);
   margin-inline-end: auto;
   margin-inline-start: auto;
   padding-inline-end: $spacing-body;
@@ -256,8 +256,6 @@ h2 {
 
 .feature__image {
   inline-size: 100%;
-  block-size: -units($count: 25);
-  object-fit: cover;
 }
 
 .feature__content {
