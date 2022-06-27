@@ -6,16 +6,12 @@
 
 @use 'the-new-css-reset/css/reset';
 
-// `$color-background` is defined in `src/colors` and shared between JavaScript and Sass.
+// `$-color-background` is defined in `src/colors` and shared between JavaScript and Sass.
 
-$color-accent: #f6c97c;
-$color-text: #a7aeca;
+$-color-accent: #f6c97c;
+$-color-text: #a7aeca;
 
-// `$max-inline-size` is defined in `src/breakpoint`.
-
-@function -z-index($name) {
-  @return map.get($map: $z-indexes, $key: $name);
-}
+// `$-max-inline-size` is defined in `src/breakpoint`.
 
 @function -rem($px) {
   @return math.div($number1: $px, $number2: 16) * 1rem;
@@ -25,38 +21,21 @@ $color-text: #a7aeca;
   @return -rem($px: 8) * $count;
 }
 
+$-breakpoint: -rem(
+  $px: 768,
+);
+
 @mixin -breakpoint {
-  @media (min-width: -units($count: 96)) {
+  @media (min-width: $-breakpoint) {
     @content;
   }
 }
 
-@mixin -type($name) {
-  $type: map.get(
-    $map: $styles-type,
-    $key: $name,
-  );
-
-  $font-size: map.get(
-    $map: $type,
-    $key: font-size,
-  );
-
-  @each $property, $value in $type {
-    #{$property}: $value;
-  }
-}
-
-$z-indexes: (
-  header: 9999,
-  hidden: -1,
+$-sizing-border: -rem(
+  $px: 1,
 );
 
-$sizing-border: -units(
-  $count: 0.125,
-);
-
-$styles-type: (
+$-styles-type: (
   body: (
     font-size: -rem(
         $px: 14,
@@ -86,36 +65,61 @@ $styles-type: (
   ),
 );
 
+@mixin -type($name) {
+  $type: map.get(
+    $map: $-styles-type,
+    $key: $name,
+  );
+
+  $font-size: map.get(
+    $map: $type,
+    $key: font-size,
+  );
+
+  @each $property, $value in $type {
+    #{$property}: $value;
+  }
+}
+
+$-z-indexes: (
+  header: 9999,
+  hidden: -1,
+);
+
+@function -z-index($name) {
+  @return map.get($map: $-z-indexes, $key: $name);
+}
+
 body {
-  $spacing-body: -units(
+  $-spacing-body: -units(
     $count: 2,
   );
 
   @include -type($name: body);
 
-  max-inline-size: -rem($px: $max-inline-size);
+  max-inline-size: -rem($px: $-max-inline-size);
   margin-inline-end: auto;
   margin-inline-start: auto;
-  padding-inline-end: $spacing-body;
-  padding-inline-start: $spacing-body;
-  color: $color-text;
+  padding-inline-end: $-spacing-body;
+  padding-inline-start: $-spacing-body;
+  color: $-color-text;
   font-family: system-ui, sans-serif;
-  background-color: $color-background;
+  background-color: $-color-background;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 header,
 footer {
-  $spacing-navigation: -units(
+  $-spacing-navigation: -units(
     $count: 2,
   );
 
   display: flex;
   position: sticky;
-  padding-block-start: $spacing-navigation;
-  padding-block-end: $spacing-navigation;
-  background-color: $color-background;
+  padding-block-start: $-spacing-navigation;
+  padding-block-end: $-spacing-navigation;
+  background-color: $-color-background;
   align-items: center;
 }
 
@@ -173,7 +177,7 @@ a::before {
   inset-inline-start: 0;
   z-index: -z-index($name: hidden);
   inline-size: 0;
-  background-color: color.adjust($color: $color-background, $lightness: -5%);
+  background-color: color.adjust($color: $-color-background, $lightness: -5%);
   content: '';
   transition: 0.3s inline-size;
 }
@@ -183,26 +187,26 @@ a:is(:focus, :hover)::before {
 }
 
 a:focus {
-  outline: $sizing-border solid $color-accent;
-  outline-offset: -$sizing-border;
+  outline: $-sizing-border solid $-color-accent;
+  outline-offset: -$-sizing-border;
 }
 
 .hero {
-  $spacing-hero: 20vh;
+  $-spacing-hero: 20vh;
 
-  padding-block-start: $spacing-hero;
-  padding-block-end: $spacing-hero;
+  padding-block-start: $-spacing-hero;
+  padding-block-end: $-spacing-hero;
 }
 
 h2,
 h3,
 .description {
-  $spacing-heading: -units(
+  $-spacing-heading: -units(
     $count: 1,
   );
 
-  margin-block-start: $spacing-heading;
-  margin-block-end: $spacing-heading;
+  margin-block-start: $-spacing-heading;
+  margin-block-end: $-spacing-heading;
 }
 
 h2,
@@ -221,11 +225,11 @@ h2 {
 }
 
 .display--even {
-  color: $color-accent;
+  color: $-color-accent;
 }
 
 .description {
-  max-inline-size: -units($count: 96);
+  max-inline-size: $-breakpoint;
 
   @include -breakpoint {
     @include -type($name: heading-02);
@@ -250,7 +254,7 @@ h2 {
   position: absolute;
   inset: 0;
   z-index: -z-index($name: hidden) - 1;
-  background-color: color.adjust($color: $color-background, $lightness: -2.5%);
+  background-color: color.adjust($color: $-color-background, $lightness: -2.5%);
   content: '';
 }
 
@@ -263,11 +267,11 @@ h2 {
 }
 
 .feature__icon {
-  $spacing-icon: -units(
+  $-spacing-icon: -units(
     $count: 2,
   );
 
-  margin: auto $spacing-icon $spacing-icon auto;
+  margin: auto $-spacing-icon $-spacing-icon auto;
   fill: currentColor;
 }
 
@@ -277,6 +281,6 @@ h4 {
 
 footer {
   inset-block-end: 0;
-  border-block-start: $sizing-border solid
-    color.adjust($color: $color-background, $lightness: 5%);
+  border-block-start: $-sizing-border solid
+    color.adjust($color: $-color-background, $lightness: 5%);
 }

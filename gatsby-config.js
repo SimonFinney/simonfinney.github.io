@@ -116,7 +116,7 @@ module.exports = {
           ['max-inline-size', maxWidth],
         ].reduce(
           (variables, [variable, value]) =>
-            `${variables}$${variable}: ${value}; `,
+            `${variables}$-${variable}: ${value}; `,
           ''
         ),
       },
