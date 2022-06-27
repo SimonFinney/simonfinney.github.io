@@ -1,19 +1,19 @@
 /** Copyright Simon Finney 2019, 2022 */
 
 const { resolve } = require('path');
-const src = resolve(__dirname, 'src');
+const _src = resolve(__dirname, 'src');
 
 const { description: name, homepage: siteUrl } = require('./package.json');
 
-function path(path) {
-  return resolve(src, path);
+function src(path) {
+  return resolve(_src, path);
 }
 
 const role = 'UX engineering';
 const meta = `${name} — ${role}`;
 
-const { maxWidth } = require(path('breakpoint'));
-const { background } = require(path('color'));
+const { maxWidth } = require(src('breakpoint'));
+const { background } = require(src('color'));
 
 module.exports = {
   siteMetadata: {
@@ -53,7 +53,7 @@ module.exports = {
         background_color: background,
         theme_color: background,
         display: 'standalone',
-        icon: path('icon.png'),
+        icon: src('icon.png'),
 
         icon_options: {
           purpose: 'any maskable',
@@ -65,7 +65,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: path('layout'),
+          default: src('layout'),
         },
         gatsbyRemarkPlugins: [
           'gatsby-remark-unwrap-images',
@@ -91,6 +91,8 @@ module.exports = {
             options: {
               linkImagesToOriginal: false,
               maxWidth,
+              withAvif: true,
+              withWebp: true,
             },
           },
         ],
@@ -111,7 +113,7 @@ module.exports = {
       options: {
         additionalData: [
           ['color-background', background],
-          ['max-width', maxWidth],
+          ['max-inline-size', maxWidth],
         ].reduce(
           (variables, [variable, value]) =>
             `${variables}$${variable}: ${value}; `,
@@ -124,7 +126,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: path('pages'),
+        path: src('pages'),
       },
     },
   ],
