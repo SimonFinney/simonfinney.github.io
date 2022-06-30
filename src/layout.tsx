@@ -127,8 +127,8 @@ export default function Layout({
           <footer>
             <nav aria-label="Contact">
               <ul>
-                {contact.map(({ children, href }, index) => (
-                  <li key={`footer__li--${index}`}>
+                {contact.map(({ children, href }) => (
+                  <li key={`footer__li--${children}`}>
                     <a href={href} rel="noopener noreferrer" target="_blank">
                       {children}
                     </a>
