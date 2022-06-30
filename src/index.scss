@@ -236,7 +236,7 @@ h2 {
   }
 }
 
-.features {
+.layout {
   display: grid;
   grid-gap: -units($count: 1);
 
@@ -245,12 +245,12 @@ h2 {
   }
 }
 
-.feature {
+.card {
   display: flex;
   flex-wrap: wrap;
 }
 
-.feature::after {
+.card::after {
   position: absolute;
   inset: 0;
   z-index: -z-index($name: hidden) - 1;
@@ -258,15 +258,15 @@ h2 {
   content: '';
 }
 
-.feature__image {
+.card__image {
   inline-size: 100%;
 }
 
-.feature__content {
+.card__content {
   padding: -units($count: 4);
 }
 
-.feature__icon {
+.card__icon {
   $-spacing-icon: -units(
     $count: 2,
   );
